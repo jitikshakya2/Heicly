@@ -1160,6 +1160,7 @@
     <a href="#about">About</a>
     <a href="#privacy">Privacy</a>
     <a href="#faq">FAQ</a>
+    <a href="blog/index.html">Blog</a>
     <a href="Heicly/privacy-policy.html">Privacy Policy</a>
   </nav>
   <div class="nav-cta">No signup &middot; No uploads</div>
@@ -1376,6 +1377,7 @@
       <a href="#about">About</a>
       <a href="#privacy">Privacy</a>
       <a href="#faq">FAQ</a>
+      <a href="blog/index.html">Blog</a>
       <a href="Heicly/privacy-policy.html">Privacy Policy</a>
     </nav>
     <div class="footer-note">Free, client-side HEIC converter. No sign-up, no watermarks, no server-imposed limits.</div>
@@ -1444,6 +1446,17 @@
     fmtCardDesc.textContent = meta.desc;
   }
   formatSelect.addEventListener('change', updateFormatCard);
+
+  // Pre-select output format from a URL param, e.g. heicly.in/?to=jpg
+  // Lets blog posts / external links land users with the right format already chosen.
+  (function applyFormatFromQuery() {
+    const params = new URLSearchParams(window.location.search);
+    const requested = (params.get('to') || '').toLowerCase();
+    if (['png', 'jpg', 'webp'].includes(requested)) {
+      formatSelect.value = requested;
+    }
+  })();
+
   updateFormatCard();
 
   function showPanel(panel) {

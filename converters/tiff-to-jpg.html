@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIFF to JPG Converter - Convert TIFF Images to JPEG Online (Batch 15)</title>
+    <meta name="description" content="Convert TIFF/TIF images to JPG format online for free. Reduce file size for web use while maintaining quality. Secure client-side conversion, batch process up to 15 files.">
+    <meta name="keywords" content="tiff to jpg, tif to jpeg, convert tiff to jpg, image converter, web optimization, batch tiff converter">
+    <link rel="canonical" href="https://heicly.in/converters/tiff-to-jpg.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://heicly.in/converters/tiff-to-jpg.html">
+    <meta property="og:title" content="TIFF to JPG Converter - Free Online Tool">
+    <meta property="og:description" content="Convert TIFF to JPG instantly in your browser. Perfect for web use and email sharing.">
+    <meta property="og:image" content="https://heicly.in/converters/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://heicly.in/converters/tiff-to-jpg.html">
+    <meta property="twitter:title" content="TIFF to JPG Converter - Free Online Tool">
+    <meta property="twitter:description" content="Convert TIFF to JPG instantly in your browser. No upload required.">
+    <meta property="twitter:image" content="https://heicly.in/converters/og-image.jpg">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .converter-card { max-width: 800px; margin: 2rem auto; padding: 2rem; }
+        .drop-zone { border: 2px dashed #ccc; padding: 2rem; text-align: center; border-radius: 8px; cursor: pointer; transition: background 0.3s; }
+        .drop-zone:hover { background: #f9f9f9; border-color: #007bff; }
+        .file-list { margin-top: 1rem; list-style: none; padding: 0; }
+        .file-item { display: flex; justify-content: space-between; padding: 0.5rem; border-bottom: 1px solid #eee; }
+        .btn-convert { background: #007bff; color: white; border: none; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 5px; cursor: pointer; width: 100%; margin-top: 1rem; }
+        .btn-convert:disabled { background: #ccc; cursor: not-allowed; }
+        .internal-links { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
+        .internal-links ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; list-style: none; padding: 0; }
+        .internal-links a { text-decoration: none; color: #007bff; font-weight: 500; }
+        .faq-section { margin-top: 3rem; }
+        .faq-item { margin-bottom: 1.5rem; }
+        .faq-question { font-weight: bold; cursor: pointer; color: #333; }
+        .faq-answer { margin-top: 0.5rem; color: #666; line-height: 1.6; }
+        @media (max-width: 600px) {
+            .converter-card { padding: 1rem; margin: 1rem auto; }
+            .internal-links ul { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TIFF to JPG Converter",
+      "url": "https://heicly.in/converters/tiff-to-jpg",
+      "description": "Free online tool to convert TIFF images to JPG format securely in the browser.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": "Batch conversion, Client-side processing, High quality, Web optimized"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why convert TIFF to JPG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TIFF files are large and ideal for printing, but JPG is better for web use, email, and sharing. Converting to JPG reduces file size by up to 90% while maintaining good visual quality."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Will I lose quality converting TIFF to JPG?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "JPG uses lossy compression, so there is some quality loss. However, at high quality settings (which we use), the difference is barely noticeable to the human eye while achieving significant file size reduction."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is this TIFF to JPG converter safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, 100%. All conversions happen locally in your browser. Your TIFF files are never uploaded to any server, ensuring complete privacy and security."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How many TIFF files can I convert at once?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can convert up to 15 TIFF files simultaneously. The tool processes them in batch and provides individual downloads plus a ZIP option for convenience."
+        }
+      }]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/index.html"> class="logo">Heicly</a>
+            <nav>
+                <a href="/index.html">Home</a>
+                <a href="/#features">Features</a>
+                <a href="/#tools">Tools</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="converter-card">
+            <h1>TIFF to JPG Converter</h1>
+            <p class="intro-text">Convert your <strong>TIFF/TIF</strong> images to widely compatible <strong>JPG</strong> format. Perfect for web publishing, email attachments, and sharing photos online.</p>
+            
+            <div class="drop-zone" id="dropZone">
+                <p>Drag & Drop TIFF files here or <strong>Click to Upload</strong></p>
+                <p class="sub-text">Max 15 files. Processed locally in your browser.</p>
+                <input type="file" id="fileInput" accept="image/tiff, image/tif, .tiff, .tif" multiple style="display: none;">
+            </div>
+
+            <ul class="file-list" id="fileList"></ul>
+            
+            <button id="convertBtn" class="btn-convert" disabled>Convert to JPG</button>
+            <div id="status" style="margin-top: 1rem; text-align: center;"></div>
+            <div id="downloadArea" style="margin-top: 1rem; text-align: center;"></div>
+        </section>
+
+        <section class="content-section">
+            <h2>When to Use TIFF to JPG Conversion?</h2>
+            <p>TIFF is a lossless format preferred by photographers and printers, but it creates very large files. Convert to JPG when you need to:</p>
+            <ul>
+                <li><strong>Share photos online:</strong> JPG is universally supported by social media, websites, and messaging apps.</li>
+                <li><strong>Send via email:</strong> Reduce file sizes to stay within email attachment limits.</li>
+                <li><strong>Upload to websites:</strong> Faster page loads improve user experience and SEO rankings.</li>
+                <li><strong>Create backups:</strong> Save storage space while keeping visually identical copies.</li>
+            </ul>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">Why convert TIFF to JPG?</div>
+                <div class="faq-answer">TIFF files are large and ideal for printing, but JPG is better for web use, email, and sharing. Converting to JPG reduces file size by up to 90% while maintaining good visual quality.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Will I lose quality converting TIFF to JPG?</div>
+                <div class="faq-answer">JPG uses lossy compression, so there is some quality loss. However, at high quality settings (which we use), the difference is barely noticeable to the human eye while achieving significant file size reduction.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is this TIFF to JPG converter safe?</div>
+                <div class="faq-answer">Yes, 100%. All conversions happen locally in your browser. Your TIFF files are never uploaded to any server, ensuring complete privacy and security.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How many TIFF files can I convert at once?</div>
+                <div class="faq-answer">You can convert up to 15 TIFF files simultaneously. The tool processes them in batch and provides individual downloads plus a ZIP option for convenience.</div>
+            </div>
+        </section>
+
+        <section class="internal-links">
+            <h3>Other Image Tools</h3>
+            <ul>
+                <li><a href="/converters/avif-to-jpg.html">AVIF to JPG</a></li>
+                <li><a href="/converters/avif-to-png.html">AVIF to PNG</a></li>
+                <li><a href="/converters/jpg-to-avif.html">JPG to AVIF</a></li>
+                <li><a href="/converters/png-to-avif.html">PNG to AVIF</a></li>
+                <li><a href="/converters/heic-to-pdf.html">HEIC to PDF</a></li>
+                <li><a href="/converters/svg-to-png.html">SVG to PNG</a></li>
+                <li><a href="/converters/ico-to-png.html">ICO to PNG</a></li>
+                <li><a href="/converters/jfif-to-jpg.html">JFIF to JPG</a></li>
+                <li><a href="/converters/bmp-to-jpg.html">BMP to JPG</a></li>
+                <li><a href="/index.html">Home</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Heicly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        const convertBtn = document.getElementById('convertBtn');
+        const statusDiv = document.getElementById('status');
+        const downloadArea = document.getElementById('downloadArea');
+        
+        let filesToProcess = [];
+        const MAX_FILES = 15;
+
+        dropZone.addEventListener('click', () => fileInput.click());
+        
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.style.background = '#f0f8ff';
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.style.background = '';
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.style.background = '';
+            handleFiles(e.dataTransfer.files);
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+
+        function handleFiles(files) {
+            const newFiles = Array.from(files).filter(f => 
+                f.type === 'image/tiff' || f.type === 'image/tif' || 
+                f.name.toLowerCase().endsWith('.tiff') || f.name.toLowerCase().endsWith('.tif')
+            );
+            
+            if (filesToProcess.length + newFiles.length > MAX_FILES) {
+                alert(`You can only upload a maximum of ${MAX_FILES} files.`);
+                return;
+            }
+
+            filesToProcess = [...filesToProcess, ...newFiles];
+            renderFileList();
+            
+            if (filesToProcess.length > 0) {
+                convertBtn.disabled = false;
+            }
+        }
+
+        function renderFileList() {
+            fileList.innerHTML = '';
+            filesToProcess.forEach((file, index) => {
+                const li = document.createElement('li');
+                li.className = 'file-item';
+                li.innerHTML = `<span>${file.name}</span> <span style="color:red; cursor:pointer;" onclick="removeFile(${index})">✕</span>`;
+                fileList.appendChild(li);
+            });
+        }
+
+        window.removeFile = function(index) {
+            filesToProcess.splice(index, 1);
+            renderFileList();
+            if (filesToProcess.length === 0) {
+                convertBtn.disabled = true;
+                downloadArea.innerHTML = '';
+                statusDiv.textContent = '';
+            }
+        };
+
+        convertBtn.addEventListener('click', async () => {
+            if (filesToProcess.length === 0) return;
+
+            convertBtn.disabled = true;
+            statusDiv.textContent = `Converting ${filesToProcess.length} files... Please wait.`;
+            downloadArea.innerHTML = '';
+
+            const zip = new JSZip();
+            const convertedFiles = [];
+
+            for (let i = 0; i < filesToProcess.length; i++) {
+                const file = filesToProcess[i];
+                try {
+                    const jpgBlob = await convertToJpg(file);
+                    const newName = file.name.replace(/\.(tiff|tif)$/i, '.jpg');
+                    
+                    zip.file(newName, jpgBlob);
+                    
+                    const url = URL.createObjectURL(jpgBlob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = newName;
+                    a.textContent = `Download ${newName}`;
+                    a.style.display = 'block';
+                    a.style.marginBottom = '5px';
+                    downloadArea.appendChild(a);
+                    
+                    convertedFiles.push({ name: newName, blob: jpgBlob });
+                } catch (err) {
+                    console.error(`Error converting ${file.name}:`, err);
+                    statusDiv.textContent += `\nError converting ${file.name}.`;
+                }
+            }
+
+            if (convertedFiles.length > 0) {
+                const zipBlob = await zip.generateAsync({ type: "blob" });
+                const zipUrl = URL.createObjectURL(zipBlob);
+                const zipBtn = document.createElement('a');
+                zipBtn.href = zipUrl;
+                zipBtn.download = "heicly-converted-jpg.zip";
+                zipBtn.textContent = "Download All as ZIP";
+                zipBtn.className = "btn-convert";
+                zipBtn.style.display = "inline-block";
+                zipBtn.style.width = "auto";
+                zipBtn.style.marginTop = "10px";
+                downloadArea.appendChild(zipBtn);
+
+                statusDiv.textContent = `Successfully converted ${convertedFiles.length} files!`;
+            } else {
+                statusDiv.textContent = "Conversion failed.";
+            }
+
+            convertBtn.disabled = false;
+        });
+
+        function convertToJpg(file) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = URL.createObjectURL(file);
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0);
+                    
+                    canvas.toBlob((blob) => {
+                        if (blob) {
+                            resolve(blob);
+                        } else {
+                            reject(new Error('Conversion failed'));
+                        }
+                    }, 'image/jpeg', 0.9);
+                };
+                img.onerror = reject;
+            });
+        }
+    </script>
+</body>
+</html>

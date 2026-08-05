@@ -1,39 +1,52 @@
 #!/bin/bash
 
-# List of all converter pages
-pages=(
-    "avif-to-jpg"
-    "avif-to-png" 
-    "jpg-to-avif"
-    "png-to-avif"
-    "heic-to-pdf"
-    "tiff-to-jpg"
-    "svg-to-png"
-    "ico-to-png"
-    "jfif-to-jpg"
-    "bmp-to-jpg"
+# Script to update converter pages with proper header styling
+
+# Files that need updating (those with basic headers)
+files=(
+    "/workspace/converters/bmp-to-jpg.html"
+    "/workspace/converters/heic-to-pdf.html"
+    "/workspace/converters/ico-to-png.html"
+    "/workspace/converters/jfif-to-jpg.html"
+    "/workspace/converters/jpg-to-avif.html"
+    "/workspace/converters/png-to-avif.html"
+    "/workspace/converters/svg-to-png.html"
+    "/workspace/converters/tiff-to-jpg.html"
 )
 
-for page in "${pages[@]}"; do
-    file="/workspace/converters/${page}.html"
+# New header HTML matching the main page style
+new_header='  <header class="nav">
+    <div class="brand">
+      <div class="mark">
+        <svg width="16" height="16" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <rect x="34" y="32" width="42" height="42" rx="6" fill="#14100e"/>
+          <rect x="56" y="66" width="42" height="42" rx="6" fill="none" stroke="#14100e" stroke-width="7"/>
+        </svg>
+      </div>
+      Heicly
+    </div>
+    <nav class="links">
+      <a href="/index.html">Home</a>
+      <a href="/#features">Features</a>
+      <a href="/#tools">Tools</a>
+      <a href="/blog/index.html">Blog</a>
+      <a href="/Heicly/privacy-policy.html">Privacy Policy</a>
+    </nav>
+    <div class="nav-cta">No signup &middot; No uploads</div>
+  </header>'
+
+for file in "${files[@]}"; do
     if [ -f "$file" ]; then
-        echo "Processing $page..."
+        echo "Updating $file..."
         
-        # Fix internal links paths (add converters/ prefix where needed)
-        sed -i 's|href="/avif-to-jpg"|href="/converters/avif-to-jpg.html"|g' "$file"
-        sed -i 's|href="/avif-to-png"|href="/converters/avif-to-png.html"|g' "$file"
-        sed -i 's|href="/jpg-to-avif"|href="/converters/jpg-to-avif.html"|g' "$file"
-        sed -i 's|href="/png-to-avif"|href="/converters/png-to-avif.html"|g' "$file"
-        sed -i 's|href="/heic-to-pdf"|href="/converters/heic-to-pdf.html"|g' "$file"
-        sed -i 's|href="/tiff-to-jpg"|href="/converters/tiff-to-jpg.html"|g' "$file"
-        sed -i 's|href="/svg-to-png"|href="/converters/svg-to-png.html"|g' "$file"
-        sed -i 's|href="/ico-to-png"|href="/converters/ico-to-png.html"|g' "$file"
-        sed -i 's|href="/jfif-to-jpg"|href="/converters/jfif-to-jpg.html"|g' "$file"
-        sed -i 's|href="/bmp-to-jpg"|href="/converters/bmp-to-jpg.html"|g' "$file"
-        sed -i 's|href="/"|href="/index.html"|g' "$file"
+        # Replace the old header block with the new one
+        # Pattern: from <header> to </header>
+        perl -i -0pe 's/<header>\s*<div class="container">\s*<a href="\/index\.html"[^>]*>Heicly<\/a>\s*<nav>\s*(?:<a href="[^"]*"[^>]*>[^<]*<\/a>\s*)+<\/nav>\s*<\/div>\s*<\/header>/'"$new_header"'/s' "$file"
         
-        echo "  ✓ Fixed internal links"
+        echo "Done."
+    else
+        echo "File not found: $file"
     fi
 done
 
-echo "Done!"
+echo "All files processed!"

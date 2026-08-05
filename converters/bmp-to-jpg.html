@@ -1,348 +1,1337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMP to JPG Converter - Convert Bitmap Images to JPEG Online (Batch 15)</title>
-    <meta name="description" content="Convert BMP bitmap images to JPG format online for free. Reduce file size dramatically for web use and sharing. Secure client-side conversion, batch process up to 15 files.">
-    <meta name="keywords" content="bmp to jpg, bitmap to jpeg, convert bmp to jpg, image converter, reduce bmp size, batch bmp converter">
-    <link rel="canonical" href="https://heicly.in/converters/bmp-to-jpg.html">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://heicly.in/converters/bmp-to-jpg.html">
-    <meta property="og:title" content="BMP to JPG Converter - Free Online Tool">
-    <meta property="og:description" content="Convert BMP to JPG instantly in your browser. Reduce file sizes by up to 90%.">
-    <meta property="og:image" content="https://heicly.in/converters/og-image.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c0d10">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  
+  <title>BMP to JPG Converter — Free Online Batch Tool | Heicly</title>
+  <meta name="description" content="Convert BMP bitmap images to JPG format instantly in your browser. Free, private batch conversion of up to 15 files with no upload required. Reduce file sizes by up to 90%.">
+  <link rel="canonical" href="https://heicly.in/converters/bmp-to-jpg.html">
+  <link rel="icon" type="image/png" sizes="1024x1024" href="../heicly-logo-concept-b.png">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Heicly">
+  <meta property="og:title" content="BMP to JPG Converter — Free Online Batch Tool | Heicly">
+  <meta property="og:description" content="Convert BMP images to JPG format instantly in your browser. Free, private batch conversion of up to 15 files with no upload required.">
+  <meta property="og:url" content="https://heicly.in/converters/bmp-to-jpg.html">
+  <meta property="og:image" content="https://heicly.in/og-image.png">
+  <meta property="og:image:secure_url" content="https://heicly.in/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BMP to JPG converter tool">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://heicly.in/converters/bmp-to-jpg.html">
-    <meta property="twitter:title" content="BMP to JPG Converter - Free Online Tool">
-    <meta property="twitter:description" content="Convert BMP to JPG instantly in your browser. No upload required.">
-    <meta property="twitter:image" content="https://heicly.in/converters/og-image.jpg">
+  <!-- X / Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BMP to JPG Converter — Free Online Batch Tool | Heicly">
+  <meta name="twitter:description" content="Convert BMP images to JPG format instantly in your browser. Free, private batch conversion of up to 15 files with no upload required.">
+  <meta name="twitter:image" content="https://heicly.in/og-image.png">
+  <meta name="twitter:image:alt" content="BMP to JPG converter tool">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="/style.css">
-    <style>
-        .converter-card { max-width: 800px; margin: 2rem auto; padding: 2rem; }
-        .drop-zone { border: 2px dashed #ccc; padding: 2rem; text-align: center; border-radius: 8px; cursor: pointer; transition: background 0.3s; }
-        .drop-zone:hover { background: #f9f9f9; border-color: #007bff; }
-        .file-list { margin-top: 1rem; list-style: none; padding: 0; }
-        .file-item { display: flex; justify-content: space-between; padding: 0.5rem; border-bottom: 1px solid #eee; }
-        .btn-convert { background: #007bff; color: white; border: none; padding: 1rem 2rem; font-size: 1.1rem; border-radius: 5px; cursor: pointer; width: 100%; margin-top: 1rem; }
-        .btn-convert:disabled { background: #ccc; cursor: not-allowed; }
-        .internal-links { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee; }
-        .internal-links ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; list-style: none; padding: 0; }
-        .internal-links a { text-decoration: none; color: #007bff; font-weight: 500; }
-        .faq-section { margin-top: 3rem; }
-        .faq-item { margin-bottom: 1.5rem; }
-        .faq-question { font-weight: bold; cursor: pointer; color: #333; }
-        .faq-answer { margin-top: 0.5rem; color: #666; line-height: 1.6; }
-        @media (max-width: 600px) {
-            .converter-card { padding: 1rem; margin: 1rem auto; }
-            .internal-links ul { grid-template-columns: 1fr; }
-        }
-    </style>
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "WebApplication",
+      "@id": "https://heicly.in/converters/bmp-to-jpg#webapp",
       "name": "BMP to JPG Converter",
-      "url": "https://heicly.in/converters/bmp-to-jpg",
-      "description": "Free online tool to convert BMP bitmap images to JPG format securely in the browser.",
+      "url": "https://heicly.in/converters/bmp-to-jpg.html",
+      "description": "Free online BMP to JPG converter. Convert up to 15 BMP images to JPG format instantly in your browser without uploading files.",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser.",
+      "isAccessibleForFree": true,
+      "image": "https://heicly.in/og-image.png",
+      "featureList": [
+        "Convert BMP to JPG",
+        "Batch conversion up to 15 files",
+        "Client-side processing",
+        "No account required",
+        "Privacy-focused conversion"
+      ],
       "offers": {
         "@type": "Offer",
         "price": "0",
         "priceCurrency": "USD"
-      },
-      "featureList": "Batch conversion, Client-side processing, Massive size reduction, Web optimized"
-    }
-    </script>
-    <script type="application/ld+json">
+      }
+    },
     {
-      "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Why convert BMP to JPG?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "BMP files are uncompressed and extremely large. Converting to JPG reduces file sizes by 80-90% while maintaining good visual quality, making them practical for web use and sharing."
+      "@id": "https://heicly.in/converters/bmp-to-jpg#faq-schema",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why convert BMP to JPG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BMP files are uncompressed and extremely large. Converting to JPG reduces file sizes by 80-90% while maintaining good visual quality, making them practical for web use and sharing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this BMP to JPG converter free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — completely free with no limits on daily conversions. Your browser handles all processing locally, so there are no server costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I convert multiple BMP files at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! You can convert up to 15 BMP files to JPG simultaneously in a single batch. All conversions happen privately in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my BMP files uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All BMP to JPG conversions happen entirely in your browser using the Canvas API. Your files never leave your device, ensuring complete privacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I lose quality converting BMP to JPG?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JPG uses lossy compression, so some quality is lost during conversion. However, our converter uses high-quality settings (90% quality) to minimize visible degradation while keeping file sizes reasonable."
+          }
         }
-      }, {
-        "@type": "Question",
-        "name": "Will I lose quality converting BMP to JPG?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "JPG uses lossy compression, so there is some quality loss. However, at high quality settings, the difference is barely noticeable while achieving dramatic file size reductions."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Is this BMP converter safe?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, 100%. All conversions happen locally in your browser using JavaScript. Your BMP files are never uploaded to any server, ensuring complete privacy."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How many BMP files can I convert at once?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can convert up to 15 BMP files simultaneously. The tool processes them in batch and provides individual downloads plus a ZIP option."
-        }
-      }]
+      ]
     }
-    </script>
+  ]
+}
+  </script>
+  
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
+  <style>
+    :root {
+      --bg: #0c0d10;
+      --bg-raised: #131519;
+      --bg-card: #16181d;
+      --border: #24272e;
+      --border-soft: #1c1f25;
+      --accent: #ff5a4e;
+      --accent-soft: #ff5a4e22;
+      --accent-dark: #d8483e;
+      --success: #34d399;
+      --success-soft: #34d39922;
+      --text-main: #f2f3f5;
+      --text-muted: #9a9ea8;
+      --text-faint: #63666f;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 9px;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    ::selection { background: var(--accent); color: #0c0d10; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    /* ---------- Ambient background ---------- */
+    .ambient {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .ambient::before,
+    .ambient::after {
+      content: "";
+      position: absolute;
+      width: 640px;
+      height: 640px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.16;
+    }
+
+    .ambient::before {
+      top: -220px;
+      left: -160px;
+      background: var(--accent);
+      animation: drift1 26s ease-in-out infinite alternate;
+    }
+
+    .ambient::after {
+      top: 30%;
+      right: -220px;
+      background: #4a7dff;
+      opacity: 0.10;
+      animation: drift2 30s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift1 {
+      from { transform: translate(0, 0) scale(1); }
+      to { transform: translate(80px, 60px) scale(1.15); }
+    }
+    @keyframes drift2 {
+      from { transform: translate(0, 0) scale(1); }
+      to { transform: translate(-60px, 40px) scale(1.1); }
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.035;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* ---------- Nav ---------- */
+    header.nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 36px;
+      background: rgba(12, 13, 16, 0.72);
+      backdrop-filter: blur(14px) saturate(140%);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+    }
+
+    .brand .mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      background: linear-gradient(140deg, var(--accent), #ff8a4e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #14100e;
+      box-shadow: 0 4px 14px var(--accent-soft);
+    }
+
+    nav.links {
+      display: flex;
+      gap: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    nav.links a {
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    nav.links a:hover { color: var(--text-main); }
+    nav.links a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -6px;
+      height: 1px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+    nav.links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-faint);
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 720px) {
+      nav.links { display: none; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 90px 24px 40px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border: 1px solid #ff5a4e33;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 26px;
+      opacity: 0;
+      animation: rise 0.7s ease forwards;
+    }
+
+    .eyebrow .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 0 var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 90, 78, 0.55); }
+      70% { box-shadow: 0 0 0 8px rgba(255, 90, 78, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 90, 78, 0); }
+    }
+
+    h1.hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 5.4vw, 58px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin: 0 0 20px;
+      opacity: 0;
+      animation: rise 0.7s ease 0.08s forwards;
+    }
+
+    h1.hero-title .grad {
+      background: linear-gradient(100deg, var(--accent), #ff9a5a 55%, var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 16.5px;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      opacity: 0;
+      animation: rise 0.7s ease 0.16s forwards;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- Dropzone ---------- */
+    .zone-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px;
+      opacity: 0;
+      animation: rise 0.7s ease 0.32s forwards;
+    }
+
+    .dropzone {
+      position: relative;
+      background: linear-gradient(180deg, var(--bg-card), var(--bg-raised));
+      border: 1.5px dashed var(--border);
+      border-radius: var(--radius-lg);
+      padding: 60px 24px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+    }
+
+    .dropzone:hover {
+      border-color: #3a3d45;
+      transform: translateY(-2px);
+    }
+
+    .dropzone.dragover {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, #1c1414, #16181d);
+      box-shadow: 0 0 0 6px var(--accent-soft), 0 20px 50px -20px rgba(255, 90, 78, 0.35);
+    }
+
+    .dropzone .icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 18px;
+      color: var(--accent);
+      transition: transform 0.25s ease;
+    }
+
+    .dropzone:hover .icon { transform: translateY(-4px); }
+    .dropzone .icon svg { width: 100%; height: 100%; }
+
+    .dropzone h3 {
+      font-family: var(--font-display);
+      margin: 0 0 6px;
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .dropzone p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .dropzone .browse-underline {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .dropzone input[type="file"] { display: none; }
+
+    /* ---------- State panels ---------- */
+    .state-panel {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 52px 24px;
+      text-align: center;
+    }
+
+    .state-panel.active { display: block; animation: rise 0.4s ease forwards; }
+
+    .spinner {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 22px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .loading-text {
+      font-family: var(--font-display);
+      font-size: 15.5px;
+      font-weight: 600;
+    }
+
+    .loading-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .progress-track {
+      width: 220px;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--border);
+      margin: 22px auto 0;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 40%;
+      background: linear-gradient(90deg, var(--accent), #ff9a5a);
+      border-radius: 3px;
+      animation: loading-slide 1.3s ease-in-out infinite;
+    }
+
+    @keyframes loading-slide {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(140%); }
+      100% { transform: translateX(280%); }
+    }
+
+    .success-icon {
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 18px;
+      background: var(--success-soft);
+      border: 1px solid #34d39944;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .success-icon svg { width: 22px; height: 22px; stroke: var(--success); }
+
+    .success-panel h3 {
+      font-family: var(--font-display);
+      margin: 0 0 4px;
+      font-size: 18px;
+      color: var(--success);
+    }
+
+    /* ---------- Batch progress panel ---------- */
+    .batch-panel { text-align: left; }
+
+    .batch-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .batch-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .batch-count {
+      font-family: var(--font-mono);
+      font-size: 12.5px;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .batch-panel .progress-fill { animation: none; }
+
+    .batch-list {
+      list-style: none;
+      margin: 22px 0 0;
+      padding: 0;
+      max-height: 300px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .batch-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-raised);
+      border: 1px solid var(--border-soft);
+    }
+
+    .batch-item-icon {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .batch-item-icon .spinner-sm {
+      width: 13px;
+      height: 13px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    .batch-item-icon .check-sm { width: 15px; height: 15px; stroke: var(--success); }
+    .batch-item-icon .x-sm { width: 15px; height: 15px; stroke: var(--accent); }
+
+    .batch-item-name {
+      flex: 1;
+      min-width: 0;
+      font-size: 12.5px;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .batch-item-status {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--text-faint);
+      flex-shrink: 0;
+    }
+
+    .batch-item.is-done .batch-item-status { color: var(--success); }
+    .batch-item.is-error { border-color: #4a2a2a; }
+    .batch-item.is-error .batch-item-status { color: var(--accent); }
+
+    /* ---------- Results panel (single file or batch) ---------- */
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+      gap: 12px;
+      margin: 20px 0 6px;
+      max-height: 420px;
+      overflow-y: auto;
+      padding: 4px;
+      text-align: left;
+    }
+
+    .result-card {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .result-thumb {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 7px;
+      border: 1px solid var(--border-soft);
+      background: var(--bg-card);
+      display: block;
+    }
+
+    .result-name {
+      font-size: 11px;
+      color: var(--text-main);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .result-size {
+      font-size: 10.5px;
+      font-family: var(--font-mono);
+      color: var(--text-faint);
+      margin-top: 2px;
+    }
+
+    .result-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 7px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      border: 1px solid #ff5a4e33;
+    }
+    .result-download:hover { background: #ff5a4e33; }
+
+    .batch-warning {
+      margin: 4px 0 18px;
+      font-size: 12px;
+      color: var(--text-faint);
+      text-align: center;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 14.5px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      font-family: var(--font-body);
+      transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:active { transform: scale(0.96); }
+
+    .btn-primary {
+      background: linear-gradient(140deg, var(--success), #1fb886);
+      color: #062c20;
+      box-shadow: 0 10px 24px -10px rgba(52, 211, 153, 0.5);
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -10px rgba(52, 211, 153, 0.6); }
+
+    .btn-secondary {
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+    }
+    .btn-secondary:hover { border-color: #3a3d45; }
+
+    .error-panel {
+      display: none;
+      background: #1c1416;
+      border: 1px solid #4a2a2a;
+      border-radius: var(--radius-lg);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .error-panel.active { display: block; animation: rise 0.4s ease forwards; }
+
+    .error-icon {
+      width: 50px; height: 50px;
+      margin: 0 auto 16px;
+      background: #ff5a4e22;
+      border: 1px solid #ff5a4e44;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .error-icon svg { width: 22px; height: 22px; stroke: var(--accent); }
+
+    .error-panel h3 { font-family: var(--font-display); margin: 0 0 6px; font-size: 17px; color: #ff8a80; }
+    .error-panel p { margin: 0 0 22px; font-size: 14px; color: #c99b96; }
+
+    /* ---------- Content sections ---------- */
+    .content-section {
+      max-width: 900px;
+      margin: 90px auto 0;
+      padding: 0 24px;
+    }
+
+    .section-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 18px;
+    }
+
+    .section-tag::before {
+      content: "";
+      width: 14px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .content-section h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 10px;
+    }
+
+    .content-section p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin: 0 0 16px;
+    }
+
+    .content-section ul {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin: 0 0 16px;
+      padding-left: 20px;
+    }
+
+    .content-section li {
+      margin-bottom: 8px;
+    }
+
+    /* FAQ accordion */
+    .faq-section {
+      max-width: 760px;
+      margin: 90px auto 0;
+      padding: 0 24px;
+    }
+
+    .faq-section h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 18px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item .chev {
+      width: 18px; height: 18px;
+      color: var(--text-faint);
+      transition: transform 0.25s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] .chev { transform: rotate(180deg); color: var(--accent); }
+
+    .faq-item .faq-body {
+      padding: 0 4px 20px;
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 640px;
+    }
+
+    /* ---------- Footer ---------- */
+    footer.site-footer {
+      margin-top: 100px;
+      border-top: 1px solid var(--border-soft);
+      padding: 40px 24px 32px;
+    }
+
+    .footer-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-links a { text-decoration: none; }
+    .footer-links a:hover { color: var(--text-main); }
+
+    .footer-note {
+      font-size: 12.5px;
+      color: var(--text-faint);
+    }
+
+    /* ---------- Scroll reveal ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 720px) {
+      header.nav { padding: 16px 20px; }
+      .hero { padding: 60px 20px 30px; }
+      .zone-wrap { padding: 0 20px; }
+      .dropzone { padding: 40px 16px; }
+      .content-section, .faq-section { padding: 0 20px; }
+      footer.site-footer { padding: 30px 20px 24px; }
+    }
+  </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="brand">
-      <div class="mark">
-        <svg width="16" height="16" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <rect x="34" y="32" width="42" height="42" rx="6" fill="#14100e"/>
-          <rect x="56" y="66" width="42" height="42" rx="6" fill="none" stroke="#14100e" stroke-width="7"/>
-        </svg>
-      </div>
-      Heicly
+
+<div class="ambient" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="brand">
+    <div class="mark">
+      <svg width="16" height="16" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <rect x="34" y="32" width="42" height="42" rx="6" fill="#14100e"/>
+        <rect x="56" y="66" width="42" height="42" rx="6" fill="none" stroke="#14100e" stroke-width="7"/>
+      </svg>
     </div>
-    <nav class="links">
-      <a href="/index.html">Home</a>
-      <a href="/#features">Features</a>
-      <a href="/#tools">Tools</a>
-      <a href="/blog/index.html">Blog</a>
-      <a href="/Heicly/privacy-policy.html">Privacy Policy</a>
-    </nav>
-    <div class="nav-cta">No signup &middot; No uploads</div>
-  </header>
+    Heicly
+  </div>
+  <nav class="links" aria-label="Primary navigation">
+    <a href="/index.html">Home</a>
+    <a href="/index.html#why">Why HEIC</a>
+    <a href="/index.html#about">About</a>
+    <a href="/index.html#privacy">Privacy</a>
+    <a href="/index.html#faq">FAQ</a>
+    <a href="/blog/index.html">Blog</a>
+    <a href="/Heicly/privacy-policy.html">Privacy Policy</a>
+  </nav>
+  <div class="nav-cta">No signup &middot; No uploads</div>
+</header>
 
-  <main class="container">
-        <section class="converter-card">
-            <h1>BMP to JPG Converter</h1>
-            <p class="intro-text">Convert <strong>BMP bitmap</strong> images to efficient <strong>JPG</strong> format. Dramatically reduce file sizes (up to 90%) while maintaining excellent visual quality. Perfect for web use and email.</p>
-            
-            <div class="drop-zone" id="dropZone">
-                <p>Drag & Drop BMP files here or <strong>Click to Upload</strong></p>
-                <p class="sub-text">Max 15 files. Processed locally in your browser.</p>
-                <input type="file" id="fileInput" accept="image/bmp, image/x-bmp, .bmp" multiple style="display: none;">
-            </div>
+<main id="main-content">
+  <section class="hero" id="converter" aria-labelledby="converter-title">
+    <div class="eyebrow"><span class="pulse-dot"></span> Runs 100% in your browser</div>
+    <h1 class="hero-title" id="converter-title">Convert <span class="grad">BMP to JPG</span></h1>
+    <p class="hero-sub">Convert BMP bitmap images to efficient JPG format. Dramatically reduce file sizes (up to 90%) while maintaining excellent visual quality. Perfect for web use and email.</p>
 
-            <ul class="file-list" id="fileList"></ul>
-            
-            <button id="convertBtn" class="btn-convert" disabled>Convert to JPG</button>
-            <div id="status" style="margin-top: 1rem; text-align: center;"></div>
-            <div id="downloadArea" style="margin-top: 1rem; text-align: center;"></div>
-        </section>
-
-        <section class="content-section">
-            <h2>When to Use BMP to JPG Conversion?</h2>
-            <p>BMP is an uncompressed format that produces very large files. Convert to JPG when you need to:</p>
-            <ul>
-                <li><strong>Share via email:</strong> BMP files are often too large for email attachments.</li>
-                <li><strong>Upload to websites:</strong> JPG loads much faster, improving user experience and SEO.</li>
-                <li><strong>Save storage space:</strong> Reduce disk usage by 80-90% without noticeable quality loss.</li>
-                <li><strong>Create backups:</strong> Keep archival copies in a more practical format.</li>
-            </ul>
-        </section>
-
-        <section class="faq-section">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <div class="faq-question">Why convert BMP to JPG?</div>
-                <div class="faq-answer">BMP files are uncompressed and extremely large. Converting to JPG reduces file sizes by 80-90% while maintaining good visual quality, making them practical for web use and sharing.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Will I lose quality converting BMP to JPG?</div>
-                <div class="faq-answer">JPG uses lossy compression, so there is some quality loss. However, at high quality settings, the difference is barely noticeable while achieving dramatic file size reductions.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Is this BMP converter safe?</div>
-                <div class="faq-answer">Yes, 100%. All conversions happen locally in your browser using JavaScript. Your BMP files are never uploaded to any server, ensuring complete privacy.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">How many BMP files can I convert at once?</div>
-                <div class="faq-answer">You can convert up to 15 BMP files simultaneously. The tool processes them in batch and provides individual downloads plus a ZIP option.</div>
-            </div>
-        </section>
-
-        <section class="internal-links">
-            <h3>Other Image Tools</h3>
-            <ul>
-                <li><a href="/converters/avif-to-jpg.html">AVIF to JPG</a></li>
-                <li><a href="/converters/avif-to-png.html">AVIF to PNG</a></li>
-                <li><a href="/converters/jpg-to-avif.html">JPG to AVIF</a></li>
-                <li><a href="/converters/png-to-avif.html">PNG to AVIF</a></li>
-                <li><a href="/converters/heic-to-pdf.html">HEIC to PDF</a></li>
-                <li><a href="/converters/tiff-to-jpg.html">TIFF to JPG</a></li>
-                <li><a href="/converters/svg-to-png.html">SVG to PNG</a></li>
-                <li><a href="/converters/ico-to-png.html">ICO to PNG</a></li>
-                <li><a href="/converters/jfif-to-jpg.html">JFIF to JPG</a></li>
-                <li><a href="/index.html">Home</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Heicly. All rights reserved.</p>
+    <div class="zone-wrap">
+      <!-- Dropzone -->
+      <div class="dropzone" id="dropzone">
+        <div class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="17 8 12 3 7 8"></polyline>
+            <line x1="12" y1="3" x2="12" y2="15"></line>
+          </svg>
         </div>
-    </footer>
+        <h3>Drop up to 15 BMP files here</h3>
+        <p>or <span class="browse-underline">browse from your device</span> — nothing leaves this tab</p>
+        <input type="file" id="fileInput" name="image-file" accept=".bmp,.BMP,image/bmp,image/x-bmp" multiple aria-label="Choose up to 15 BMP images to convert">
+      </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+      <!-- Batch progress state -->
+      <div class="state-panel batch-panel" id="batchPanel" role="status" aria-live="polite" aria-atomic="true">
+        <div class="batch-head">
+          <div class="batch-title" id="batchTitle">Converting…</div>
+          <div class="batch-count" id="batchCount">0%</div>
+        </div>
+        <div class="progress-track"><div class="progress-fill" id="batchProgressFill" style="animation:none; width:0%;"></div></div>
+        <ul class="batch-list" id="batchList" aria-label="Per-file conversion progress"></ul>
+      </div>
 
-    <script>
-        const dropZone = document.getElementById('dropZone');
-        const fileInput = document.getElementById('fileInput');
-        const fileList = document.getElementById('fileList');
-        const convertBtn = document.getElementById('convertBtn');
-        const statusDiv = document.getElementById('status');
-        const downloadArea = document.getElementById('downloadArea');
+      <!-- Results state (single file or batch) -->
+      <div class="state-panel results-panel" id="resultsPanel" role="status" aria-live="polite" aria-atomic="true">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h3 id="resultsHeading">Conversion complete</h3>
+        <div class="results-grid" id="resultsGrid"></div>
+        <div class="batch-warning" id="batchWarning" style="display:none;"></div>
+        <div class="btn-row">
+          <button class="btn btn-primary" id="downloadAllBtn" type="button" style="display:none;">&#8595; Download All (.zip)</button>
+          <button class="btn btn-secondary" id="resetBtn" type="button">Convert More</button>
+        </div>
+      </div>
+
+      <!-- Error state -->
+      <div class="error-panel" id="errorPanel" role="alert" aria-live="assertive">
+        <div class="error-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+        </div>
+        <h3>Conversion failed</h3>
+        <p id="errorMessage">The file could not be converted. It may be corrupt or an unsupported format.</p>
+        <button class="btn btn-secondary" id="errorResetBtn" type="button">Try Another File</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content section -->
+  <section class="content-section reveal">
+    <div class="section-tag">When to Use</div>
+    <h2>When to Use BMP to JPG Conversion?</h2>
+    <p>BMP is an uncompressed format that produces very large files. Convert to JPG when you need to:</p>
+    <ul>
+      <li><strong>Share via email:</strong> BMP files are often too large for email attachments.</li>
+      <li><strong>Upload to websites:</strong> JPG loads much faster, improving user experience and SEO.</li>
+      <li><strong>Save storage space:</strong> Reduce disk usage by 80-90% without noticeable quality loss.</li>
+      <li><strong>Create backups:</strong> Keep archival copies in a more practical format.</li>
+    </ul>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section reveal">
+    <div class="section-tag">FAQ</div>
+    <h2>Frequently Asked Questions</h2>
+
+    <details class="faq-item" open>
+      <summary>Why convert BMP to JPG?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-body">BMP files are uncompressed and extremely large. Converting to JPG reduces file sizes by 80-90% while maintaining good visual quality, making them practical for web use and sharing.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Will I lose quality converting BMP to JPG?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-body">JPG uses lossy compression, so there is some quality loss. However, at high quality settings, the difference is barely noticeable while achieving dramatic file size reductions.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Is this BMP converter safe?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-body">Yes, 100%. All conversions happen locally in your browser using JavaScript. Your BMP files are never uploaded to any server, ensuring complete privacy.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How many BMP files can I convert at once?
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </summary>
+      <div class="faq-body">You can convert up to 15 BMP files simultaneously. The tool processes them in batch and provides individual downloads plus a ZIP option.</div>
+    </details>
+  </section>
+</main>
+
+<footer class="site-footer" aria-label="Site footer">
+  <div class="footer-inner">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+      <!-- Site Navigation -->
+      <div>
+        <h4 style="font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 1rem;">Site</h4>
+        <nav class="footer-links" aria-label="Footer navigation" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="/index.html">Home</a>
+          <a href="/index.html#about">About</a>
+          <a href="/index.html#privacy">Privacy</a>
+          <a href="/index.html#faq">FAQ</a>
+          <a href="/blog/index.html">Blog</a>
+        </nav>
+      </div>
+      
+      <!-- Legal -->
+      <div>
+        <h4 style="font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 1rem;">Legal</h4>
+        <nav class="footer-links" aria-label="Legal navigation" style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <a href="/Heicly/privacy-policy.html">Privacy Policy</a>
+          <a href="/Heicly/terms-of-service.html">Terms of Service</a>
+        </nav>
+      </div>
+      
+      <!-- Image Converters -->
+      <div>
+        <h4 style="font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--text-muted); margin-bottom: 1rem;">Image Converters</h4>
+        <nav class="footer-links" aria-label="Image converter tools" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+          <a href="/converters/avif-to-jpg.html">AVIF to JPG</a>
+          <a href="/converters/avif-to-png.html">AVIF to PNG</a>
+          <a href="/converters/jpg-to-avif.html">JPG to AVIF</a>
+          <a href="/converters/png-to-avif.html">PNG to AVIF</a>
+          <a href="/converters/heic-to-pdf.html">HEIC to PDF</a>
+          <a href="/converters/tiff-to-jpg.html">TIFF to JPG</a>
+          <a href="/converters/svg-to-png.html">SVG to PNG</a>
+          <a href="/converters/ico-to-png.html">ICO to PNG</a>
+          <a href="/converters/jfif-to-jpg.html">JFIF to JPG</a>
+          <a href="/converters/bmp-to-jpg.html">BMP to JPG</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="footer-note" style="text-align: center; padding-top: 1.5rem; border-top: 1px solid var(--border-soft);">Free, client-side image converter. No sign-up, no watermarks, no server-imposed limits.</div>
+  </div>
+</footer>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  const MAX_FILES = 15;
+
+  const dropzone = document.getElementById('dropzone');
+  const fileInput = document.getElementById('fileInput');
+
+  const batchPanel = document.getElementById('batchPanel');
+  const batchTitle = document.getElementById('batchTitle');
+  const batchCount = document.getElementById('batchCount');
+  const batchProgressFill = document.getElementById('batchProgressFill');
+  const batchList = document.getElementById('batchList');
+
+  const resultsPanel = document.getElementById('resultsPanel');
+  const resultsGrid = document.getElementById('resultsGrid');
+  const downloadAllBtn = document.getElementById('downloadAllBtn');
+  const resetBtn = document.getElementById('resetBtn');
+
+  const errorPanel = document.getElementById('errorPanel');
+  const errorMessage = document.getElementById('errorMessage');
+  const errorResetBtn = document.getElementById('errorResetBtn');
+
+  let filesToProcess = [];
+  let convertedBlobs = [];
+
+  // Reveal animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  function showPanel(panel) {
+    document.querySelectorAll('.state-panel, .error-panel').forEach(p => p.classList.remove('active'));
+    if (panel) panel.classList.add('active');
+  }
+
+  function createBatchItem(file, status = 'pending') {
+    const li = document.createElement('li');
+    li.className = 'batch-item';
+    li.dataset.file = file.name;
+    
+    let iconHtml = '<div class="spinner-sm"></div>';
+    if (status === 'done') {
+      li.classList.add('is-done');
+      iconHtml = '<svg class="check-sm" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+    } else if (status === 'error') {
+      li.classList.add('is-error');
+      iconHtml = '<svg class="x-sm" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+    }
+
+    li.innerHTML = `
+      <div class="batch-item-icon">${iconHtml}</div>
+      <span class="batch-item-name">${file.name}</span>
+      <span class="batch-item-status">${status === 'pending' ? 'Converting...' : status === 'done' ? 'Done' : 'Failed'}</span>
+    `;
+    return li;
+  }
+
+  function updateBatchProgress(completed, total) {
+    const pct = Math.round((completed / total) * 100);
+    batchCount.textContent = `${pct}%`;
+    batchProgressFill.style.width = `${pct}%`;
+  }
+
+  async function convertToJpg(file) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = URL.createObjectURL(file);
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
         
-        let filesToProcess = [];
-        const MAX_FILES = 15;
+        canvas.toBlob((blob) => {
+          if (blob) {
+            resolve(blob);
+          } else {
+            reject(new Error('Conversion failed'));
+          }
+        }, 'image/jpeg', 0.9);
+      };
+      img.onerror = reject;
+    });
+  }
 
-        dropZone.addEventListener('click', () => fileInput.click());
+  function handleFiles(files) {
+    const newFiles = Array.from(files).filter(f => 
+      f.type === 'image/bmp' || f.type === 'image/x-bmp' || 
+      f.name.toLowerCase().endsWith('.bmp')
+    );
+    
+    if (filesToProcess.length + newFiles.length > MAX_FILES) {
+      alert(`You can only upload a maximum of ${MAX_FILES} files.`);
+      return;
+    }
+
+    filesToProcess = [...filesToProcess, ...newFiles];
+    
+    if (filesToProcess.length > 0) {
+      dropzone.style.display = 'none';
+      showPanel(batchPanel);
+      batchList.innerHTML = '';
+      filesToProcess.forEach(file => {
+        batchList.appendChild(createBatchItem(file, 'pending'));
+      });
+      processFiles();
+    }
+  }
+
+  async function processFiles() {
+    convertedBlobs = [];
+    let completed = 0;
+    const total = filesToProcess.length;
+
+    for (let i = 0; i < filesToProcess.length; i++) {
+      const file = filesToProcess[i];
+      const listItem = batchList.children[i];
+      
+      try {
+        const jpgBlob = await convertToJpg(file);
+        const newName = file.name.replace(/\.bmp$/i, '.jpg');
+        convertedBlobs.push({ name: newName, blob: jpgBlob });
         
-        dropZone.addEventListener('dragover', (e) => {
-            e.preventDefault();
-            dropZone.style.background = '#f0f8ff';
+        listItem.classList.add('is-done');
+        listItem.querySelector('.batch-item-icon').innerHTML = '<svg class="check-sm" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+        listItem.querySelector('.batch-item-status').textContent = 'Done';
+        listItem.querySelector('.batch-item-status').style.color = 'var(--success)';
+      } catch (err) {
+        console.error(`Error converting ${file.name}:`, err);
+        listItem.classList.add('is-error');
+        listItem.querySelector('.batch-item-icon').innerHTML = '<svg class="x-sm" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+        listItem.querySelector('.batch-item-status').textContent = 'Failed';
+        listItem.querySelector('.batch-item-status').style.color = 'var(--accent)';
+      }
+      
+      completed++;
+      updateBatchProgress(completed, total);
+    }
+
+    if (convertedBlobs.length > 0) {
+      showResults();
+    } else {
+      showError('All conversions failed. Please try different files.');
+    }
+  }
+
+  function showResults() {
+    showPanel(resultsPanel);
+    resultsGrid.innerHTML = '';
+    
+    convertedBlobs.forEach(({ name, blob }) => {
+      const card = document.createElement('div');
+      card.className = 'result-card';
+      
+      const url = URL.createObjectURL(blob);
+      const img = document.createElement('img');
+      img.className = 'result-thumb';
+      img.src = url;
+      img.alt = name;
+      
+      const nameEl = document.createElement('div');
+      nameEl.className = 'result-name';
+      nameEl.textContent = name;
+      
+      const downloadLink = document.createElement('a');
+      downloadLink.className = 'result-download';
+      downloadLink.href = url;
+      downloadLink.download = name;
+      downloadLink.textContent = 'Download';
+      
+      card.appendChild(img);
+      card.appendChild(nameEl);
+      card.appendChild(downloadLink);
+      resultsGrid.appendChild(card);
+    });
+
+    if (convertedBlobs.length > 1) {
+      downloadAllBtn.style.display = 'inline-flex';
+      downloadAllBtn.onclick = async () => {
+        const zip = new JSZip();
+        convertedBlobs.forEach(({ name, blob }) => {
+          zip.file(name, blob);
         });
+        const zipBlob = await zip.generateAsync({ type: "blob" });
+        const zipUrl = URL.createObjectURL(zipBlob);
+        const a = document.createElement('a');
+        a.href = zipUrl;
+        a.download = "heicly-converted-jpg.zip";
+        a.click();
+        URL.revokeObjectURL(zipUrl);
+      };
+    } else {
+      downloadAllBtn.style.display = 'none';
+    }
+  }
 
-        dropZone.addEventListener('dragleave', () => {
-            dropZone.style.background = '';
-        });
+  function showError(msg) {
+    errorMessage.textContent = msg;
+    showPanel(errorPanel);
+  }
 
-        dropZone.addEventListener('drop', (e) => {
-            e.preventDefault();
-            dropZone.style.background = '';
-            handleFiles(e.dataTransfer.files);
-        });
+  function resetAll() {
+    filesToProcess = [];
+    convertedBlobs = [];
+    dropzone.style.display = 'block';
+    showPanel(null);
+    batchList.innerHTML = '';
+    resultsGrid.innerHTML = '';
+    batchProgressFill.style.width = '0%';
+    batchCount.textContent = '0%';
+  }
 
-        fileInput.addEventListener('change', (e) => {
-            handleFiles(e.target.files);
-        });
+  // Event listeners
+  dropzone.addEventListener('click', () => fileInput.click());
+  
+  dropzone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropzone.classList.add('dragover');
+  });
 
-        function handleFiles(files) {
-            const newFiles = Array.from(files).filter(f => 
-                f.type === 'image/bmp' || f.type === 'image/x-bmp' || 
-                f.name.toLowerCase().endsWith('.bmp')
-            );
-            
-            if (filesToProcess.length + newFiles.length > MAX_FILES) {
-                alert(`You can only upload a maximum of ${MAX_FILES} files.`);
-                return;
-            }
+  dropzone.addEventListener('dragleave', () => {
+    dropzone.classList.remove('dragover');
+  });
 
-            filesToProcess = [...filesToProcess, ...newFiles];
-            renderFileList();
-            
-            if (filesToProcess.length > 0) {
-                convertBtn.disabled = false;
-            }
-        }
+  dropzone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropzone.classList.remove('dragover');
+    handleFiles(e.dataTransfer.files);
+  });
 
-        function renderFileList() {
-            fileList.innerHTML = '';
-            filesToProcess.forEach((file, index) => {
-                const li = document.createElement('li');
-                li.className = 'file-item';
-                li.innerHTML = `<span>${file.name}</span> <span style="color:red; cursor:pointer;" onclick="removeFile(${index})">✕</span>`;
-                fileList.appendChild(li);
-            });
-        }
+  fileInput.addEventListener('change', (e) => {
+    handleFiles(e.target.files);
+  });
 
-        window.removeFile = function(index) {
-            filesToProcess.splice(index, 1);
-            renderFileList();
-            if (filesToProcess.length === 0) {
-                convertBtn.disabled = true;
-                downloadArea.innerHTML = '';
-                statusDiv.textContent = '';
-            }
-        };
-
-        convertBtn.addEventListener('click', async () => {
-            if (filesToProcess.length === 0) return;
-
-            convertBtn.disabled = true;
-            statusDiv.textContent = `Converting ${filesToProcess.length} files... Please wait.`;
-            downloadArea.innerHTML = '';
-
-            const zip = new JSZip();
-            const convertedFiles = [];
-
-            for (let i = 0; i < filesToProcess.length; i++) {
-                const file = filesToProcess[i];
-                try {
-                    const jpgBlob = await convertToJpg(file);
-                    const newName = file.name.replace(/\.bmp$/i, '.jpg');
-                    
-                    zip.file(newName, jpgBlob);
-                    
-                    const url = URL.createObjectURL(jpgBlob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = newName;
-                    a.textContent = `Download ${newName}`;
-                    a.style.display = 'block';
-                    a.style.marginBottom = '5px';
-                    downloadArea.appendChild(a);
-                    
-                    convertedFiles.push({ name: newName, blob: jpgBlob });
-                } catch (err) {
-                    console.error(`Error converting ${file.name}:`, err);
-                    statusDiv.textContent += `\nError converting ${file.name}.`;
-                }
-            }
-
-            if (convertedFiles.length > 0) {
-                const zipBlob = await zip.generateAsync({ type: "blob" });
-                const zipUrl = URL.createObjectURL(zipBlob);
-                const zipBtn = document.createElement('a');
-                zipBtn.href = zipUrl;
-                zipBtn.download = "heicly-converted-jpg.zip";
-                zipBtn.textContent = "Download All as ZIP";
-                zipBtn.className = "btn-convert";
-                zipBtn.style.display = "inline-block";
-                zipBtn.style.width = "auto";
-                zipBtn.style.marginTop = "10px";
-                downloadArea.appendChild(zipBtn);
-
-                statusDiv.textContent = `Successfully converted ${convertedFiles.length} files!`;
-            } else {
-                statusDiv.textContent = "Conversion failed.";
-            }
-
-            convertBtn.disabled = false;
-        });
-
-        function convertToJpg(file) {
-            return new Promise((resolve, reject) => {
-                const img = new Image();
-                img.src = URL.createObjectURL(file);
-                img.onload = () => {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0);
-                    
-                    canvas.toBlob((blob) => {
-                        if (blob) {
-                            resolve(blob);
-                        } else {
-                            reject(new Error('Conversion failed'));
-                        }
-                    }, 'image/jpeg', 0.9);
-                };
-                img.onerror = reject;
-            });
-        }
-    </script>
+  resetBtn.addEventListener('click', resetAll);
+  errorResetBtn.addEventListener('click', resetAll);
+})();
+</script>
 </body>
 </html>

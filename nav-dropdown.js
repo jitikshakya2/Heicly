@@ -56,17 +56,9 @@ const moreToolsMenuItems = [
  * @returns {string} HTML string for the dropdown
  */
 function renderDropdown(items, dropdownId) {
-  if (!items || items.length === 0) {
-    return `
-      <div id="${dropdownId}" class="mega-dropdown" role="menu" aria-hidden="true">
-        <div class="mega-dropdown-panel">
-          <p class="dropdown-empty">No tools available yet. Check back soon!</p>
-        </div>
-      </div>
-    `;
-  }
-
-  const itemsHtml = items.map((item, index) => `
+  const isEmpty = !items || items.length === 0;
+  
+  const itemsHtml = !isEmpty ? items.map((item, index) => `
     <a href="${item.url}" class="mega-dropdown-item" role="menuitem" tabindex="-1" data-index="${index}">
       <div class="mega-dropdown-icon" aria-hidden="true">
         ${getIconSvg(item.icon || 'default')}
@@ -79,14 +71,15 @@ function renderDropdown(items, dropdownId) {
         <polyline points="9 18 15 12 9 6"></polyline>
       </svg>
     </a>
-  `).join('');
+  `).join('') : '';
 
   return `
-    <div id="${dropdownId}" class="mega-dropdown" role="menu" aria-hidden="true">
+    <div id="${dropdownId}" class="mega-dropdown" role="menu" aria-hidden="true" data-empty="${isEmpty}">
       <div class="mega-dropdown-panel">
         <div class="mega-dropdown-grid">
           ${itemsHtml}
         </div>
+        ${isEmpty ? '<p class="dropdown-empty">Check back soon for new tools!</p>' : ''}
       </div>
     </div>
   `;

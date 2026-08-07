@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://heicly.in/sitemap.xml

@@ -7,7 +7,7 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
+  
   gtag('config', 'G-W7DVFC0C19');
 </script>
   <meta charset="UTF-8">
@@ -16,32 +16,32 @@
   <meta name="theme-color" content="#0c0d10">
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-
-  <title>Free HEIC to JPG, PNG or WEBP Converter | Heicly</title>
-  <meta name="description" content="Convert HEIC images to JPG, PNG, or WEBP for free directly in your browser. No uploads, no sign-up, and no server ever sees your photos.">
-  <link rel="canonical" href="https://heicly.in/">
-  <link rel="icon" type="image/png" sizes="1024x1024" href="heicly-logo-concept-b.png">
+  
+  <title>Free AVIF to JPG Converter | Heicly</title>
+  <meta name="description" content="Convert AVIF images to JPG for free directly in your browser. No uploads, no sign-up, and no server ever sees your photos.">
+  <link rel="canonical" href="https://heicly.in/avif-to-jpg">
+  <link rel="icon" type="image/png" sizes="1024x1024" href="../heicly-logo-concept-b.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Heicly">
-  <meta property="og:title" content="Free HEIC to JPG, PNG or WEBP Converter | Heicly">
-  <meta property="og:description" content="Convert HEIC images for free directly in your browser. Your photos are never uploaded.">
-  <meta property="og:url" content="https://heicly.in/">
+  <meta property="og:title" content="Free AVIF to JPG Converter | Heicly">
+  <meta property="og:description" content="Convert AVIF images to JPG for free directly in your browser. Your photos are never uploaded.">
+  <meta property="og:url" content="https://heicly.in/avif-to-jpg">
   <meta property="og:image" content="https://heicly.in/og-image.png">
   <meta property="og:image:secure_url" content="https://heicly.in/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Heicly browser-based HEIC image converter">
+  <meta property="og:image:alt" content="Heicly browser-based AVIF to JPG converter">
 
   <!-- X / Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Free HEIC to JPG, PNG or WEBP Converter | Heicly">
-  <meta name="twitter:description" content="Convert HEIC images for free directly in your browser. Your photos are never uploaded.">
+  <meta name="twitter:title" content="Free AVIF to JPG Converter | Heicly">
+  <meta name="twitter:description" content="Convert AVIF images to JPG for free directly in your browser. Your photos are never uploaded.">
   <meta name="twitter:image" content="https://heicly.in/og-image.png">
-  <meta name="twitter:image:alt" content="Heicly browser-based HEIC image converter">
+  <meta name="twitter:image:alt" content="Heicly browser-based AVIF to JPG converter">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -50,21 +50,20 @@
   "@graph": [
     {
       "@type": "WebApplication",
-      "@id": "https://heicly.in/#webapp",
-      "name": "Heicly",
-      "url": "https://heicly.in/",
-      "description": "Convert HEIC images to JPG, PNG, or WEBP for free directly in your browser, without uploading files.",
+      "@id": "https://heicly.in/avif-to-jpg/#webapp",
+      "name": "Heicly AVIF to JPG Converter",
+      "url": "https://heicly.in/avif-to-jpg",
+      "description": "Convert AVIF images to JPG for free directly in your browser, without uploading files.",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Any",
       "browserRequirements": "Requires JavaScript and a modern web browser.",
       "isAccessibleForFree": true,
       "image": "https://heicly.in/og-image.png",
       "featureList": [
-        "Convert HEIC to PNG",
-        "Convert HEIC to JPG",
-        "Convert HEIC to WEBP",
+        "Convert AVIF to JPG",
         "Client-side image conversion",
-        "No account required"
+        "No account required",
+        "Batch conversion up to 15 images"
       ],
       "offers": {
         "@type": "Offer",
@@ -74,7 +73,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://heicly.in/#faq-schema",
+      "@id": "https://heicly.in/avif-to-jpg/#faq-schema",
       "mainEntity": [
         {
           "@type": "Question",
@@ -94,18 +93,10 @@
         },
         {
           "@type": "Question",
-          "name": "Which format should I pick?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PNG is lossless and the safest default. JPG is smaller and ideal for photos you're sharing or emailing. WEBP balances small size with good quality if the destination supports it."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "Will this work on very large files?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Most photos convert in a second or two. Very large files (30MB+) or unusual HEIC variants can take longer or occasionally fail — that's a limitation of in-browser decoding, not a bug."
+            "text": "Most photos convert in a second or two. Very large files (30MB+) or unusual AVIF variants can take longer or occasionally fail — that's a limitation of in-browser decoding, not a bug."
           }
         }
       ]
@@ -239,6 +230,12 @@
     font-weight: 700;
     font-size: 18px;
     letter-spacing: -0.02em;
+    color: var(--text-main);
+    text-decoration: none;
+  }
+
+  .brand:hover {
+    opacity: 0.85;
   }
 
   .brand .mark {
@@ -408,22 +405,67 @@
     to { transform: rotate(360deg); }
   }
 
-  .swap-bar select {
-    appearance: none;
-    -webkit-appearance: none;
-    background: var(--bg-raised) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%239a9ea8" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>') no-repeat right 12px center;
-    background-size: 14px;
+  /* ---------- Quality Slider ---------- */
+  .quality-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 999px;
-    padding: 9px 36px 9px 16px;
+    padding: 10px 18px;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: rise 0.7s ease 0.28s forwards;
+  }
+
+  .quality-label {
     font-family: var(--font-mono);
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text-main);
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .quality-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 140px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+    outline: none;
     cursor: pointer;
   }
 
-  .swap-bar select:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .quality-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(255, 90, 78, 0.4);
+  }
+
+  .quality-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(255, 90, 78, 0.4);
+  }
+
+  .quality-value {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    min-width: 36px;
+    text-align: right;
+  }
 
   /* ---------- Dropzone ---------- */
   .zone-wrap {
@@ -771,6 +813,12 @@
   }
   .btn-secondary:hover { border-color: #3a3d45; }
 
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+
   .error-panel {
     display: none;
     background: #1c1416;
@@ -855,7 +903,7 @@
     flex-shrink: 0;
   }
 
-  .swatch.heic { background: linear-gradient(140deg, #ff5a4e, #d8483e); }
+  .swatch.avif { background: linear-gradient(140deg, #5a67d8, #434190); }
   .swatch.out { background: linear-gradient(140deg, #4a7dff, #2f5fd8); }
 
   .format-card .fmt-full { color: var(--text-faint); font-weight: 400; font-size: 12.5px; }
@@ -1145,7 +1193,7 @@
 <div class="grain" aria-hidden="true"></div>
 
 <header class="nav">
-  <div class="brand">
+  <a href="../index.html" class="brand" aria-label="Heicly Home">
     <div class="mark">
       <svg width="16" height="16" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
         <rect x="34" y="32" width="42" height="42" rx="6" fill="#14100e"/>
@@ -1153,17 +1201,15 @@
       </svg>
     </div>
     Heicly
-  </div>
+  </a>
   <nav class="links" aria-label="Primary navigation">
-    <a href="#converter">Converter</a>
-    <a href="avif-to-jpg/">AVIF to JPG</a>
-    <a href="avif-to-png/">AVIF to PNG</a>
-    <a href="#why">Why HEIC</a>
+    <a href="../index.html#converter">Converter</a>
+    <a href="#why">Why AVIF</a>
     <a href="#about">About</a>
     <a href="#privacy">Privacy</a>
     <a href="#faq">FAQ</a>
-    <a href="blog/index.html">Blog</a>
-    <a href="Heicly/privacy-policy.html">Privacy Policy</a>
+    <a href="../blog/index.html">Blog</a>
+    <a href="../Heicly/privacy-policy.html">Privacy Policy</a>
   </nav>
   <div class="nav-cta">No signup &middot; No uploads</div>
 </header>
@@ -1171,11 +1217,11 @@
 <main id="main-content">
   <section class="hero" id="converter" aria-labelledby="converter-title">
     <div class="eyebrow"><span class="pulse-dot"></span> Runs 100% in your browser</div>
-    <h1 class="hero-title" id="converter-title">Convert HEIC to <span class="grad">JPG PNG WEBP</span></h1>
-    <p class="hero-sub">Apple's photo format, translated instantly into something every device, app and person can actually open. No uploads. No accounts. No waiting on a server.</p>
+    <h1 class="hero-title" id="converter-title">Convert AVIF to <span class="grad">JPG instantly</span></h1>
+    <p class="hero-sub">Looking For How to Convert AVIF File to JPG? Here is the solution, Convert AVIF File to JPG for Free. No Signup, No Uploads And Fully Private.</p>
 
     <div class="swap-bar">
-      <span class="format-chip">HEIC</span>
+      <span class="format-chip">AVIF</span>
       <div class="swap-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="17 1 21 5 17 9"></polyline>
@@ -1184,11 +1230,13 @@
           <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
         </svg>
       </div>
-      <select id="formatSelect" name="output-format" aria-label="Output image format">
-        <option value="png" selected>PNG</option>
-        <option value="jpg">JPG</option>
-        <option value="webp">WEBP</option>
-      </select>
+      <span class="format-chip">JPG</span>
+    </div>
+
+    <div class="quality-control">
+      <span class="quality-label">JPG Quality:</span>
+      <input type="range" id="qualitySlider" class="quality-slider" min="50" max="100" value="92" aria-label="JPG output quality percentage">
+      <span class="quality-value" id="qualityValue">92%</span>
     </div>
 
     <div class="zone-wrap">
@@ -1201,9 +1249,9 @@
             <line x1="12" y1="3" x2="12" y2="15"></line>
           </svg>
         </div>
-        <h3>Drop up to 15 HEIC files here</h3>
+        <h3>Drop up to 15 AVIF files here</h3>
         <p>or <span class="browse-underline">browse from your device</span> — nothing leaves this tab</p>
-        <input type="file" id="fileInput" name="heic-file" accept=".heic,.HEIC,image/heic,image/heif" multiple aria-label="Choose up to 15 HEIC images to convert">
+        <input type="file" id="fileInput" name="avif-file" accept=".avif,.AVIF,image/avif" multiple aria-label="Choose up to 15 AVIF images to convert">
       </div>
 
       <!-- Batch progress state -->
@@ -1253,41 +1301,41 @@
     <div class="section-tag">Formats involved</div>
     <div class="formats-grid">
       <div class="format-card">
-        <div class="fmt-head"><span class="swatch heic">H</span> HEIC <span class="fmt-full">High Efficiency Image Format</span></div>
-        <p>Apple's default photo format since iOS 11. Encodes images with the HEVC codec, cutting file size roughly in half versus JPG at the same quality — but barely supported outside Apple hardware.</p>
+        <div class="fmt-head"><span class="swatch avif">A</span> AVIF <span class="fmt-full">AV1 Image File Format</span></div>
+        <p>A modern image format based on the AV1 video codec. Delivers exceptional compression with high quality — smaller than JPEG and WebP at equivalent visual fidelity. Supported by newer browsers and apps.</p>
       </div>
       <div class="format-card">
-        <div class="fmt-head"><span class="swatch out">O</span> <span id="fmtCardLabel">PNG</span> <span class="fmt-full" id="fmtCardFull">Portable Network Graphics</span></div>
-        <p id="fmtCardDesc">Lossless and universally supported. Every browser, editor and OS can open a PNG without a second thought — the safest possible export target.</p>
+        <div class="fmt-head"><span class="swatch out">O</span> JPG <span class="fmt-full">Joint Photographic Experts Group</span></div>
+        <p>The most universally supported image format on Earth. Every browser, operating system, email client, and social platform accepts JPG without question. Ideal for sharing and archiving.</p>
       </div>
     </div>
   </section>
 
   <!-- Why convert -->
   <section class="info-section reveal" id="why">
-    <h2>Why convert HEIC files?</h2>
-    <p class="info-intro">HEIC is efficient, but it was built for Apple's ecosystem first — and the rest of the world second.</p>
+    <h2>Why convert AVIF files?</h2>
+    <p class="info-intro">AVIF offers superior compression, but compatibility is still catching up. Converting to JPG ensures your images work everywhere.</p>
 
     <div class="info-grid">
       <div class="info-card">
         <span class="num">01</span>
         <h3>Universal compatibility</h3>
-        <p>Most Windows apps, websites, and older Android devices can't open HEIC. Converting to JPG or PNG guarantees it opens everywhere, every time.</p>
+        <p>Older browsers, legacy apps, and many image viewers don't support AVIF yet. JPG opens on any device, any OS, any software — guaranteed.</p>
       </div>
       <div class="info-card">
         <span class="num">02</span>
-        <h3>Painless sharing</h3>
-        <p>Web forms, social platforms, and email clients frequently reject or mishandle HEIC uploads. JPG and PNG are accepted without a second thought.</p>
+        <h3>Social media ready</h3>
+        <p>Many social platforms and upload forms still reject AVIF files. Convert to JPG first to avoid upload errors or automatic re-compression.</p>
       </div>
       <div class="info-card">
         <span class="num">03</span>
-        <h3>Editor support</h3>
-        <p>Older versions of Photoshop, GIMP, and other tools don't natively read HEIC. Converting first avoids compatibility headaches mid-edit.</p>
+        <h3>Email friendly</h3>
+        <p>Email clients frequently struggle with AVIF attachments. JPG ensures your recipients can actually view the photos you send.</p>
       </div>
       <div class="info-card">
         <span class="num">04</span>
-        <h3>Archiving & printing</h3>
-        <p>Print shops and long-term storage workflows overwhelmingly expect JPG or PNG. Converting protects your photos from becoming unreadable later.</p>
+        <h3>Print & archive safe</h3>
+        <p>Print shops and long-term archives expect JPG. Converting protects your images from becoming inaccessible as formats evolve.</p>
       </div>
     </div>
 
@@ -1303,24 +1351,8 @@
   <section class="content-section reveal" id="about">
     <div class="section-tag">About</div>
     <h2>Built to do one thing well</h2>
-    <p>This tool exists because converting a single photo shouldn't require an account, a subscription, or trusting a stranger's server with your camera roll. <strong>Heicly</strong> is a static page — the entire decoder runs inside your browser's own JavaScript engine, using the same technology that powers offline web apps.</p>
-    <p>There's no team behind an upload queue, no storage bill, and no reason to ask for your email. You open the page, drop a file, get a result. That's the whole product — ads are how it stays free to run, and they're kept separate from anything you convert. See the <a href="Heicly/privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Privacy Policy</a> for how those ads work.</p>
-    
-    <div class="tools-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin:2rem 0;">
-      <a href="avif-to-jpg/" class="tool-card" style="background:linear-gradient(135deg, rgba(255,99,71,0.08), rgba(255,140,0,0.06)); border:1px solid rgba(255,99,71,0.15); border-radius:16px; padding:1.5rem; text-decoration:none; color:inherit; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🦊</div>
-        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">AVIF to JPG Converter</h3>
-        <p style="margin:0; opacity:0.8; line-height:1.6;">Convert AVIF images to JPG format directly in your browser. No uploads, no sign-up, completely free.</p>
-        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(255,99,71,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Try AVIF to JPG →</div>
-      </a>
-      <a href="avif-to-png/" class="tool-card" style="background:linear-gradient(135deg, rgba(52,211,153,0.08), rgba(31,184,134,0.06)); border:1px solid rgba(52,211,153,0.15); border-radius:16px; padding:1.5rem; text-decoration:none; color:inherit; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🖼️</div>
-        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">AVIF to PNG Converter</h3>
-        <p style="margin:0; opacity:0.8; line-height:1.6;">Convert AVIF images to PNG with lossless quality and transparency support. No uploads, no sign-up, completely free.</p>
-        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(52,211,153,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Try AVIF to PNG →</div>
-      </a>
-    </div>
-    
+    <p>This tool exists because converting images shouldn't require an account, a subscription, or trusting a stranger's server with your photos. <strong>Heicly</strong> is a static page — the entire converter runs inside your browser's own rendering engine, using native browser APIs to decode AVIF and encode JPG.</p>
+    <p>There's no team behind an upload queue, no storage bill, and no reason to ask for your email. You open the page, drop a file, get a result. That's the whole product — ads are how it stays free to run, and they're kept separate from anything you convert. See the <a href="../Heicly/privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Privacy Policy</a> for how those ads work.</p>
     <div class="about-stats">
       <div class="stat"><span class="n">0</span><span class="l">Servers involved</span></div>
       <div class="stat"><span class="n">0</span><span class="l">Accounts required</span></div>
@@ -1336,11 +1368,11 @@
     <ul class="policy-list">
       <li>
         <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div><h4>No file leaves your device</h4><p>Conversion happens with in-browser JavaScript. Your HEIC file is read into memory locally and never sent anywhere.</p></div>
+        <div><h4>No file leaves your device</h4><p>Conversion happens with in-browser JavaScript. Your AVIF file is read into memory locally and never sent anywhere.</p></div>
       </li>
       <li>
         <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div><h4>Nothing tied to your files</h4><p>Your images and what you convert them to are never logged, stored, or associated with you. Ads on this page are served by Google and may use cookies for that purpose — see our <a href="Heicly/privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Privacy Policy</a> for details.</p></div>
+        <div><h4>Nothing tied to your files</h4><p>Your images and what you convert them to are never logged, stored, or associated with you. Ads on this page are served by Google and may use cookies for that purpose — see our <a href="../Heicly/privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Privacy Policy</a> for details.</p></div>
       </li>
       <li>
         <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
@@ -1373,17 +1405,17 @@
     </details>
 
     <details class="faq-item">
-      <summary>Which format should I pick?
+      <summary>What quality should I choose?
         <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </summary>
-      <div class="faq-body">PNG is lossless and the safest default. JPG is smaller and ideal for photos you're sharing or emailing. WEBP balances small size with good quality if the destination supports it.</div>
+      <div class="faq-body">The default 92% is ideal for most photos — excellent quality with reasonable file size. Use 100% for archival or editing, and lower values (70–85%) for web use where smaller files matter more.</div>
     </details>
 
     <details class="faq-item">
       <summary>Will this work on very large files?
         <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </summary>
-      <div class="faq-body">Most photos convert in a second or two. Very large files (30MB+) or unusual HEIC variants can take longer or occasionally fail — that's a limitation of in-browser decoding, not a bug.</div>
+      <div class="faq-body">Most photos convert in a second or two. Very large files (30MB+) or unusual AVIF variants can take longer or occasionally fail — that's a limitation of in-browser decoding, not a bug.</div>
     </details>
   </section>
 </main>
@@ -1391,20 +1423,17 @@
 <footer class="site-footer" aria-label="Site footer">
   <div class="footer-inner">
     <nav class="footer-links" aria-label="Footer navigation">
-      <a href="#converter">Converter</a>
-      <a href="avif-to-jpg/">AVIF to JPG</a>
-      <a href="#about">About</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#faq">FAQ</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="Heicly/privacy-policy.html">Privacy Policy</a>
+      <a href="../index.html#converter">Converter</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../blog/index.html">Blog</a>
+      <a href="../Heicly/privacy-policy.html">Privacy Policy</a>
     </nav>
-    <div class="footer-note">Free, client-side HEIC converter. No sign-up, no watermarks, no server-imposed limits.</div>
+    <div class="footer-note">Free, client-side AVIF to JPG converter. No sign-up, no watermarks, no server-imposed limits.</div>
   </div>
 </footer>
 
-<!-- heic2any: client-side HEIC decoding engine -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/heic2any/0.0.4/heic2any.min.js"></script>
 <!-- JSZip: bundles multi-file results into a single .zip for "Download All" -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
@@ -1412,11 +1441,12 @@
 (function () {
   "use strict";
 
-  const MAX_FILES = 15;
+  const MAX_BATCH_FILES = 15;
 
   const dropzone = document.getElementById('dropzone');
   const fileInput = document.getElementById('fileInput');
-  const formatSelect = document.getElementById('formatSelect');
+  const qualitySlider = document.getElementById('qualitySlider');
+  const qualityValue = document.getElementById('qualityValue');
 
   const batchPanel = document.getElementById('batchPanel');
   const batchTitle = document.getElementById('batchTitle');
@@ -1435,48 +1465,14 @@
   const errorMessage = document.getElementById('errorMessage');
   const errorResetBtn = document.getElementById('errorResetBtn');
 
-  const fmtCardLabel = document.getElementById('fmtCardLabel');
-  const fmtCardFull = document.getElementById('fmtCardFull');
-  const fmtCardDesc = document.getElementById('fmtCardDesc');
-
   let activeObjectUrls = [];  // object URLs from the current batch, cleaned up on reset
   let currentResults = [];    // [{ name, blob, url, size }] for the current batch
 
-  const formatMeta = {
-    png: {
-      full: 'Portable Network Graphics',
-      desc: "Lossless and universally supported. Every browser, editor and OS can open a PNG without a second thought — the safest possible export target."
-    },
-    jpg: {
-      full: 'Joint Photographic Experts Group',
-      desc: "The most widely accepted photo format on the web. Smaller files than PNG through lossy compression — ideal for sharing and emailing."
-    },
-    webp: {
-      full: 'Web Picture Format',
-      desc: "A modern format balancing small file size with strong quality. Supported by all current browsers and increasingly by editing tools."
-    }
-  };
-
-  function updateFormatCard() {
-    const fmt = formatSelect.value;
-    const meta = formatMeta[fmt] || formatMeta.png;
-    fmtCardLabel.textContent = fmt.toUpperCase();
-    fmtCardFull.textContent = meta.full;
-    fmtCardDesc.textContent = meta.desc;
+  // Update quality slider display
+  function updateQualityDisplay() {
+    qualityValue.textContent = qualitySlider.value + '%';
   }
-  formatSelect.addEventListener('change', updateFormatCard);
-
-  // Pre-select output format from a URL param, e.g. heicly.in/?to=jpg
-  // Lets blog posts / external links land users with the right format already chosen.
-  (function applyFormatFromQuery() {
-    const params = new URLSearchParams(window.location.search);
-    const requested = (params.get('to') || '').toLowerCase();
-    if (['png', 'jpg', 'webp'].includes(requested)) {
-      formatSelect.value = requested;
-    }
-  })();
-
-  updateFormatCard();
+  qualitySlider.addEventListener('input', updateQualityDisplay);
 
   function showPanel(panel) {
     [dropzone, batchPanel, resultsPanel, errorPanel].forEach(p => {
@@ -1550,12 +1546,31 @@
   resetBtn.addEventListener('click', resetToDropzone);
   errorResetBtn.addEventListener('click', resetToDropzone);
 
+  // --- Paste support ---
+  window.addEventListener('paste', (e) => {
+    const items = e.clipboardData?.items;
+    if (!items) return;
+
+    const files = [];
+    for (const item of items) {
+      if (item.type.startsWith('image/')) {
+        const file = item.getAsFile();
+        if (file) {
+          files.push(file);
+        }
+      }
+    }
+
+    if (files.length > 0) {
+      handleFiles(files);
+    }
+  });
+
   // --- Core conversion logic ---
-  function isLikelyHeic(file) {
+  function isLikelyAvif(file) {
     const name = (file.name || '').toLowerCase();
     const type = (file.type || '').toLowerCase();
-    return name.endsWith('.heic') || name.endsWith('.heif') ||
-           type === 'image/heic' || type === 'image/heif' || type === '';
+    return name.endsWith('.avif') || type === 'image/avif' || type === '';
   }
 
   function setItemStatus(index, status, label) {
@@ -1583,18 +1598,57 @@
     }
   }
 
+  async function convertAvifToJpeg(avifBlob, quality) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      const url = URL.createObjectURL(avifBlob);
+
+      img.onload = () => {
+        URL.revokeObjectURL(url);
+        try {
+          const canvas = document.createElement('canvas');
+          canvas.width = img.width;
+          canvas.height = img.height;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0);
+
+          canvas.toBlob(
+            (blob) => {
+              if (blob) {
+                resolve({ blob, width: img.width, height: img.height });
+              } else {
+                reject(new Error('Canvas toBlob failed'));
+              }
+            },
+            'image/jpeg',
+            quality / 100
+          );
+        } catch (err) {
+          reject(err);
+        }
+      };
+
+      img.onerror = () => {
+        URL.revokeObjectURL(url);
+        reject(new Error('Failed to decode AVIF image'));
+      };
+
+      img.src = url;
+    });
+  }
+
   async function handleFiles(fileList) {
-    let files = Array.from(fileList).filter(isLikelyHeic);
+    let files = Array.from(fileList).filter(isLikelyAvif);
 
     if (files.length === 0) {
-      showError('Please select valid .heic files.');
+      showError('Please select valid .avif files.');
       return;
     }
 
     let trimmedNotice = '';
-    if (files.length > MAX_FILES) {
-      trimmedNotice = `Only the first ${MAX_FILES} files were used — ${MAX_FILES} at a time is the current limit.`;
-      files = files.slice(0, MAX_FILES);
+    if (files.length > MAX_BATCH_FILES) {
+      trimmedNotice = `Only the first ${MAX_BATCH_FILES} files were used — ${MAX_BATCH_FILES} at a time is the current limit.`;
+      files = files.slice(0, MAX_BATCH_FILES);
     }
 
     revokeActiveUrls();
@@ -1602,10 +1656,7 @@
     resultsGrid.innerHTML = '';
     batchWarning.style.display = 'none';
 
-    const format = formatSelect.value; // "png" | "jpg" | "webp"
-    const mimeMap = { png: 'image/png', jpg: 'image/jpeg', webp: 'image/webp' };
-    const outputMime = mimeMap[format] || 'image/png';
-    const extension = format === 'jpg' ? 'jpg' : format;
+    const quality = parseInt(qualitySlider.value, 10);
 
     // Build the per-file progress list up front
     batchList.innerHTML = '';
@@ -1626,7 +1677,7 @@
 
     let successCount = 0;
 
-    // Files are converted ONE AT A TIME on purpose: only a single HEIC decode
+    // Files are converted ONE AT A TIME on purpose: only a single decode
     // is ever active in memory at once, which keeps the tab responsive and
     // avoids memory spikes on phones/low-RAM devices even with 15 files queued.
     for (let i = 0; i < files.length; i++) {
@@ -1635,8 +1686,8 @@
       setItemStatus(i, 'active');
 
       try {
-        const result = await heic2any({ blob: file, toType: outputMime, quality: 0.9 });
-        const outputBlob = Array.isArray(result) ? result[0] : result;
+        const result = await convertAvifToJpeg(file, quality);
+        const outputBlob = result.blob;
 
         if (!outputBlob || outputBlob.size === 0) {
           throw new Error('Conversion produced an empty file.');
@@ -1646,13 +1697,20 @@
         activeObjectUrls.push(objectUrl);
 
         const originalName = file.name.replace(/\.[^/.]+$/, '');
-        const outFileName = `${originalName}.${extension}`;
+        const outFileName = `${originalName}.jpg`;
 
-        currentResults.push({ name: outFileName, blob: outputBlob, url: objectUrl, size: outputBlob.size });
+        currentResults.push({ 
+          name: outFileName, 
+          blob: outputBlob, 
+          url: objectUrl, 
+          size: outputBlob.size,
+          width: result.width,
+          height: result.height
+        });
         setItemStatus(i, 'done');
         successCount++;
       } catch (err) {
-        console.error('HEIC conversion error:', file.name, err);
+        console.error('AVIF conversion error:', file.name, err);
         setItemStatus(i, 'error', 'Failed');
       }
 
@@ -1660,9 +1718,7 @@
       batchProgressFill.style.width = pct + '%';
       batchCount.textContent = pct + '%';
 
-      // Yield to the browser so it can repaint between files — this is what
-      // keeps the progress list and UI feeling smooth instead of freezing
-      // while heic2any works on the next image.
+      // Yield to the browser so it can repaint between files
       await new Promise(requestAnimationFrame);
     }
 

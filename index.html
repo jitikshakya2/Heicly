@@ -1156,16 +1156,28 @@
   </div>
   <nav class="links" aria-label="Primary navigation">
     <a href="#converter">Converter</a>
-    <a href="avif-to-jpg/">AVIF to JPG</a>
-    <a href="avif-to-png/">AVIF to PNG</a>
+    <div class="nav-with-dropdown">
+      <button class="nav-tools-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tools-dropdown">
+        Tools
+        <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+    </div>
     <a href="#why">Why HEIC</a>
     <a href="#about">About</a>
     <a href="#privacy">Privacy</a>
     <a href="#faq">FAQ</a>
     <a href="blog/index.html">Blog</a>
-    <a href="Heicly/privacy-policy.html">Privacy Policy</a>
+    <div class="nav-with-dropdown">
+      <button class="nav-more-tools-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="more-tools-dropdown">
+        More Tools
+        <svg class="nav-dropdown-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+    </div>
   </nav>
-  <div class="nav-cta">No signup &middot; No uploads</div>
 </header>
 
 <main id="main-content">
@@ -1749,6 +1761,8 @@
   }
 })();
 </script>
+
+<script src="nav-dropdown.js" defer></script>
 
 </body>
 </html>

@@ -17,31 +17,31 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   
-  <title>Free AVIF to PNG Converter | Heicly</title>
-  <meta name="description" content="Convert AVIF images to PNG for free directly in your browser. No uploads, no sign-up, and no server ever sees your photos. Lossless conversion with transparency support.">
-  <link rel="canonical" href="https://heicly.in/avif-to-png">
+  <title>Free AVIF to JPG Converter | Heicly</title>
+  <meta name="description" content="Convert AVIF images to JPG for free directly in your browser. No uploads, no sign-up, and no server ever sees your photos.">
+  <link rel="canonical" href="https://heicly.in/avif-to-jpg">
   <link rel="icon" type="image/png" sizes="1024x1024" href="../heicly-logo-concept-b.png">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Heicly">
-  <meta property="og:title" content="Free AVIF to PNG Converter | Heicly">
-  <meta property="og:description" content="Convert AVIF images to PNG for free directly in your browser. Your photos are never uploaded. Lossless conversion with transparency support.">
-  <meta property="og:url" content="https://heicly.in/avif-to-png">
+  <meta property="og:title" content="Free AVIF to JPG Converter | Heicly">
+  <meta property="og:description" content="Convert AVIF images to JPG for free directly in your browser. Your photos are never uploaded.">
+  <meta property="og:url" content="https://heicly.in/avif-to-jpg">
   <meta property="og:image" content="https://heicly.in/og-image.png">
   <meta property="og:image:secure_url" content="https://heicly.in/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Heicly browser-based AVIF to PNG converter">
+  <meta property="og:image:alt" content="Heicly browser-based AVIF to JPG converter">
 
   <!-- X / Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Free AVIF to PNG Converter | Heicly">
-  <meta name="twitter:description" content="Convert AVIF images to PNG for free directly in your browser. Your photos are never uploaded.">
+  <meta name="twitter:title" content="Free AVIF to JPG Converter | Heicly">
+  <meta name="twitter:description" content="Convert AVIF images to JPG for free directly in your browser. Your photos are never uploaded.">
   <meta name="twitter:image" content="https://heicly.in/og-image.png">
-  <meta name="twitter:image:alt" content="Heicly browser-based AVIF to PNG converter">
+  <meta name="twitter:image:alt" content="Heicly browser-based AVIF to JPG converter">
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -50,22 +50,20 @@
   "@graph": [
     {
       "@type": "WebApplication",
-      "@id": "https://heicly.in/avif-to-png/#webapp",
-      "name": "Heicly AVIF to PNG Converter",
-      "url": "https://heicly.in/avif-to-png",
-      "description": "Convert AVIF images to PNG for free directly in your browser, without uploading files.",
+      "@id": "https://heicly.in/avif-to-jpg/#webapp",
+      "name": "Heicly AVIF to JPG Converter",
+      "url": "https://heicly.in/avif-to-jpg",
+      "description": "Convert AVIF images to JPG for free directly in your browser, without uploading files.",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Any",
       "browserRequirements": "Requires JavaScript and a modern web browser.",
       "isAccessibleForFree": true,
       "image": "https://heicly.in/og-image.png",
       "featureList": [
-        "Convert AVIF to PNG",
+        "Convert AVIF to JPG",
         "Client-side image conversion",
         "No account required",
-        "Batch conversion up to 15 images",
-        "Lossless PNG output",
-        "Transparency preservation"
+        "Batch conversion up to 15 images"
       ],
       "offers": {
         "@type": "Offer",
@@ -75,7 +73,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://heicly.in/avif-to-png/#faq-schema",
+      "@id": "https://heicly.in/avif-to-jpg/#faq-schema",
       "mainEntity": [
         {
           "@type": "Question",
@@ -99,14 +97,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Most photos convert in a second or two. Very large files (30MB+) or unusual AVIF variants can take longer or occasionally fail — that's a limitation of in-browser decoding, not a bug."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does PNG preserve transparency?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The converter preserves the alpha channel, so transparent areas in your AVIF images remain transparent in the PNG output."
           }
         }
       ]
@@ -288,15 +278,217 @@
   }
   nav.links a:hover::after { transform: scaleX(1); }
 
-  .nav-cta {
+  /* ---------- Formats dropdown (nav) ---------- */
+  .nav-menu { position: relative; }
+
+  .nav-menu-trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
     font-size: 12.5px;
     font-weight: 600;
-    color: var(--text-faint);
     letter-spacing: 0.02em;
+    color: var(--text-faint);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 9px 16px;
+    cursor: pointer;
+    overflow: hidden;
+    isolation: isolate;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.15s ease;
+    animation: toolsGlow 3.2s ease-in-out infinite;
+  }
+
+  @keyframes toolsGlow {
+    0%, 100% { box-shadow: 0 0 0 0 var(--accent-soft); }
+    50% { box-shadow: 0 0 0 6px rgba(255, 90, 78, 0.10); }
+  }
+
+  .nav-menu-trigger::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(115deg, var(--accent), #ff8a4e, #ffc16b, var(--accent-dark), var(--accent));
+    background-size: 300% 300%;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    animation: toolsGradientFlow 5s ease infinite;
+  }
+
+  .nav-menu-trigger::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(115deg, transparent 20%, rgba(255, 255, 255, 0.35) 45%, transparent 65%);
+    transform: translateX(-120%);
+    transition: transform 0.6s ease;
+  }
+
+  @keyframes toolsGradientFlow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .nav-menu-trigger:hover,
+  .nav-menu-trigger[aria-expanded="true"] {
+    color: #14100e;
+    border-color: transparent;
+    transform: scale(1.045);
+    animation: none;
+  }
+
+  .nav-menu-trigger:hover::before,
+  .nav-menu-trigger[aria-expanded="true"]::before {
+    opacity: 1;
+  }
+
+  .nav-menu-trigger:hover::after,
+  .nav-menu-trigger[aria-expanded="true"]::after {
+    transform: translateX(120%);
+  }
+
+  .nav-menu-trigger:active { transform: scale(0.96); }
+
+  .nav-menu-trigger svg {
+    flex-shrink: 0;
+    color: var(--text-faint);
+    transition: transform 0.25s ease, color 0.3s ease;
+  }
+
+  .nav-menu-trigger:hover svg,
+  .nav-menu-trigger[aria-expanded="true"] svg {
+    color: #14100e;
+  }
+
+  .nav-menu-trigger[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+
+  .nav-menu-panel {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    z-index: 60;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 28px;
+    width: 460px;
+    padding: 22px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(0.98);
+    transform-origin: top right;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  }
+
+  .nav-menu-panel.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  .nav-menu-heading {
+    margin: 0 0 10px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+
+  .nav-menu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    margin: 0 -10px;
+    padding: 8px 10px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: background 0.15s ease;
+  }
+
+  .nav-menu-item:hover { background: var(--bg-raised); }
+  .nav-menu-item:hover .nav-menu-item-title { color: var(--accent); }
+
+  .nav-menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 11.5px;
+    color: #14100e;
+    background: linear-gradient(140deg, var(--accent), #ff8a4e);
+  }
+
+  .nav-menu-icon.alt {
+    color: #0c0d10;
+    background: linear-gradient(140deg, #4a7dff, #7aa2ff);
+  }
+
+  .nav-menu-item-title {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-main);
+    transition: color 0.15s ease;
+  }
+
+  .nav-menu-item-sub {
+    display: block;
+    margin-top: 2px;
+    font-size: 11.5px;
+    color: var(--text-faint);
+  }
+
+  .nav-menu-footer {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-soft);
+    font-size: 11.5px;
+    color: var(--text-faint);
+  }
+
+  .nav-menu-footer-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--success);
+    box-shadow: 0 0 0 3px var(--success-soft);
+    flex-shrink: 0;
   }
 
   @media (max-width: 720px) {
     nav.links { display: none; }
+
+    .nav-menu-panel {
+      position: fixed;
+      top: 76px;
+      left: 12px;
+      right: 12px;
+      width: auto;
+      grid-template-columns: 1fr;
+      max-height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
   }
 
   /* ---------- Hero ---------- */
@@ -413,6 +605,68 @@
 
   @keyframes spin-slow {
     to { transform: rotate(360deg); }
+  }
+
+  /* ---------- Quality Slider ---------- */
+  .quality-control {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 18px;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: rise 0.7s ease 0.28s forwards;
+  }
+
+  .quality-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  .quality-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 140px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--border);
+    outline: none;
+    cursor: pointer;
+  }
+
+  .quality-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(255, 90, 78, 0.4);
+  }
+
+  .quality-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(255, 90, 78, 0.4);
+  }
+
+  .quality-value {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    min-width: 36px;
+    text-align: right;
   }
 
   /* ---------- Dropzone ---------- */
@@ -556,6 +810,13 @@
   }
 
   .success-icon svg { width: 22px; height: 22px; stroke: var(--success); }
+
+  .success-panel h3 {
+    font-family: var(--font-display);
+    margin: 0 0 4px;
+    font-size: 18px;
+    color: var(--success);
+  }
 
   /* ---------- Batch progress panel ---------- */
   .batch-panel { text-align: left; }
@@ -754,6 +1015,12 @@
   }
   .btn-secondary:hover { border-color: #3a3d45; }
 
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+
   .error-panel {
     display: none;
     background: #1c1416;
@@ -788,19 +1055,25 @@
   .section-tag {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-family: var(--font-mono);
+    gap: 8px;
     font-size: 11.5px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--text-faint);
     margin-bottom: 18px;
   }
 
+  .section-tag::before {
+    content: "";
+    width: 14px;
+    height: 1px;
+    background: var(--accent);
+  }
+
   .formats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 18px;
   }
 
@@ -815,26 +1088,25 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 15px;
     margin-bottom: 10px;
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 15px;
   }
 
   .format-card .fmt-head .swatch {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-mono);
-    font-size: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px;
     font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
   }
 
-  .swatch.avif { background: linear-gradient(140deg, #6d4aff, #4a7dff); color: #fff; }
-  .swatch.out { background: linear-gradient(140deg, #34d399, #1fb886); color: #062c20; }
+  .swatch.avif { background: linear-gradient(140deg, #5a67d8, #434190); }
+  .swatch.out { background: linear-gradient(140deg, #4a7dff, #2f5fd8); }
 
   .format-card .fmt-full { color: var(--text-faint); font-weight: 400; font-size: 12.5px; }
 
@@ -842,137 +1114,143 @@
     margin: 0;
     font-size: 13.5px;
     color: var(--text-muted);
-    line-height: 1.6;
   }
 
-  /* ---------- Info section ---------- */
+  @media (max-width: 620px) {
+    .formats-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Why convert / info ---------- */
   .info-section {
-    max-width: 900px;
+    max-width: 1040px;
     margin: 90px auto 0;
     padding: 0 24px;
   }
 
   .info-section h2 {
     font-family: var(--font-display);
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
     margin: 0 0 10px;
   }
 
-  .info-intro {
+  .info-section .info-intro {
     color: var(--text-muted);
     font-size: 15px;
-    max-width: 600px;
-    margin: 0 0 28px;
+    max-width: 540px;
+    margin: 0 0 40px;
   }
 
   .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    margin-bottom: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
   }
 
   .info-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: 20px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    padding: 22px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
   }
 
   .info-card:hover {
-    transform: translateY(-2px);
-    border-color: #3a3d45;
+    transform: translateY(-4px);
+    border-color: #34363d;
   }
 
   .info-card .num {
     font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 12px;
     color: var(--accent);
-    letter-spacing: 0.08em;
+    margin-bottom: 14px;
     display: block;
-    margin-bottom: 8px;
   }
 
   .info-card h3 {
     font-family: var(--font-display);
-    font-size: 15px;
+    font-size: 15.5px;
+    margin: 0 0 8px;
     font-weight: 600;
-    margin: 0 0 6px;
   }
 
   .info-card p {
-    margin: 0;
     font-size: 13.5px;
     color: var(--text-muted);
-    line-height: 1.6;
+    margin: 0;
   }
 
   .privacy-banner {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    background: var(--bg-card);
+    margin-top: 22px;
+    background: linear-gradient(120deg, #16181d, #1a1416);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: 18px 20px;
-    font-size: 14px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 13.5px;
     color: var(--text-muted);
   }
 
   .privacy-banner .lock-icon {
-    width: 24px;
-    height: 24px;
+    width: 34px; height: 34px;
     flex-shrink: 0;
-    color: var(--success);
+    border-radius: 9px;
+    background: var(--accent-soft);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
   }
+  .privacy-banner .lock-icon svg { width: 16px; height: 16px; }
 
-  /* ---------- About ---------- */
-  .about-section {
+  .privacy-banner strong { color: var(--text-main); }
+
+  /* ---------- Generic content sections (About / Privacy / FAQ) ---------- */
+  .content-section {
     max-width: 760px;
     margin: 90px auto 0;
     padding: 0 24px;
   }
 
-  .about-section h2 {
+  .content-section h2 {
     font-family: var(--font-display);
     font-size: 26px;
-    font-weight: 600;
-    margin: 0 0 14px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 18px;
   }
 
-  .about-section p {
+  .content-section p {
     color: var(--text-muted);
     font-size: 15px;
-    line-height: 1.7;
     margin: 0 0 16px;
   }
 
-  .about-section strong { color: var(--text-main); }
+  .content-section p strong { color: var(--text-main); }
 
   .about-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 28px;
+    gap: 14px;
+    margin: 28px 0 8px;
   }
 
   .about-stats .stat {
-    text-align: center;
-    padding: 18px 12px;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
+    padding: 18px;
+    text-align: center;
   }
 
   .about-stats .stat .n {
-    display: block;
     font-family: var(--font-display);
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--accent);
+    display: block;
   }
 
   .about-stats .stat .l {
@@ -1127,7 +1405,7 @@
     Heicly
   </a>
   <nav class="links" aria-label="Primary navigation">
-    <a href="../index.html#converter">Converter</a>
+    <a href="#converter">Converter</a>
     <a href="#why">Why AVIF</a>
     <a href="#about">About</a>
     <a href="#privacy">Privacy</a>
@@ -1135,14 +1413,102 @@
     <a href="../blog/index.html">Blog</a>
     <a href="../privacy-policy.html">Privacy Policy</a>
   </nav>
-  <div class="nav-cta">No signup &middot; No uploads</div>
+  <div class="nav-menu">
+    <button type="button" class="nav-menu-trigger" id="formatsMenuTrigger" aria-haspopup="true" aria-expanded="false" aria-controls="formatsMenuPanel">
+      <span>Tools</span>
+      <svg width="10" height="10" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="nav-menu-panel" id="formatsMenuPanel" role="menu" aria-label="All converters">
+      <div class="nav-menu-col">
+        <p class="nav-menu-heading">Convert HEIC to</p>
+        <a href="../index.html?to=jpg#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">J</span>
+          <span>
+            <span class="nav-menu-item-title">HEIC to JPG</span>
+            <span class="nav-menu-item-sub">Universal compatibility</span>
+          </span>
+        </a>
+        <a href="../index.html?to=png#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">P</span>
+          <span>
+            <span class="nav-menu-item-title">HEIC to PNG</span>
+            <span class="nav-menu-item-sub">Lossless, with transparency</span>
+          </span>
+        </a>
+        <a href="../index.html?to=webp#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">W</span>
+          <span>
+            <span class="nav-menu-item-title">HEIC to WEBP</span>
+            <span class="nav-menu-item-sub">Small size, modern web</span>
+          </span>
+        </a>
+      </div>
+      <div class="nav-menu-col">
+        <p class="nav-menu-heading">Convert AVIF to</p>
+        <a href="../avif-to-jpg/" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon alt">J</span>
+          <span>
+            <span class="nav-menu-item-title">AVIF to JPG</span>
+            <span class="nav-menu-item-sub">Open it anywhere</span>
+          </span>
+        </a>
+        <a href="../avif-to-png/" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon alt">P</span>
+          <span>
+            <span class="nav-menu-item-title">AVIF to PNG</span>
+            <span class="nav-menu-item-sub">Lossless, with transparency</span>
+          </span>
+        </a>
+      </div>
+      <div class="nav-menu-footer">
+        <span class="nav-menu-footer-dot" aria-hidden="true"></span>
+        Every conversion runs locally — nothing is ever uploaded
+      </div>
+    </div>
+  </div>
 </header>
+
+<script>
+  (function () {
+    var trigger = document.getElementById('formatsMenuTrigger');
+    var panel = document.getElementById('formatsMenuPanel');
+    if (!trigger || !panel) return;
+
+    function closeMenu() {
+      panel.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+    function openMenu() {
+      panel.classList.add('open');
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      panel.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!panel.contains(e.target) && e.target !== trigger) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    panel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+  })();
+</script>
 
 <main id="main-content">
   <section class="hero" id="converter" aria-labelledby="converter-title">
     <div class="eyebrow"><span class="pulse-dot"></span> Runs 100% in your browser</div>
-    <h1 class="hero-title" id="converter-title">Convert AVIF to <span class="grad">PNG instantly</span></h1>
-    <p class="hero-sub">Looking For How to Convert AVIF File to PNG? Here is the solution, Convert AVIF File to PNG for Free. No Signup, No Uploads And Fully Private. Lossless conversion with transparency support.</p>
+    <h1 class="hero-title" id="converter-title">Convert AVIF to <span class="grad">JPG instantly</span></h1>
+    <p class="hero-sub">Looking For How to Convert AVIF File to JPG? Here is the solution, Convert AVIF File to JPG for Free. No Signup, No Uploads And Fully Private.</p>
 
     <div class="swap-bar">
       <span class="format-chip">AVIF</span>
@@ -1154,7 +1520,13 @@
           <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
         </svg>
       </div>
-      <span class="format-chip">PNG</span>
+      <span class="format-chip">JPG</span>
+    </div>
+
+    <div class="quality-control">
+      <span class="quality-label">JPG Quality:</span>
+      <input type="range" id="qualitySlider" class="quality-slider" min="50" max="100" value="92" aria-label="JPG output quality percentage">
+      <span class="quality-value" id="qualityValue">92%</span>
     </div>
 
     <div class="zone-wrap">
@@ -1223,8 +1595,8 @@
         <p>A modern image format based on the AV1 video codec. Delivers exceptional compression with high quality — smaller than JPEG and WebP at equivalent visual fidelity. Supported by newer browsers and apps.</p>
       </div>
       <div class="format-card">
-        <div class="fmt-head"><span class="swatch out">O</span> PNG <span class="fmt-full">Portable Network Graphics</span></div>
-        <p>A lossless image format that supports transparency (alpha channel). PNG is universally supported and ideal for images requiring perfect quality, graphics with transparency, or archival purposes.</p>
+        <div class="fmt-head"><span class="swatch out">O</span> JPG <span class="fmt-full">Joint Photographic Experts Group</span></div>
+        <p>The most universally supported image format on Earth. Every browser, operating system, email client, and social platform accepts JPG without question. Ideal for sharing and archiving.</p>
       </div>
     </div>
   </section>
@@ -1232,28 +1604,28 @@
   <!-- Why convert -->
   <section class="info-section reveal" id="why">
     <h2>Why convert AVIF files?</h2>
-    <p class="info-intro">AVIF offers excellent compression, but compatibility is still catching up. Converting to PNG ensures lossless quality and broader support with transparency preserved.</p>
+    <p class="info-intro">AVIF offers superior compression, but compatibility is still catching up. Converting to JPG ensures your images work everywhere.</p>
 
     <div class="info-grid">
       <div class="info-card">
         <span class="num">01</span>
-        <h3>Lossless quality</h3>
-        <p>PNG uses lossless compression, meaning no quality is lost during conversion. Perfect for preserving every detail of your original AVIF images.</p>
+        <h3>Universal compatibility</h3>
+        <p>Older browsers, legacy apps, and many image viewers don't support AVIF yet. JPG opens on any device, any OS, any software — guaranteed.</p>
       </div>
       <div class="info-card">
         <span class="num">02</span>
-        <h3>Transparency support</h3>
-        <p>PNG fully supports alpha transparency. Any transparent areas in your AVIF images will remain transparent in the PNG output.</p>
+        <h3>Social media ready</h3>
+        <p>Many social platforms and upload forms still reject AVIF files. Convert to JPG first to avoid upload errors or automatic re-compression.</p>
       </div>
       <div class="info-card">
         <span class="num">03</span>
-        <h3>Universal compatibility</h3>
-        <p>PNG is supported by virtually every application, browser, and operating system. Share your images with confidence.</p>
+        <h3>Email friendly</h3>
+        <p>Email clients frequently struggle with AVIF attachments. JPG ensures your recipients can actually view the photos you send.</p>
       </div>
       <div class="info-card">
         <span class="num">04</span>
-        <h3>Archive safe</h3>
-        <p>PNG is a stable, well-documented format ideal for long-term storage. Your converted images will remain accessible for years to come.</p>
+        <h3>Print & archive safe</h3>
+        <p>Print shops and long-term archives expect JPG. Converting protects your images from becoming inaccessible as formats evolve.</p>
       </div>
     </div>
 
@@ -1266,27 +1638,11 @@
   </section>
 
   <!-- About -->
-  <section class="about-section reveal" id="about">
+  <section class="content-section reveal" id="about">
     <div class="section-tag">About</div>
     <h2>Built to do one thing well</h2>
-    <p>This tool exists because converting images shouldn't require an account, a subscription, or trusting a stranger's server with your photos. <strong>Heicly</strong> is a static page — the entire decoder runs inside your browser's own JavaScript engine, using the same technology that powers offline web apps.</p>
+    <p>This tool exists because converting images shouldn't require an account, a subscription, or trusting a stranger's server with your photos. <strong>Heicly</strong> is a static page — the entire converter runs inside your browser's own rendering engine, using native browser APIs to decode AVIF and encode JPG.</p>
     <p>There's no team behind an upload queue, no storage bill, and no reason to ask for your email. You open the page, drop a file, get a result. That's the whole product — ads are how it stays free to run, and they're kept separate from anything you convert. See the <a href="../privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Privacy Policy</a> for how those ads work.</p>
-    
-    <div class="tools-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin:2rem 0;">
-      <a href="../avif-to-jpg/" class="tool-card" style="background:linear-gradient(135deg, rgba(255,99,71,0.08), rgba(255,140,0,0.06)); border:1px solid rgba(255,99,71,0.15); border-radius:16px; padding:1.5rem; text-decoration:none; color:inherit; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">🦊</div>
-        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">AVIF to JPG Converter</h3>
-        <p style="margin:0; opacity:0.8; line-height:1.6;">Need JPG instead? Convert AVIF images to JPG format directly in your browser. No uploads, no sign-up, completely free.</p>
-        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(255,99,71,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Try AVIF to JPG →</div>
-      </a>
-      <a href="../index.html" class="tool-card" style="background:linear-gradient(135deg, rgba(52,211,153,0.08), rgba(31,184,134,0.06)); border:1px solid rgba(52,211,153,0.15); border-radius:16px; padding:1.5rem; text-decoration:none; color:inherit; transition:transform 0.2s ease, box-shadow 0.2s ease;">
-        <div style="font-size:2rem; margin-bottom:0.75rem;">📱</div>
-        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">HEIC to PNG/JPG</h3>
-        <p style="margin:0; opacity:0.8; line-height:1.6;">Also convert HEIC images from iPhones to PNG, JPG, or WEBP. Same privacy-first approach, completely client-side.</p>
-        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(52,211,153,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Try HEIC Converter →</div>
-      </a>
-    </div>
-    
     <div class="about-stats">
       <div class="stat"><span class="n">0</span><span class="l">Servers involved</span></div>
       <div class="stat"><span class="n">0</span><span class="l">Accounts required</span></div>
@@ -1295,7 +1651,7 @@
   </section>
 
   <!-- Privacy Policy -->
-  <section class="about-section reveal" id="privacy">
+  <section class="content-section reveal" id="privacy">
     <div class="section-tag">Privacy policy</div>
     <h2>We can't see your photos — structurally</h2>
     <p>This isn't a promise we're asking you to trust; it's a consequence of how the page is built. There is no upload endpoint for your image to travel through in the first place.</p>
@@ -1320,7 +1676,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="about-section reveal" id="faq">
+  <section class="content-section reveal" id="faq">
     <div class="section-tag">FAQ</div>
     <h2>Common questions</h2>
 
@@ -1339,10 +1695,10 @@
     </details>
 
     <details class="faq-item">
-      <summary>Does PNG preserve transparency?
+      <summary>What quality should I choose?
         <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </summary>
-      <div class="faq-body">Yes. The converter preserves the alpha channel, so transparent areas in your AVIF images remain transparent in the PNG output.</div>
+      <div class="faq-body">The default 92% is ideal for most photos — excellent quality with reasonable file size. Use 100% for archival or editing, and lower values (70–85%) for web use where smaller files matter more.</div>
     </details>
 
     <details class="faq-item">
@@ -1351,27 +1707,20 @@
       </summary>
       <div class="faq-body">Most photos convert in a second or two. Very large files (30MB+) or unusual AVIF variants can take longer or occasionally fail — that's a limitation of in-browser decoding, not a bug.</div>
     </details>
-
-    <details class="faq-item">
-      <summary>How many files can I convert at once?
-        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </summary>
-      <div class="faq-body">You can convert up to 15 AVIF images in a single batch. This limit helps maintain excellent browser performance even on mobile devices.</div>
-    </details>
   </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-footer" aria-label="Site footer">
   <div class="footer-inner">
     <nav class="footer-links" aria-label="Footer navigation">
-      <a href="../index.html">Home</a>
-      <a href="../avif-to-jpg/">AVIF to JPG</a>
-      <a href="#about">About</a>
-      <a href="#privacy">Privacy</a>
+      <a href="#converter">Converter</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#privacy">Privacy</a>
+      <a href="../index.html#faq">FAQ</a>
       <a href="../blog/index.html">Blog</a>
       <a href="../privacy-policy.html">Privacy Policy</a>
     </nav>
-    <div class="footer-note">Free, client-side AVIF to PNG converter. No sign-up, no watermarks, no server-imposed limits.</div>
+    <div class="footer-note">Free, client-side AVIF to JPG converter. No sign-up, no watermarks, no server-imposed limits.</div>
   </div>
 </footer>
 
@@ -1386,6 +1735,9 @@
 
   const dropzone = document.getElementById('dropzone');
   const fileInput = document.getElementById('fileInput');
+  const qualitySlider = document.getElementById('qualitySlider');
+  const qualityValue = document.getElementById('qualityValue');
+
   const batchPanel = document.getElementById('batchPanel');
   const batchTitle = document.getElementById('batchTitle');
   const batchCount = document.getElementById('batchCount');
@@ -1405,6 +1757,12 @@
 
   let activeObjectUrls = [];  // object URLs from the current batch, cleaned up on reset
   let currentResults = [];    // [{ name, blob, url, size }] for the current batch
+
+  // Update quality slider display
+  function updateQualityDisplay() {
+    qualityValue.textContent = qualitySlider.value + '%';
+  }
+  qualitySlider.addEventListener('input', updateQualityDisplay);
 
   function showPanel(panel) {
     [dropzone, batchPanel, resultsPanel, errorPanel].forEach(p => {
@@ -1530,7 +1888,7 @@
     }
   }
 
-  async function convertAvifToPng(avifBlob) {
+  async function convertAvifToJpeg(avifBlob, quality) {
     return new Promise((resolve, reject) => {
       const img = new Image();
       const url = URL.createObjectURL(avifBlob);
@@ -1552,7 +1910,8 @@
                 reject(new Error('Canvas toBlob failed'));
               }
             },
-            'image/png'
+            'image/jpeg',
+            quality / 100
           );
         } catch (err) {
           reject(err);
@@ -1578,15 +1937,16 @@
 
     let trimmedNotice = '';
     if (files.length > MAX_BATCH_FILES) {
-      trimmedNotice = `You can convert up to 15 AVIF images at a time. Please reduce your selection and try again.`;
-      showError(trimmedNotice);
-      return;
+      trimmedNotice = `Only the first ${MAX_BATCH_FILES} files were used — ${MAX_BATCH_FILES} at a time is the current limit.`;
+      files = files.slice(0, MAX_BATCH_FILES);
     }
 
     revokeActiveUrls();
     currentResults = [];
     resultsGrid.innerHTML = '';
     batchWarning.style.display = 'none';
+
+    const quality = parseInt(qualitySlider.value, 10);
 
     // Build the per-file progress list up front
     batchList.innerHTML = '';
@@ -1616,7 +1976,7 @@
       setItemStatus(i, 'active');
 
       try {
-        const result = await convertAvifToPng(file);
+        const result = await convertAvifToJpeg(file, quality);
         const outputBlob = result.blob;
 
         if (!outputBlob || outputBlob.size === 0) {
@@ -1627,7 +1987,7 @@
         activeObjectUrls.push(objectUrl);
 
         const originalName = file.name.replace(/\.[^/.]+$/, '');
-        const outFileName = `${originalName}.png`;
+        const outFileName = `${originalName}.jpg`;
 
         currentResults.push({ 
           name: outFileName, 

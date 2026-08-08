@@ -486,8 +486,34 @@
       right: 12px;
       width: auto;
       grid-template-columns: 1fr;
-      max-height: calc(100vh - 100px);
+      row-gap: 18px;
+      column-gap: 0;
+      padding: 18px;
+      max-height: calc(100vh - 96px);
       overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-menu-col {
+      min-width: 0;
+    }
+
+    .nav-menu-heading {
+      margin-bottom: 8px;
+    }
+
+    .nav-menu-item {
+      margin: 0 -8px;
+      padding: 9px 8px;
+    }
+
+    .nav-menu-item-title {
+      font-size: 13px;
+    }
+
+    .nav-menu-footer {
+      margin-top: 2px;
+      padding-top: 16px;
     }
   }
 
@@ -1459,6 +1485,57 @@
           <span>
             <span class="nav-menu-item-title">AVIF to PNG</span>
             <span class="nav-menu-item-sub">Lossless, with transparency</span>
+          </span>
+        </a>
+      </div>
+      <div class="nav-menu-col">
+        <p class="nav-menu-heading">Convert JPG to</p>
+        <a href="../index.html?from=jpg&amp;to=png#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">P</span>
+          <span>
+            <span class="nav-menu-item-title">JPG to PNG</span>
+            <span class="nav-menu-item-sub">Lossless quality</span>
+          </span>
+        </a>
+        <a href="../index.html?from=jpg&amp;to=webp#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">W</span>
+          <span>
+            <span class="nav-menu-item-title">JPG to WEBP</span>
+            <span class="nav-menu-item-sub">Smaller, same quality</span>
+          </span>
+        </a>
+      </div>
+      <div class="nav-menu-col">
+        <p class="nav-menu-heading">Convert PNG to</p>
+        <a href="../index.html?from=png&amp;to=jpg#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">J</span>
+          <span>
+            <span class="nav-menu-item-title">PNG to JPG</span>
+            <span class="nav-menu-item-sub">Smaller file size</span>
+          </span>
+        </a>
+        <a href="../index.html?from=png&amp;to=webp#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">W</span>
+          <span>
+            <span class="nav-menu-item-title">PNG to WEBP</span>
+            <span class="nav-menu-item-sub">Smaller, keeps transparency</span>
+          </span>
+        </a>
+      </div>
+      <div class="nav-menu-col">
+        <p class="nav-menu-heading">Convert WEBP to</p>
+        <a href="../index.html?from=webp&amp;to=jpg#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">J</span>
+          <span>
+            <span class="nav-menu-item-title">WEBP to JPG</span>
+            <span class="nav-menu-item-sub">Works everywhere</span>
+          </span>
+        </a>
+        <a href="../index.html?from=webp&amp;to=png#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">P</span>
+          <span>
+            <span class="nav-menu-item-title">WEBP to PNG</span>
+            <span class="nav-menu-item-sub">Lossless, universal support</span>
           </span>
         </a>
       </div>

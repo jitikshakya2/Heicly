@@ -492,8 +492,34 @@
       right: 12px;
       width: auto;
       grid-template-columns: 1fr;
-      max-height: calc(100vh - 100px);
+      row-gap: 18px;
+      column-gap: 0;
+      padding: 18px;
+      max-height: calc(100vh - 96px);
       overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-menu-col {
+      min-width: 0;
+    }
+
+    .nav-menu-heading {
+      margin-bottom: 8px;
+    }
+
+    .nav-menu-item {
+      margin: 0 -8px;
+      padding: 9px 8px;
+    }
+
+    .nav-menu-item-title {
+      font-size: 13px;
+    }
+
+    .nav-menu-footer {
+      margin-top: 2px;
+      padding-top: 16px;
     }
   }
 
@@ -578,7 +604,7 @@
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 999px;
-    padding: 8px 10px 8px 22px;
+    padding: 8px 10px;
     margin-bottom: 32px;
     opacity: 0;
     animation: rise 0.7s ease 0.24s forwards;
@@ -1361,7 +1387,7 @@
   </div>
   <nav class="links" aria-label="Primary navigation">
     <a href="#converter">Converter</a>
-    <a href="#why">Why HEIC</a>
+    <a href="#why" id="whyNavLink">Why HEIC</a>
     <a href="#about">About</a>
     <a href="#privacy">Privacy</a>
     <a href="#faq">FAQ</a>
@@ -1418,6 +1444,57 @@
           </span>
         </a>
       </div>
+      <div class="nav-menu-col">
+        <p class="nav-menu-heading">Convert JPG to</p>
+        <a href="?from=jpg&amp;to=png#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">P</span>
+          <span>
+            <span class="nav-menu-item-title">JPG to PNG</span>
+            <span class="nav-menu-item-sub">Lossless quality</span>
+          </span>
+        </a>
+        <a href="?from=jpg&amp;to=webp#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">W</span>
+          <span>
+            <span class="nav-menu-item-title">JPG to WEBP</span>
+            <span class="nav-menu-item-sub">Smaller, same quality</span>
+          </span>
+        </a>
+      </div>
+      <div class="nav-menu-col">
+        <p class="nav-menu-heading">Convert PNG to</p>
+        <a href="?from=png&amp;to=jpg#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">J</span>
+          <span>
+            <span class="nav-menu-item-title">PNG to JPG</span>
+            <span class="nav-menu-item-sub">Smaller file size</span>
+          </span>
+        </a>
+        <a href="?from=png&amp;to=webp#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">W</span>
+          <span>
+            <span class="nav-menu-item-title">PNG to WEBP</span>
+            <span class="nav-menu-item-sub">Smaller, keeps transparency</span>
+          </span>
+        </a>
+      </div>
+      <div class="nav-menu-col">
+        <p class="nav-menu-heading">Convert WEBP to</p>
+        <a href="?from=webp&amp;to=jpg#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">J</span>
+          <span>
+            <span class="nav-menu-item-title">WEBP to JPG</span>
+            <span class="nav-menu-item-sub">Works everywhere</span>
+          </span>
+        </a>
+        <a href="?from=webp&amp;to=png#converter" class="nav-menu-item" role="menuitem">
+          <span class="nav-menu-icon">P</span>
+          <span>
+            <span class="nav-menu-item-title">WEBP to PNG</span>
+            <span class="nav-menu-item-sub">Lossless, universal support</span>
+          </span>
+        </a>
+      </div>
       <div class="nav-menu-footer">
         <span class="nav-menu-footer-dot" aria-hidden="true"></span>
         Every conversion runs locally — nothing is ever uploaded
@@ -1467,7 +1544,12 @@
     <p class="hero-sub">Apple's photo format, translated instantly into something every device, app and person can actually open. No uploads. No accounts. No waiting on a server.</p>
 
     <div class="swap-bar">
-      <span class="format-chip">HEIC</span>
+      <select id="sourceFormatSelect" name="input-format" aria-label="Input image format">
+        <option value="heic" selected>HEIC</option>
+        <option value="jpg">JPG</option>
+        <option value="png">PNG</option>
+        <option value="webp">WEBP</option>
+      </select>
       <div class="swap-icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polyline points="17 1 21 5 17 9"></polyline>
@@ -1493,9 +1575,9 @@
             <line x1="12" y1="3" x2="12" y2="15"></line>
           </svg>
         </div>
-        <h3>Drop up to 15 HEIC files here</h3>
+        <h3 id="dropzoneTitle">Drop up to 15 HEIC files here</h3>
         <p>or <span class="browse-underline">browse from your device</span> — nothing leaves this tab</p>
-        <input type="file" id="fileInput" name="heic-file" accept=".heic,.HEIC,image/heic,image/heif" multiple aria-label="Choose up to 15 HEIC images to convert">
+        <input type="file" id="fileInput" name="source-file" accept=".heic,.HEIC,.heif,.HEIF,image/heic,image/heif" multiple aria-label="Choose up to 15 HEIC images to convert">
       </div>
 
       <!-- Batch progress state -->
@@ -1545,8 +1627,8 @@
     <div class="section-tag">Formats involved</div>
     <div class="formats-grid">
       <div class="format-card">
-        <div class="fmt-head"><span class="swatch heic">H</span> HEIC <span class="fmt-full">High Efficiency Image Format</span></div>
-        <p>Apple's default photo format since iOS 11. Encodes images with the HEVC codec, cutting file size roughly in half versus JPG at the same quality — but barely supported outside Apple hardware.</p>
+        <div class="fmt-head"><span class="swatch heic">I</span> <span id="fmtCardLabelLeft">HEIC</span> <span class="fmt-full" id="fmtCardFullLeft">High Efficiency Image Format</span></div>
+        <p id="fmtCardDescLeft">Apple's default photo format since iOS 11. Encodes images with the HEVC codec, cutting file size roughly in half versus JPG at the same quality — but barely supported outside Apple hardware.</p>
       </div>
       <div class="format-card">
         <div class="fmt-head"><span class="swatch out">O</span> <span id="fmtCardLabel">PNG</span> <span class="fmt-full" id="fmtCardFull">Portable Network Graphics</span></div>
@@ -1557,29 +1639,29 @@
 
   <!-- Why convert -->
   <section class="info-section reveal" id="why">
-    <h2>Why convert HEIC files?</h2>
-    <p class="info-intro">HEIC is efficient, but it was built for Apple's ecosystem first — and the rest of the world second.</p>
+    <h2 id="whyHeading">Why convert HEIC files?</h2>
+    <p class="info-intro" id="whyIntro">HEIC is efficient, but it was built for Apple's ecosystem first — and the rest of the world second.</p>
 
     <div class="info-grid">
       <div class="info-card">
         <span class="num">01</span>
-        <h3>Universal compatibility</h3>
-        <p>Most Windows apps, websites, and older Android devices can't open HEIC. Converting to JPG or PNG guarantees it opens everywhere, every time.</p>
+        <h3 id="infoCard1Title">Universal compatibility</h3>
+        <p id="infoCard1Desc">Most Windows apps, websites, and older Android devices can't open HEIC. Converting to JPG or PNG guarantees it opens everywhere, every time.</p>
       </div>
       <div class="info-card">
         <span class="num">02</span>
-        <h3>Painless sharing</h3>
-        <p>Web forms, social platforms, and email clients frequently reject or mishandle HEIC uploads. JPG and PNG are accepted without a second thought.</p>
+        <h3 id="infoCard2Title">Painless sharing</h3>
+        <p id="infoCard2Desc">Web forms, social platforms, and email clients frequently reject or mishandle HEIC uploads. JPG and PNG are accepted without a second thought.</p>
       </div>
       <div class="info-card">
         <span class="num">03</span>
-        <h3>Editor support</h3>
-        <p>Older versions of Photoshop, GIMP, and other tools don't natively read HEIC. Converting first avoids compatibility headaches mid-edit.</p>
+        <h3 id="infoCard3Title">Editor support</h3>
+        <p id="infoCard3Desc">Older versions of Photoshop, GIMP, and other tools don't natively read HEIC. Converting first avoids compatibility headaches mid-edit.</p>
       </div>
       <div class="info-card">
         <span class="num">04</span>
-        <h3>Archiving & printing</h3>
-        <p>Print shops and long-term storage workflows overwhelmingly expect JPG or PNG. Converting protects your photos from becoming unreadable later.</p>
+        <h3 id="infoCard4Title">Archiving & printing</h3>
+        <p id="infoCard4Desc">Print shops and long-term storage workflows overwhelmingly expect JPG or PNG. Converting protects your photos from becoming unreadable later.</p>
       </div>
     </div>
 
@@ -1707,7 +1789,9 @@
   const MAX_FILES = 15;
 
   const dropzone = document.getElementById('dropzone');
+  const dropzoneTitle = document.getElementById('dropzoneTitle');
   const fileInput = document.getElementById('fileInput');
+  const sourceFormatSelect = document.getElementById('sourceFormatSelect');
   const formatSelect = document.getElementById('formatSelect');
 
   const batchPanel = document.getElementById('batchPanel');
@@ -1730,45 +1814,256 @@
   const fmtCardLabel = document.getElementById('fmtCardLabel');
   const fmtCardFull = document.getElementById('fmtCardFull');
   const fmtCardDesc = document.getElementById('fmtCardDesc');
+  const fmtCardLabelLeft = document.getElementById('fmtCardLabelLeft');
+  const fmtCardFullLeft = document.getElementById('fmtCardFullLeft');
+  const fmtCardDescLeft = document.getElementById('fmtCardDescLeft');
+  const whyNavLink = document.getElementById('whyNavLink');
+  const whyHeading = document.getElementById('whyHeading');
+  const whyIntro = document.getElementById('whyIntro');
+  const infoCardEls = [1, 2, 3, 4].map(function (n) {
+    return {
+      title: document.getElementById('infoCard' + n + 'Title'),
+      desc: document.getElementById('infoCard' + n + 'Desc')
+    };
+  });
 
   let activeObjectUrls = [];  // object URLs from the current batch, cleaned up on reset
   let currentResults = [];    // [{ name, blob, url, size }] for the current batch
 
-  const formatMeta = {
-    png: {
-      full: 'Portable Network Graphics',
-      desc: "Lossless and universally supported. Every browser, editor and OS can open a PNG without a second thought — the safest possible export target."
+  // Every format the converter understands. HEIC can only ever be a SOURCE:
+  // no browser or JS library can encode images into HEIC (the HEVC codec it
+  // relies on isn't licensed for that), so it's intentionally left out of
+  // OUTPUT_FORMATS below rather than offered as a broken option.
+  const FORMATS = {
+    heic: {
+      label: 'HEIC',
+      full: 'High Efficiency Image Format',
+      desc: "Apple's default photo format since iOS 11. Encodes images with the HEVC codec, cutting file size roughly in half versus JPG at the same quality — but barely supported outside Apple hardware.",
+      accept: '.heic,.HEIC,.heif,.HEIF,image/heic,image/heif',
+      exts: ['.heic', '.heif'],
+      mimes: ['image/heic', 'image/heif']
     },
     jpg: {
+      label: 'JPG',
       full: 'Joint Photographic Experts Group',
-      desc: "The most widely accepted photo format on the web. Smaller files than PNG through lossy compression — ideal for sharing and emailing."
+      desc: "The most widely accepted photo format on the web. Smaller files than PNG through lossy compression — ideal for sharing and emailing.",
+      accept: '.jpg,.jpeg,.JPG,.JPEG,image/jpeg',
+      exts: ['.jpg', '.jpeg'],
+      mimes: ['image/jpeg']
+    },
+    png: {
+      label: 'PNG',
+      full: 'Portable Network Graphics',
+      desc: "Lossless and universally supported. Every browser, editor and OS can open a PNG without a second thought — the safest possible export target.",
+      accept: '.png,.PNG,image/png',
+      exts: ['.png'],
+      mimes: ['image/png']
     },
     webp: {
+      label: 'WEBP',
       full: 'Web Picture Format',
-      desc: "A modern format balancing small file size with strong quality. Supported by all current browsers and increasingly by editing tools."
+      desc: "A modern format balancing small file size with strong quality. Supported by all current browsers and increasingly by editing tools.",
+      accept: '.webp,.WEBP,image/webp',
+      exts: ['.webp'],
+      mimes: ['image/webp']
     }
   };
 
-  function updateFormatCard() {
-    const fmt = formatSelect.value;
-    const meta = formatMeta[fmt] || formatMeta.png;
-    fmtCardLabel.textContent = fmt.toUpperCase();
-    fmtCardFull.textContent = meta.full;
-    fmtCardDesc.textContent = meta.desc;
-  }
-  formatSelect.addEventListener('change', updateFormatCard);
+  const OUTPUT_FORMATS = ['jpg', 'png', 'webp'];
 
-  // Pre-select output format from a URL param, e.g. heicly.in/?to=jpg
-  // Lets blog posts / external links land users with the right format already chosen.
+  // Rebuilds the right-side (output) dropdown so it only ever offers formats
+  // that are both convertible AND different from whatever is selected as the
+  // source — e.g. picking JPG as source leaves PNG/WEBP as valid outputs.
+  function refreshOutputOptions() {
+    const source = sourceFormatSelect.value;
+    const previous = formatSelect.value;
+    const available = OUTPUT_FORMATS.filter(function (fmt) { return fmt !== source; });
+
+    formatSelect.innerHTML = available.map(function (fmt) {
+      return '<option value="' + fmt + '">' + FORMATS[fmt].label + '</option>';
+    }).join('');
+
+    formatSelect.value = available.indexOf(previous) !== -1 ? previous : available[0];
+  }
+
+  function updateFormatCards() {
+    const srcMeta = FORMATS[sourceFormatSelect.value] || FORMATS.heic;
+    const tgtMeta = FORMATS[formatSelect.value] || FORMATS.png;
+
+    fmtCardLabelLeft.textContent = sourceFormatSelect.value.toUpperCase();
+    fmtCardFullLeft.textContent = srcMeta.full;
+    fmtCardDescLeft.textContent = srcMeta.desc;
+
+    fmtCardLabel.textContent = formatSelect.value.toUpperCase();
+    fmtCardFull.textContent = tgtMeta.full;
+    fmtCardDesc.textContent = tgtMeta.desc;
+
+    updateWhySection();
+  }
+
+  // Hand-written "why convert" copy for every working pair, since the honest
+  // reason to convert HEIC->JPG (compatibility) isn't the honest reason to
+  // convert PNG->WEBP (file size) — a generic templated sentence would read
+  // as filler for half of these, so each pair gets its own two lines.
+  const WHY_CONTENT = {
+    heic_jpg: {
+      heading: 'Why convert HEIC to JPG?',
+      intro: "HEIC is efficient, but it's an Apple-first format that plenty of apps, platforms, and older devices still don't open. JPG is the one format almost nothing on earth has trouble reading."
+    },
+    heic_png: {
+      heading: 'Why convert HEIC to PNG?',
+      intro: "HEIC is efficient, but it's an Apple-first format that plenty of apps, platforms, and older devices still don't open. PNG trades away some of that efficiency for lossless quality, transparency, and support everywhere."
+    },
+    heic_webp: {
+      heading: 'Why convert HEIC to WEBP?',
+      intro: "HEIC is efficient, but it's an Apple-first format that plenty of apps, platforms, and older devices still don't open. WEBP keeps a similar balance of small size and strong quality, minus the compatibility headaches."
+    },
+    jpg_png: {
+      heading: 'Why convert JPG to PNG?',
+      intro: "JPG's lossy compression keeps files small, but it can soften fine detail and offers no way to keep part of an image transparent. PNG fixes both — lossless quality with a transparent background when you need one."
+    },
+    jpg_webp: {
+      heading: 'Why convert JPG to WEBP?',
+      intro: "JPG has been the web's default for decades, but newer compression in WEBP can match the same quality at a noticeably smaller file size — which adds up fast on image-heavy pages."
+    },
+    png_jpg: {
+      heading: 'Why convert PNG to JPG?',
+      intro: "PNG's lossless quality is great, but it comes with a file size that's often overkill for an ordinary photo. JPG's compression shrinks the file dramatically while staying sharp enough for sharing, printing, or the web."
+    },
+    png_webp: {
+      heading: 'Why convert PNG to WEBP?',
+      intro: "PNG keeps every pixel exact, but that precision costs storage space and load time. WEBP gets you close to the same quality — transparency included — in a fraction of the file size."
+    },
+    webp_jpg: {
+      heading: 'Why convert WEBP to JPG?',
+      intro: "WEBP is compact and modern, but older editors, print shops, and some legacy tools still can't open it. JPG trades away a little efficiency for a format that's guaranteed to work anywhere you send it."
+    },
+    webp_png: {
+      heading: 'Why convert WEBP to PNG?',
+      intro: "WEBP is compact and modern, but older editors, print shops, and some legacy tools still can't open it. PNG gives up some of that efficiency for lossless quality and support that's never in question."
+    }
+  };
+
+  // Hand-written copy for the four reason cards under "Why convert", one set
+  // per working pair. The reasons that matter for HEIC->JPG (compatibility)
+  // aren't the reasons that matter for PNG->WEBP (file size), so each pair
+  // gets its own four points rather than a generic template repeated nine times.
+  const CARD_CONTENT = {
+    heic_jpg: [
+      { title: 'Universal compatibility', desc: "JPG opens on literally everything — every phone, laptop, app and website ever made supports it. No more wondering if a photo will actually open where you send it." },
+      { title: 'Effortless sharing', desc: 'Upload forms, messaging apps and social platforms are all built around JPG. Converting first means one less thing that can go wrong when you hit send.' },
+      { title: 'Works in any editor', desc: 'From Photoshop to a basic phone editor, nothing has trouble opening a JPG. Skip the plugin hunts and format warnings HEIC still triggers in older software.' },
+      { title: 'Ready for print and storage', desc: 'Print shops and archival workflows are built around JPG as a baseline. Converting now means your photos stay usable years down the line.' }
+    ],
+    heic_png: [
+      { title: 'Universal compatibility', desc: "PNG is read by every operating system, browser and app in existence — no exceptions, no plugins, no guesswork about whether it'll open." },
+      { title: 'Pixel-perfect quality', desc: "PNG's lossless compression means nothing is thrown away in the conversion. What you see is exactly what was captured, right down to the last pixel." },
+      { title: 'Transparency, if you need it', desc: 'Unlike HEIC, PNG can preserve a transparent background — handy for logos, cutouts, or anything headed into a design tool later.' },
+      { title: 'Built for the long haul', desc: 'Because nothing is compressed away, PNG is the safer bet for photos you want to archive or edit again in the future.' }
+    ],
+    heic_webp: [
+      { title: 'Universal compatibility', desc: 'Every modern browser — Chrome, Safari, Firefox, Edge — renders WEBP natively, so your images just work wherever they’re viewed online.' },
+      { title: 'Smaller files, same quality', desc: 'WEBP typically shrinks images further than JPG at a comparable quality, which means faster page loads and quicker sharing over slow connections.' },
+      { title: 'Increasingly editor-friendly', desc: 'Most current design and photo tools now read and write WEBP directly, closing the gap that used to make it a web-only format.' },
+      { title: 'Built for modern workflows', desc: 'If your photos are headed for a website, app, or CMS, WEBP is usually the format those platforms already expect.' }
+    ],
+    jpg_png: [
+      { title: 'No compression artifacts', desc: "JPG's compression can soften fine detail over repeated saves. PNG is lossless, so nothing is lost or blurred no matter how many times you open and save it." },
+      { title: 'Transparency support', desc: "PNG can keep parts of an image transparent, something JPG simply can't do — useful for logos, icons, or graphics that need to sit cleanly on any background." },
+      { title: 'Safer for further editing', desc: 'If a photo is headed into more rounds of editing, converting to PNG first avoids stacking compression loss on top of compression loss.' },
+      { title: 'Reliable for archiving', desc: "PNG's lossless nature makes it a dependable format for long-term storage — what you save today looks the same however far in the future you open it." }
+    ],
+    jpg_webp: [
+      { title: 'Smaller without losing quality', desc: "WEBP's compression is more efficient than JPG's, often producing noticeably smaller files at a quality that's hard to tell apart." },
+      { title: 'Faster-loading pages', desc: 'Smaller image files mean less to download, which adds up to real speed gains on any page or gallery with more than a couple of photos.' },
+      { title: 'Still works everywhere that matters', desc: "Every browser released in the last several years supports WEBP natively, so compatibility isn't the trade-off it once was." },
+      { title: 'Great for galleries and grids', desc: "If you're publishing a lot of images at once, the file size savings from WEBP compound quickly across an entire gallery or product catalog." }
+    ],
+    png_jpg: [
+      { title: 'Dramatically smaller files', desc: "PNG's lossless quality comes at the cost of file size. JPG's compression can shrink an ordinary photo down to a fraction of that with barely a visible difference." },
+      { title: 'Faster uploads and page loads', desc: 'Smaller files move faster — whether that’s an email attachment, a website, or a photo you’re uploading from a spotty connection.' },
+      { title: 'Plenty sharp for real photos', desc: "For photographs (as opposed to graphics or text), JPG's compression is very hard to spot at normal viewing sizes, even at fairly aggressive settings." },
+      { title: 'Accepted absolutely everywhere', desc: "From social platforms to print shops, JPG remains the format almost nothing rejects — a safe default when you're not sure what's expected on the other end." }
+    ],
+    png_webp: [
+      { title: 'Smaller than PNG, transparency intact', desc: 'WEBP can preserve transparency just like PNG, but typically compresses it into a much smaller file — the best of both without the size penalty.' },
+      { title: 'Faster sites, especially with graphics', desc: 'Transparent PNGs are often some of the heaviest assets on a page. Converting to WEBP can noticeably speed up load times without changing how anything looks.' },
+      { title: 'Quality holds up well', desc: "WEBP's compression is efficient enough that the difference from a lossless PNG is rarely visible, even in graphics with sharp edges or text." },
+      { title: 'Broad support today', desc: "Every major browser in current use renders WEBP correctly, so there's little practical downside to making the switch." }
+    ],
+    webp_jpg: [
+      { title: "Works in tools that don't recognize WEBP", desc: 'Some older software, print services, and legacy systems still don’t know what to do with a WEBP file. JPG sidesteps that problem entirely.' },
+      { title: 'Accepted by print shops and older systems', desc: "Long-established print and archival workflows are usually built around JPG, not WEBP, so converting first avoids a rejected order or a failed upload." },
+      { title: 'Universal compatibility', desc: 'JPG has decades of support behind it. If a file needs to open on literally any device or in any application, this is the safer target.' },
+      { title: 'A dependable long-term format', desc: "Because JPG isn't going anywhere and is understood by essentially every tool that reads images, it's a solid choice for photos you want to keep usable." }
+    ],
+    webp_png: [
+      { title: "Works in tools that don't recognize WEBP", desc: "Plenty of older editors and legacy systems still can't open a WEBP file directly. PNG has no such problem — it's been standard for decades." },
+      { title: 'Lossless quality preserved', desc: "Converting to PNG keeps the image lossless, so you're not trading away any quality on top of switching formats." },
+      { title: 'Transparency carries over', desc: 'If the original WEBP has a transparent background, PNG is one of the few common formats that keeps that transparency intact.' },
+      { title: 'Reliable for archiving', desc: "For photos or graphics you want to keep long-term, PNG's universal support and lossless quality make it a safer archival choice than WEBP." }
+    ]
+  };
+
+  function updateWhySection() {
+    const source = sourceFormatSelect.value;
+    const target = formatSelect.value;
+    const key = source + '_' + target;
+    const content = WHY_CONTENT[key];
+    if (!content) return;
+
+    whyNavLink.textContent = 'Why ' + source.toUpperCase() + ' to ' + target.toUpperCase();
+    whyHeading.textContent = content.heading;
+    whyIntro.textContent = content.intro;
+
+    const cards = CARD_CONTENT[key];
+    if (cards) {
+      cards.forEach(function (card, i) {
+        if (infoCardEls[i]) {
+          infoCardEls[i].title.textContent = card.title;
+          infoCardEls[i].desc.textContent = card.desc;
+        }
+      });
+    }
+  }
+
+  function updateDropzoneCopy() {
+    const meta = FORMATS[sourceFormatSelect.value];
+    dropzoneTitle.textContent = 'Drop up to ' + MAX_FILES + ' ' + meta.label + ' files here';
+    fileInput.setAttribute('accept', meta.accept);
+    fileInput.setAttribute('aria-label', 'Choose up to ' + MAX_FILES + ' ' + meta.label + ' images to convert');
+  }
+
+  sourceFormatSelect.addEventListener('change', function () {
+    refreshOutputOptions();
+    updateDropzoneCopy();
+    updateFormatCards();
+  });
+  formatSelect.addEventListener('change', updateFormatCards);
+
+  refreshOutputOptions();
+  updateDropzoneCopy();
+
+  // Pre-select source and/or output format from URL params, e.g.
+  // heicly.in/?from=png&to=webp — lets nav links land users on the right pair already chosen.
   (function applyFormatFromQuery() {
     const params = new URLSearchParams(window.location.search);
-    const requested = (params.get('to') || '').toLowerCase();
-    if (['png', 'jpg', 'webp'].includes(requested)) {
-      formatSelect.value = requested;
+    const requestedFrom = (params.get('from') || '').toLowerCase();
+    const sourceAvailable = Array.prototype.map.call(sourceFormatSelect.options, function (o) { return o.value; });
+    if (sourceAvailable.indexOf(requestedFrom) !== -1) {
+      sourceFormatSelect.value = requestedFrom;
+      refreshOutputOptions();
+      updateDropzoneCopy();
+    }
+
+    const requestedTo = (params.get('to') || '').toLowerCase();
+    const targetAvailable = Array.prototype.map.call(formatSelect.options, function (o) { return o.value; });
+    if (targetAvailable.indexOf(requestedTo) !== -1) {
+      formatSelect.value = requestedTo;
     }
   })();
 
-  updateFormatCard();
+  updateFormatCards();
 
   function showPanel(panel) {
     [dropzone, batchPanel, resultsPanel, errorPanel].forEach(p => {
@@ -1843,11 +2138,74 @@
   errorResetBtn.addEventListener('click', resetToDropzone);
 
   // --- Core conversion logic ---
-  function isLikelyHeic(file) {
+  function isLikelySourceFile(file, source) {
+    const meta = FORMATS[source];
     const name = (file.name || '').toLowerCase();
     const type = (file.type || '').toLowerCase();
-    return name.endsWith('.heic') || name.endsWith('.heif') ||
-           type === 'image/heic' || type === 'image/heif' || type === '';
+    const extMatch = meta.exts.some(function (ext) { return name.endsWith(ext); });
+    const mimeMatch = meta.mimes.indexOf(type) !== -1;
+    // Some browsers report no MIME type at all for HEIC files, so allow that case through.
+    if (source === 'heic') {
+      return extMatch || mimeMatch || type === '';
+    }
+    return extMatch || mimeMatch;
+  }
+
+  const MIME_MAP = { jpg: 'image/jpeg', png: 'image/png', webp: 'image/webp' };
+
+  // Decodes a JPG/PNG/WEBP file into something drawable, using the fast
+  // createImageBitmap path where available and falling back to a plain
+  // <img> element (via an object URL) for older browsers.
+  function decodeToDrawable(file) {
+    if (window.createImageBitmap) {
+      return createImageBitmap(file).catch(function () { return decodeViaImageElement(file); });
+    }
+    return decodeViaImageElement(file);
+  }
+
+  function decodeViaImageElement(file) {
+    return new Promise(function (resolve, reject) {
+      const url = URL.createObjectURL(file);
+      const img = new Image();
+      img.onload = function () { URL.revokeObjectURL(url); resolve(img); };
+      img.onerror = function () { URL.revokeObjectURL(url); reject(new Error('Could not read image.')); };
+      img.src = url;
+    });
+  }
+
+  // Converts one file from `source` format to `target` format and resolves
+  // with the output Blob. HEIC sources go through heic2any (the only engine
+  // here that can decode HEIC); every other pair is a same-browser
+  // decode-then-recompress via Canvas, since JPG/PNG/WEBP are all natively
+  // readable and writable by the browser itself.
+  async function convertOneFile(file, source, target) {
+    const outputMime = MIME_MAP[target] || 'image/png';
+
+    if (source === 'heic') {
+      const result = await heic2any({ blob: file, toType: outputMime, quality: 0.9 });
+      return Array.isArray(result) ? result[0] : result;
+    }
+
+    const drawable = await decodeToDrawable(file);
+    const canvas = document.createElement('canvas');
+    canvas.width = drawable.width;
+    canvas.height = drawable.height;
+    const ctx = canvas.getContext('2d');
+
+    // JPG has no alpha channel, so flatten any transparency onto white first
+    // rather than letting it silently turn black.
+    if (target === 'jpg') {
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    ctx.drawImage(drawable, 0, 0);
+    if (typeof drawable.close === 'function') drawable.close();
+
+    return await new Promise(function (resolve, reject) {
+      canvas.toBlob(function (blob) {
+        if (blob) resolve(blob); else reject(new Error('Conversion produced an empty file.'));
+      }, outputMime, 0.92);
+    });
   }
 
   function setItemStatus(index, status, label) {
@@ -1876,10 +2234,14 @@
   }
 
   async function handleFiles(fileList) {
-    let files = Array.from(fileList).filter(isLikelyHeic);
+    const source = sourceFormatSelect.value;
+    const target = formatSelect.value;
+    const sourceMeta = FORMATS[source];
+
+    let files = Array.from(fileList).filter(function (f) { return isLikelySourceFile(f, source); });
 
     if (files.length === 0) {
-      showError('Please select valid .heic files.');
+      showError('Please select valid ' + sourceMeta.label + ' files.');
       return;
     }
 
@@ -1894,10 +2256,7 @@
     resultsGrid.innerHTML = '';
     batchWarning.style.display = 'none';
 
-    const format = formatSelect.value; // "png" | "jpg" | "webp"
-    const mimeMap = { png: 'image/png', jpg: 'image/jpeg', webp: 'image/webp' };
-    const outputMime = mimeMap[format] || 'image/png';
-    const extension = format === 'jpg' ? 'jpg' : format;
+    const extension = target === 'jpg' ? 'jpg' : target;
 
     // Build the per-file progress list up front
     batchList.innerHTML = '';
@@ -1918,8 +2277,8 @@
 
     let successCount = 0;
 
-    // Files are converted ONE AT A TIME on purpose: only a single HEIC decode
-    // is ever active in memory at once, which keeps the tab responsive and
+    // Files are converted ONE AT A TIME on purpose: only a single decode is
+    // ever active in memory at once, which keeps the tab responsive and
     // avoids memory spikes on phones/low-RAM devices even with 15 files queued.
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
@@ -1927,8 +2286,7 @@
       setItemStatus(i, 'active');
 
       try {
-        const result = await heic2any({ blob: file, toType: outputMime, quality: 0.9 });
-        const outputBlob = Array.isArray(result) ? result[0] : result;
+        const outputBlob = await convertOneFile(file, source, target);
 
         if (!outputBlob || outputBlob.size === 0) {
           throw new Error('Conversion produced an empty file.');
@@ -1944,7 +2302,7 @@
         setItemStatus(i, 'done');
         successCount++;
       } catch (err) {
-        console.error('HEIC conversion error:', file.name, err);
+        console.error('Conversion error:', file.name, err);
         setItemStatus(i, 'error', 'Failed');
       }
 
@@ -1954,7 +2312,7 @@
 
       // Yield to the browser so it can repaint between files — this is what
       // keeps the progress list and UI feeling smooth instead of freezing
-      // while heic2any works on the next image.
+      // while the next file converts.
       await new Promise(requestAnimationFrame);
     }
 

@@ -1541,7 +1541,7 @@
   <section class="hero" id="converter" aria-labelledby="converter-title">
     <div class="eyebrow"><span class="pulse-dot"></span> Runs 100% in your browser</div>
     <h1 class="hero-title" id="converter-title">Convert HEIC to <span class="grad">JPG PNG WEBP</span></h1>
-    <p class="hero-sub">Apple's photo format, translated instantly into something every device, app and person can actually open. No uploads. No accounts. No waiting on a server.</p>
+    <p class="hero-sub" id="heroSub">Apple's photo format, translated instantly into something every device, app and person can actually open. No uploads. No accounts. No waiting on a server.</p>
 
     <div class="swap-bar">
       <select id="sourceFormatSelect" name="input-format" aria-label="Input image format">
@@ -1793,6 +1793,8 @@
   const fileInput = document.getElementById('fileInput');
   const sourceFormatSelect = document.getElementById('sourceFormatSelect');
   const formatSelect = document.getElementById('formatSelect');
+  const converterTitle = document.getElementById('converter-title');
+  const heroSub = document.getElementById('heroSub');
 
   const batchPanel = document.getElementById('batchPanel');
   const batchTitle = document.getElementById('batchTitle');
@@ -1886,6 +1888,35 @@
     formatSelect.value = available.indexOf(previous) !== -1 ? previous : available[0];
   }
 
+  // Hand-written sub-heading copy for every working pair, shown right under
+  // the H1. Keeps the same "no upload" promise the whole page is built on,
+  // but the reasoning changes with what's actually being converted — the
+  // pitch for HEIC->JPG (compatibility) isn't the pitch for PNG->WEBP (size).
+  const HERO_CONTENT = {
+    heic_jpg: { sub: "Apple's photo format, turned into something every device, app and person can actually open — instantly, without ever leaving your browser." },
+    heic_png: { sub: "Apple's photo format, translated into a lossless, universally-readable file you can drop straight into any tool. No uploads, no accounts, no waiting on a server." },
+    heic_webp: { sub: "Apple's photo format, converted into a smaller, web-ready file that still looks sharp. Runs entirely on your device — nothing is ever uploaded." },
+    jpg_png: { sub: "Turn a compressed JPG into a lossless PNG with a transparent background if you need one — done locally in your browser, no upload required." },
+    jpg_webp: { sub: "Shrink a JPG down further without losing visible quality, ready for faster-loading pages. Converted right here, on your device, in seconds." },
+    png_jpg: { sub: "Trade a heavy, lossless PNG for a much smaller JPG that's still plenty sharp for sharing or printing — no upload, no account, no wait." },
+    png_webp: { sub: "Keep your PNG's transparency but shrink the file size dramatically. Everything happens locally — your image never leaves this tab." },
+    webp_jpg: { sub: "Turn a modern WEBP into a JPG that opens in literally anything, from old editors to print shops. Converted instantly, right in your browser." },
+    webp_png: { sub: "Turn a modern WEBP into a lossless PNG that any editor or archive can open. Runs locally — your file is never sent anywhere." }
+  };
+
+  // Keeps the H1 an exact-match "Convert X to Y" for whatever pair is
+  // selected, so the page's own headline always matches what the visitor
+  // just told it they want to do.
+  function updateHeroSection() {
+    const source = sourceFormatSelect.value;
+    const target = formatSelect.value;
+    const content = HERO_CONTENT[source + '_' + target];
+    if (!content || !converterTitle || !heroSub) return;
+
+    converterTitle.innerHTML = 'Convert ' + source.toUpperCase() + ' to <span class="grad">' + target.toUpperCase() + '</span>';
+    heroSub.textContent = content.sub;
+  }
+
   function updateFormatCards() {
     const srcMeta = FORMATS[sourceFormatSelect.value] || FORMATS.heic;
     const tgtMeta = FORMATS[formatSelect.value] || FORMATS.png;
@@ -1898,6 +1929,7 @@
     fmtCardFull.textContent = tgtMeta.full;
     fmtCardDesc.textContent = tgtMeta.desc;
 
+    updateHeroSection();
     updateWhySection();
   }
 

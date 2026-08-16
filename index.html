@@ -1794,9 +1794,9 @@
 </footer>
 
 <!-- heic2any: client-side HEIC decoding engine -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/heic2any/0.0.4/heic2any.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/heic2any/0.0.4/heic2any.min.js"></script>
 <!-- JSZip: bundles multi-file results into a single .zip for "Download All" -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
 <script>
 (function () {
@@ -2387,7 +2387,7 @@
       const card = document.createElement('div');
       card.className = 'result-card';
       card.innerHTML =
-        '<img class="result-thumb" src="' + res.url + '" alt="" loading="lazy">' +
+        '<img class="result-thumb" src="' + res.url + '" alt="" loading="lazy" decoding="async">' +
         '<div class="result-info">' +
           '<div class="result-name">' + escapeHtml(res.name) + '</div>' +
           '<div class="result-size">' + formatBytes(res.size) + '</div>' +

@@ -2409,7 +2409,11 @@
       iframe.onload = async () => {
         if (settled) return;
         try {
-          const doc = iframe.contentDocument;
+          // Give the iframe document time to fully attach to its window
+          await new Promise((r) => setTimeout(r, 50));
+          
+          const iframeWindow = iframe.contentWindow;
+          const doc = iframe.contentDocument || iframeWindow.document;
           if (!doc) throw new Error('Could not access the rendered document.');
 
           // Attached stylesheets: drop any <link> tags that reference an
@@ -2456,7 +2460,7 @@
             height: contentHeight,
             windowWidth: width,
             windowHeight: contentHeight,
-            window: iframe.contentWindow
+            window: iframeWindow
           });
 
           canvas.toBlob((blob) => {

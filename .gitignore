@@ -1,8 +1,10 @@
 ```
+# Dependencies
+node_modules/
+
 # Logs and temp files
 *.log
 *.tmp
-*.swp
 
 # Environment
 .env
@@ -13,6 +15,12 @@
 .vscode/
 .idea/
 
-# Original rules preserved
-*.log
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+target/
 ```

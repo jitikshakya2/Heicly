@@ -2,13 +2,39 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W7DVFC0C19"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  
-  gtag('config', 'G-W7DVFC0C19');
+(function() {
+  var GA_ID = 'G-W7DVFC0C19';
+  var loaded = false;
+
+  function loadGA() {
+    if (loaded) return;
+    loaded = true;
+
+    var script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+
+    events.forEach(function(evt) {
+      window.removeEventListener(evt, loadGA);
+    });
+    clearTimeout(fallback);
+  }
+
+  var events = ['scroll', 'mousemove', 'touchstart', 'keydown', 'click'];
+  events.forEach(function(evt) {
+    window.addEventListener(evt, loadGA, { once: true, passive: true });
+  });
+
+  var fallback = setTimeout(loadGA, 4000);
+})();
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

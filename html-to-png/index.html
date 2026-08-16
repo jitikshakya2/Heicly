@@ -2455,7 +2455,8 @@
             width: width,
             height: contentHeight,
             windowWidth: width,
-            windowHeight: contentHeight
+            windowHeight: contentHeight,
+            window: iframe.contentWindow
           });
 
           canvas.toBlob((blob) => {

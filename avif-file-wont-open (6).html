@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script>
+(function() {
+  var GA_ID = 'G-W7DVFC0C19';
+  var loaded = false;
+
+  function loadGA() {
+    if (loaded) return;
+    loaded = true;
+
+    var script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+
+    events.forEach(function(evt) {
+      window.removeEventListener(evt, loadGA);
+    });
+    clearTimeout(fallback);
+  }
+
+  var events = ['scroll', 'mousemove', 'touchstart', 'keydown', 'click'];
+  events.forEach(function(evt) {
+    window.addEventListener(evt, loadGA, { once: true, passive: true });
+  });
+
+  var fallback = setTimeout(loadGA, 4000);
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Tu archivo AVIF no se abre? Aquí te explicamos por qué (solución gratis) | Blog de Heicly</title>
+<meta name="description" content="¿Por qué de repente las fotos AVIF no se abren en Windows, en Photoshop o en el correo? Esto es lo que está pasando, y cómo convertir AVIF a JPG gratis en tu navegador.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0c0d10">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://heicly.in/Esp/blog/avif-file-wont-open.html">
+<link rel="alternate" hreflang="en" href="https://heicly.in/blog/avif-file-wont-open.html">
+<link rel="alternate" hreflang="es" href="https://heicly.in/Esp/blog/avif-file-wont-open.html">
+<link rel="alternate" hreflang="x-default" href="https://heicly.in/blog/avif-file-wont-open.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Heicly">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="¿Tu archivo AVIF no se abre? Esto es lo que realmente está pasando">
+<meta property="og:description" content="Por qué las fotos AVIF no se abren en Windows, Photoshop y el correo — y cómo convertir AVIF a JPG gratis, directamente en tu navegador.">
+<meta property="og:url" content="https://heicly.in/blog/avif-file-wont-open.html">
+<meta property="og:image" content="https://heicly.in/og-image.png">
+<meta property="og:image:alt" content="Conversor de AVIF a JPG de Heicly basado en el navegador">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="¿Tu archivo AVIF no se abre? Esto es lo que realmente está pasando">
+<meta name="twitter:description" content="Por qué las fotos AVIF no se abren en Windows, Photoshop y el correo — y cómo convertir AVIF a JPG gratis, directamente en tu navegador.">
+<meta name="twitter:image" content="https://heicly.in/og-image.png">
+<meta name="twitter:image:alt" content="Conversor de AVIF a JPG de Heicly basado en el navegador">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "¿Tu archivo AVIF no se abre? Esto es lo que realmente está pasando",
+  "description": "Por qué las fotos AVIF no se abren en Windows, Photoshop y el correo, y cómo convertir AVIF a JPG gratis, directamente en tu navegador.",
+  "author": { "@type": "Organization", "name": "Equipo de Heicly" },
+  "publisher": { "@type": "Organization", "name": "Heicly", "url": "https://heicly.in/" },
+  "datePublished": "2026-08-08",
+  "dateModified": "2026-08-08",
+  "mainEntityOfPage": "https://heicly.in/blog/avif-file-wont-open.html",
+  "image": "https://heicly.in/photos/avif-to-jpg.jpg"
+}
+</script>
+
+<link rel="icon" type="image/png" sizes="1024x1024" href="../heicly-logo-concept-b.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #111317;
+    --bg-raised: rgba(25, 35, 30, 0.85);
+    --bg-card: rgba(20, 25, 22, 0.7);
+    --border: rgba(0, 255, 102, 0.2);
+    --border-soft: rgba(0, 255, 102, 0.05);
+    --accent: #00ff66;
+    --accent-soft: rgba(0, 255, 102, 0.15);
+    --success: #34d399;
+    --success-soft: #34d39922;
+    --text-main: #f0fdf4;
+    --text-muted: #86efac;
+    --text-faint: #4ade80;
+    --radius-md: 14px;
+    --radius-sm: 9px;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.7;
+  }
+  a { color: var(--accent); }
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 36px;
+    background: rgba(12, 13, 16, 0.86);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--text-main);
+  }
+  .brand .mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(140deg, var(--accent), #ff8a4e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px var(--accent-soft);
+  }
+  .back-link {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .back-link:hover { color: var(--text-main); }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 100px;
+  }
+  .breadcrumb {
+    font-size: 13px;
+    color: var(--text-faint);
+    margin-bottom: 22px;
+  }
+  .breadcrumb a { color: var(--text-faint); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--text-muted); }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid #ff5a4e33;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4.4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    line-height: 1.15;
+  }
+  .article-meta {
+    color: var(--text-faint);
+    font-size: 13.5px;
+    margin: 0 0 40px;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 44px 0 14px;
+  }
+  h3 {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 26px 0 8px;
+  }
+  p, li { color: var(--text-muted); font-size: 15.5px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--text-main); }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #14100e;
+    font-weight: 600;
+    font-size: 14.5px;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 999px;
+    margin: 8px 0 4px;
+  }
+  .cta-btn:hover { background: #ff6f63; }
+  .cta-card {
+    background: linear-gradient(145deg, var(--bg-card), var(--bg-raised));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px 26px;
+    text-align: center;
+    margin: 40px 0;
+  }
+  .cta-card p { margin: 0 0 16px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-soft);
+    color: var(--text-muted);
+  }
+  th { color: var(--text-main); font-family: var(--font-display); font-weight: 600; font-size: 13px; }
+  .illustration {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 24px 22px 18px;
+    margin: 30px 0;
+  }
+  .illustration svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .illustration figcaption {
+    color: var(--text-faint);
+    font-size: 12.5px;
+    text-align: center;
+    margin-top: 14px;
+  }
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .related-card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+    text-decoration: none;
+  }
+  .related-card:hover { border-color: var(--accent); }
+  .related-card .tag { font-family: var(--font-mono); font-size: 11.5px; color: var(--accent); }
+  .related-card span.title { display: block; color: var(--text-main); font-size: 14.5px; font-weight: 600; margin-top: 4px; }
+  @media (max-width: 560px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
+  footer.site-footer {
+    border-top: 1px solid var(--border-soft);
+    padding: 28px 24px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 13px;
+  }
+  footer.site-footer a { color: var(--text-muted); text-decoration: none; }
+  footer.site-footer a:hover { color: var(--text-main); }
+
+  @media (max-width: 720px) {
+    header.nav {
+        padding: 14px 16px !important;
+    }
+    .nav-right-group {
+        gap: 8px !important;
+    }
+    .css-lang-container .nav-menu-panel {
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        left: auto !important;
+        right: 0 !important;
+        width: max-content !important;
+        padding: 4px !important;
+        border: 1px solid rgba(0, 255, 102, 0.3) !important;
+    }
+    .css-lang-container .nav-menu-item {
+        padding: 6px 12px !important;
+    }
+    
+    .footer-inner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 32px !important;
+    }
+    .footer-links {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        width: 100% !important;
+        gap: 16px 24px !important;
+    }
+
+    h1.hero-title {
+        font-size: clamp(28px, 8vw, 40px) !important;
+    }
+    .hero {
+        padding: 60px 16px 30px !important;
+    }
+  }
+
+
+  html {
+      overflow-x: hidden !important;
+      width: 100%;
+  }
+  body {
+      overflow-x: hidden !important;
+      width: 100%;
+  }
+  canvas {
+      max-width: 100vw;
+  }
+  @media (max-width: 480px) {
+      .controls {
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+      }
+      .controls .btn {
+          width: 100%;
+          box-sizing: border-box;
+      }
+      .nav-menu-trigger span {
+          /* Optionally hide the text "Tools" and "EN" on tiny screens to save space, just show icons */
+          /* But the user wants them identical, so let's just reduce padding */
+      }
+      .nav-menu-trigger {
+          padding: 6px 10px !important;
+          font-size: 13px !important;
+      }
+      .brand {
+          font-size: 16px !important;
+          gap: 8px !important;
+      }
+      .brand svg {
+          width: 32px !important;
+          height: 32px !important;
+      }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <a class="brand" href="../index.html" aria-label="Inicio de Heicly">
+    <div class="mark" aria-hidden="true" style="background: transparent; box-shadow: none;">
+      <svg width="16" height="16" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="34" y="32" width="42" height="42" rx="6" fill="#14100e"/>
+        <rect x="56" y="66" width="42" height="42" rx="6" fill="none" stroke="#14100e" stroke-width="7"/>
+      </svg>
+    </div>
+    Heicly
+  </a>
+  <a class="back-link" href="../avif-to-jpg.html#converter" aria-label="Volver al conversor de AVIF a JPG de Heicly">&larr; Volver al conversor</a>
+</header>
+
+<main id="main-content" aria-labelledby="post-title">
+  <p class="breadcrumb"><a href="../index.html">Inicio</a> / <a href="./">Blog</a> / AVIF no se abre</p>
+  <div class="eyebrow">Blog</div>
+  <h1 id="post-title">¿Tu archivo AVIF no se abre? Esto es lo que realmente está pasando</h1>
+  <p class="article-meta">Por el equipo de Heicly · Agosto de 2026 · 5 min de lectura</p>
+
+  <p>Una amiga me envió una captura de pantalla la semana pasada: un simple cuadro gris donde debía estar la foto de un producto, con una diminuta "i" en la esquina, como si el archivo simplemente se hubiera rendido. Lo había descargado del sitio de un proveedor para un anuncio que estaba preparando, y ni el visor de fotos de su portátil ni el cliente de correo al que intentó adjuntarlo tenían idea de qué hacer con él. La extensión decía <code>.avif</code>. Si has llegado hasta aquí después de escribir alguna versión de "archivo avif no se abre" en un buscador, no te lo estás imaginando: se ha convertido en uno de los quebraderos de cabeza más comunes con fotos del último año, y la razón detrás de todo esto es, sinceramente, bastante aburrida.</p>
+
+  <p>Si solo has venido a arreglar el archivo y seguir con tu día, la versión corta es: <a href="../avif-to-jpg.html">conviértelo a JPG</a> y se abrirá en cualquier sitio. Aquí va la versión larga, por si tienes curiosidad de por qué esto sigue pasando.</p>
+
+  <a class="cta-btn" href="../avif-to-jpg.html#converter">Convertir AVIF a JPG ahora &rarr;</a>
+
+  <h2>Por qué AVIF sigue apareciendo sin que nadie lo invite</h2>
+  <p>Probablemente no elegiste AVIF. Casi nadie lo hace: simplemente aparece. Chrome, la mayoría de las CDN y un número cada vez mayor de sitios de comercio electrónico y bancos de imágenes han empezado a servir imágenes en AVIF de forma predeterminada, en silencio, porque el formato comprime aproximadamente un 50% menos que JPG con una calidad visual similar. Para un sitio web que intenta reducir el tiempo de carga, eso es una ventaja real. Para la persona que recibe la imagen e intenta guardarla, editarla o adjuntarla en algún sitio, es un formato de archivo que puede que su software nunca haya sido diseñado para reconocer. Esa brecha —la web avanzando más rápido que las herramientas que la gente realmente usa para abrir, editar e imprimir imágenes— es en realidad toda la historia detrás de "por qué no se abre mi AVIF". No está roto. Simplemente es pronto, y todos los que están más abajo del navegador todavía se están poniendo al día a su propio ritmo.</p>
+
+  <figure class="illustration">
+    <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un archivo AVIF que no se abre, convertido a un archivo JPG que se abre en todas partes">
+      <rect x="10" y="10" width="250" height="180" rx="14" fill="#16181d" stroke="#24272e"/>
+      <rect x="70" y="40" width="130" height="90" rx="8" fill="none" stroke="#3a3d44" stroke-width="3"/>
+      <circle cx="100" cy="65" r="8" fill="#3a3d44"/>
+      <path d="M75,118 L100,88 L118,105 L140,80 L195,118 Z" fill="#3a3d44"/>
+      <circle cx="196" cy="44" r="14" fill="#ff5a4e"/>
+      <text x="196" y="49" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#14100e">!</text>
+      <text x="135" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="600" fill="#f2f3f5">.avif</text>
+      <text x="135" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#9a9ea8">no se abre</text>
+
+      <line x1="266" y1="100" x2="326" y2="100" stroke="#ff5a4e" stroke-width="3" stroke-linecap="round"/>
+      <path d="M326,100 L314,90 M326,100 L314,110" stroke="#ff5a4e" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text x="296" y="80" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#9a9ea8">convertir</text>
+
+      <rect x="340" y="10" width="250" height="180" rx="14" fill="#16181d" stroke="#24272e"/>
+      <rect x="400" y="40" width="130" height="90" rx="8" fill="none" stroke="#34d399" stroke-width="3"/>
+      <circle cx="430" cy="65" r="8" fill="#34d399"/>
+      <path d="M405,118 L430,88 L448,105 L470,80 L525,118 Z" fill="#34d399" fill-opacity="0.85"/>
+      <circle cx="526" cy="44" r="14" fill="#34d399"/>
+      <path d="M519,44 L524,49 L534,37" stroke="#14100e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="465" y="160" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="600" fill="#f2f3f5">.jpg</text>
+      <text x="465" y="178" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#9a9ea8">se abre en todas partes</text>
+    </svg>
+    <figcaption>La misma foto, dos tipos de archivo — uno se abre en cualquier sitio, el otro todavía no.</figcaption>
+  </figure>
+
+  <h2>El problema de Windows, en concreto</h2>
+  <p>Esto empeora si usas Windows, que probablemente es la razón por la que "avif no se abre windows 10" y "avif no se abre windows 11" aparecen tan a menudo en los buscadores. Nada más instalar, el Explorador de archivos suele mostrar los archivos AVIF como un simple icono blanco sin ninguna miniatura, y hacer doble clic en uno solo abre la app Fotos directamente con un mensaje de error. Microsoft publica una extensión AV1/HEIF a través de la Microsoft Store que arregla las vistas previas y la visualización básica, pero no te ayudará dentro de Outlook, versiones antiguas de Office, la mayoría de los programas de impresión de escritorio, o cualquier app escrita antes de que existiera AVIF. Terminas parcheando un programa a la vez en lugar de simplemente arreglar el archivo en sí.</p>
+
+  <h2>AVIF frente a JPG — ¿es uno realmente "mejor"?</h2>
+  <p>Técnicamente, sí, AVIF es el formato más avanzado. Comprime con más fuerza sin perder demasiado detalle visible, y admite cosas que JPG simplemente nunca tendrá, como la transparencia y el HDR. Pero "técnicamente mejor" y "utilizable ahora mismo" no son la misma afirmación. JPG tiene treinta y tantos años de soporte casi universal detrás: cada sistema operativo, cada editor, cada quiosco de fotos, cada bandeja de entrada. Ese es, en realidad, todo el compromiso resumido en una línea:</p>
+
+  <table>
+    <tr><th>Formato</th><th>Gana en</th><th>Tiene dificultades con</th></tr>
+    <tr><td>AVIF</td><td>Archivos más pequeños, HDR, transparencia</td><td>Apps de escritorio, impresoras, software antiguo</td></tr>
+    <tr><td>JPG</td><td>Se abre en casi cualquier sitio, edición, impresión</td><td>Tamaño de archivo ligeramente mayor</td></tr>
+  </table>
+
+  <h2>La solución que realmente funciona</h2>
+  <p>En lugar de instalar un paquete de extensiones en cada dispositivo que tengas, normalmente es más rápido simplemente convertir el archivo una vez y seguir adelante. Esa es toda la idea detrás del <a href="../avif-to-jpg.html">conversor de AVIF a JPG de Heicly</a>: funciona dentro de la pestaña de tu navegador usando JavaScript puro, así que la foto nunca llega a salir de tu dispositivo. Suelta hasta 15 archivos AVIF a la vez, ajusta el control deslizante de calidad si te interesa, y descarga JPG que se abrirán en más o menos cualquier cosa: Outlook, una copia antigua de Photoshop, el quiosco de impresión de una farmacia, el portátil de diez años de un familiar. Sin instalación, sin cuenta, sin espera de subida — y como nada se envía a un servidor, tampoco hay nada de qué preocuparse en ese aspecto.</p>
+
+  <a class="cta-btn" href="../avif-to-jpg.html#converter">Convertir AVIF a JPG ahora &rarr;</a>
+
+  <figure class="illustration">
+    <svg viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico de barras que compara el tamaño de archivo AVIF con el tamaño de archivo JPG para la misma imagen">
+      <text x="10" y="30" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#f2f3f5">AVIF</text>
+      <rect x="90" y="18" width="190" height="26" rx="6" fill="#ff5a4e"/>
+      <text x="292" y="36" font-family="Inter, sans-serif" font-size="12.5" fill="#9a9ea8">~50% más pequeño</text>
+
+      <text x="10" y="85" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#f2f3f5">JPG</text>
+      <rect x="90" y="73" width="360" height="26" rx="6" fill="#3a3d44"/>
+      <text x="462" y="91" font-family="Inter, sans-serif" font-size="12.5" fill="#9a9ea8">tamaño de referencia</text>
+    </svg>
+    <figcaption>Los archivos AVIF suelen ocupar aproximadamente la mitad que el JPG equivalente — útil para un sitio web que carga rápido, menos útil cuando necesitas que el archivo se abra en otro sitio.</figcaption>
+  </figure>
+
+  <p>Si necesitas conservar la transparencia, o estás preparando la imagen para más trabajo de diseño en lugar de simplemente compartirla, JPG en realidad no es el formato de destino adecuado — la <a href="avif-to-png-guide.html">guía de AVIF a PNG</a> cubre ese caso en su lugar. Pero para la situación habitual — una foto que solo necesita abrirse, adjuntarse o imprimirse sin complicaciones — convertirla a JPG lo soluciona en más o menos el tiempo que has tardado en leer esta entrada. AVIF seguirá extendiéndose a medida que más partes de la web lo adopten, y eso es genuinamente bueno para la velocidad de las páginas. Simplemente significa que vale la pena guardar en marcadores una forma rápida y sin complicaciones de volver a JPG, en lugar de tener que resolverlo desde cero cada vez que un archivo te haga tropezar.</p>
+
+  <div class="cta-card">
+    <p>¿Tienes un archivo AVIF que no coopera?</p>
+    <a class="cta-btn" href="../avif-to-jpg.html#converter">Abrir el conversor &rarr;</a>
+  </div>
+
+  <div class="related-grid">
+    <a class="related-card" href="avif-to-jpg-guide.html">
+      <span class="tag">AVIF → JPG</span>
+      <span class="title">Guía completa de AVIF a JPG</span>
+    </a>
+    <a class="related-card" href="avif-to-png-guide.html">
+      <span class="tag">AVIF → PNG</span>
+      <span class="title">Guía de conversión de AVIF a PNG</span>
+    </a>
+    <a class="related-card" href="heic-to-jpg-guide.html">
+      <span class="tag">HEIC → JPG</span>
+      <span class="title">Guía de conversión de HEIC a JPG</span>
+    </a>
+    <a class="related-card" href="./">
+      <span class="tag">Blog</span>
+      <span class="title">Todas las guías de conversión</span>
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  Heicly — conversor de imágenes gratuito y del lado del cliente. <a href="../index.html">Conversor</a> · <a href="../privacy-policy.html">Política de privacidad</a> · <a href="./">Blog</a>
+</footer>
+
+
+<style class="quantum-patch">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif !important; 
+    background: transparent !important;
+}
+html {
+    background: #111317;
+}
+h1, h2, h3, h4, h5, h6, .brand, .nav-menu-item-title {
+    font-family: 'Space Grotesk', sans-serif !important;
+    text-transform: none !important;
+}
+
+/* Glassmorphism over the network */
+  .nav-menu-panel, .lang-menu-panel {
+      backdrop-filter: blur(28px) !important;
+      -webkit-backdrop-filter: blur(28px) !important;
+      background: rgba(10, 13, 15, 0.92) !important;
+      border-radius: var(--radius-lg) !important;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+      transition: all 0.3s ease !important;
+      border: 1px solid rgba(0, 255, 102, 0.3) !important;
+  }
+  
+  .nav-menu-trigger, .lang-menu-trigger, 
+  .dropzone, .state-panel, .format-card, .info-card, .stat, .result-card, .btn-secondary, .card {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary, .btn-secondary, .nav-menu-trigger, .lang-menu-trigger, .lang-menu-item, .nav-menu-item {
+    text-transform: none !important;
+    border-radius: var(--radius-lg) !important;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .nav-menu-trigger:hover, .lang-menu-trigger:hover, .lang-menu-item:hover, .nav-menu-item:hover {
+    transform: translateY(-2px) !important;
+}
+</style>
+
+<canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+<script>
+// --- Quantum Network Node Background ---
+const canvas = document.getElementById('particle-canvas');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let nodes = [];
+    const maxNodes = window.innerWidth < 768 ? 60 : 150;
+    const connectionDistance = 140;
+    
+    let mouse = { x: canvas.width/2, y: canvas.height/2, radius: 200, isHovering: false };
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
+    
+    document.addEventListener('mouseover', (e) => {
+        if(e.target.closest('.dropzone') || e.target.closest('.card')) {
+            mouse.isHovering = true;
+        } else {
+            mouse.isHovering = false;
+        }
+    });
+
+    class Node {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 1.5;
+            this.vy = (Math.random() - 0.5) * 1.5;
+            this.radius = Math.random() * 2 + 1;
+            this.color = Math.random() > 0.8 ? '#00ff66' : '#ffffff';
+        }
+        update() {
+            if(mouse.isHovering) {
+                let dx = (canvas.width/2) - this.x;
+                let dy = (canvas.height/2) - this.y;
+                let dist = Math.sqrt(dx*dx + dy*dy);
+                if(dist > 0) {
+                    this.vx += (dx / dist) * 0.08;
+                    this.vy += (dy / dist) * 0.08;
+                }
+                let speed = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+                if(speed > 5) {
+                    this.vx = (this.vx / speed) * 5;
+                    this.vy = (this.vy / speed) * 5;
+                }
+            } else {
+                let speed = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+                if(speed > 1.5) {
+                    this.vx *= 0.98;
+                    this.vy *= 0.98;
+                }
+            }
+        
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if(this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if(this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            
+            let dx = mouse.x - this.x;
+            let dy = mouse.y - this.y;
+            let distance = Math.sqrt(dx*dx + dy*dy);
+            if(distance < mouse.radius && !mouse.isHovering) {
+                this.x -= dx * 0.02;
+                this.y -= dy * 0.02;
+            }
+
+            this.draw();
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = this.color;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+    }
+
+    for(let i=0; i<maxNodes; i++) {
+        nodes.push(new Node());
+    }
+
+    function animateNetwork() {
+        ctx.fillStyle = '#111317';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        for(let a=0; a<nodes.length; a++) {
+            for(let b=a+1; b<nodes.length; b++) {
+                let dx = nodes[a].x - nodes[b].x;
+                let dy = nodes[a].y - nodes[b].y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                
+                if(distance < connectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(nodes[a].x, nodes[a].y);
+                    ctx.lineTo(nodes[b].x, nodes[b].y);
+                    let opacity = 1 - (distance/connectionDistance);
+                    ctx.strokeStyle = nodes[a].color === '#00ff66' || nodes[b].color === '#00ff66' ? 
+                                      `rgba(0, 255, 102, ${opacity * 0.5})` : 
+                                      `rgba(255, 255, 255, ${opacity * 0.2})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+            
+            if(!mouse.isHovering) {
+                let mdx = nodes[a].x - mouse.x;
+                let mdy = nodes[a].y - mouse.y;
+                let mDist = Math.sqrt(mdx*mdx + mdy*mdy);
+                if(mDist < connectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(nodes[a].x, nodes[a].y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    let mOp = 1 - (mDist/connectionDistance);
+                    ctx.strokeStyle = `rgba(0, 255, 102, ${mOp * 0.6})`;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        for(let i=0; i<nodes.length; i++) {
+            nodes[i].update();
+        }
+
+        requestAnimationFrame(animateNetwork);
+    }
+    animateNetwork();
+}
+</script>
+
+</body>
+</html>

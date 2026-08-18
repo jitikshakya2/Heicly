@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script>
+(function() {
+  var GA_ID = 'G-W7DVFC0C19';
+  var loaded = false;
+
+  function loadGA() {
+    if (loaded) return;
+    loaded = true;
+
+    var script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+
+    events.forEach(function(evt) {
+      window.removeEventListener(evt, loadGA);
+    });
+    clearTimeout(fallback);
+  }
+
+  var events = ['scroll', 'mousemove', 'touchstart', 'keydown', 'click'];
+  events.forEach(function(evt) {
+    window.addEventListener(evt, loadGA, { once: true, passive: true });
+  });
+
+  var fallback = setTimeout(loadGA, 4000);
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convert HEIC to WEBP Free — Fast Online Guide | Heicly</title>
+<meta name="description" content="Learn how to convert HEIC to WEBP for free, entirely in your browser. Smaller files for websites and stores — no upload, no sign-up.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0c0d10">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://heicly.in/blog/heic-to-webp-guide.html">
+<link rel="alternate" hreflang="en" href="https://heicly.in/blog/heic-to-webp-guide.html">
+<link rel="alternate" hreflang="es" href="https://heicly.in/Esp/blog/heic-to-webp-guide.html">
+<link rel="alternate" hreflang="x-default" href="https://heicly.in/blog/heic-to-webp-guide.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Heicly">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Convert HEIC to WEBP Free — Fast Online Guide">
+<meta property="og:description" content="Step-by-step guide to converting HEIC to WEBP for free, entirely in your browser. No upload, no sign-up.">
+<meta property="og:url" content="https://heicly.in/blog/heic-to-webp-guide.html">
+<meta property="og:image" content="https://heicly.in/og-image.png">
+<meta property="og:image:alt" content="Heicly browser-based HEIC to WEBP converter">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Convert HEIC to WEBP Free — Fast Online Guide">
+<meta name="twitter:description" content="Step-by-step guide to converting HEIC to WEBP for free, entirely in your browser. No upload, no sign-up.">
+<meta name="twitter:image" content="https://heicly.in/og-image.png">
+<meta name="twitter:image:alt" content="Heicly browser-based HEIC to WEBP converter">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Convert HEIC to WEBP: Free Online Guide",
+      "description": "Learn how to convert HEIC to WEBP for free, entirely in your browser, with no upload and no sign-up.",
+      "author": { "@type": "Organization", "name": "Heicly Team" },
+      "publisher": { "@type": "Organization", "name": "Heicly", "url": "https://heicly.in/" },
+      "datePublished": "2026-08-04",
+      "dateModified": "2026-08-04",
+      "mainEntityOfPage": "https://heicly.in/blog/heic-to-webp-guide.html",
+      "image": "https://heicly.in/og-image.png"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a WEBP file used for?",
+          "acceptedAnswer": { "@type": "Answer", "text": "WEBP is a modern image format developed by Google, designed to give smaller file sizes than JPG or PNG while keeping good visual quality. It's widely used for website images to improve page load speed." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do all browsers support WEBP images?",
+          "acceptedAnswer": { "@type": "Answer", "text": "All current major browsers, including Chrome, Firefox, Safari, and Edge, support WEBP. Very old browser versions may not, which is worth checking if your audience includes legacy software." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is converting HEIC to WEBP free with Heicly?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, conversion is completely free with no limits and no account required." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Heicly upload my photos when converting to WEBP?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The conversion happens entirely inside your browser using JavaScript. Your photos are never uploaded, transmitted, or stored anywhere." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="icon" type="image/png" sizes="1024x1024" href="../heicly-logo-concept-b.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #111317;
+    --bg-raised: rgba(25, 35, 30, 0.85);
+    --bg-card: rgba(20, 25, 22, 0.7);
+    --border: rgba(0, 255, 102, 0.2);
+    --border-soft: rgba(0, 255, 102, 0.05);
+    --accent: #00ff66;
+    --accent-soft: rgba(0, 255, 102, 0.15);
+    --success: #34d399;
+    --success-soft: #34d39922;
+    --text-main: #f0fdf4;
+    --text-muted: #86efac;
+    --text-faint: #4ade80;
+    --radius-md: 14px;
+    --radius-sm: 9px;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.7;
+  }
+  a { color: var(--accent); }
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 36px;
+    background: rgba(12, 13, 16, 0.86);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--text-main);
+  }
+  .brand .mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(140deg, var(--accent), #ff8a4e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px var(--accent-soft);
+  }
+  .back-link {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .back-link:hover { color: var(--text-main); }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 100px;
+  }
+  .breadcrumb {
+    font-size: 13px;
+    color: var(--text-faint);
+    margin-bottom: 22px;
+  }
+  .breadcrumb a { color: var(--text-faint); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--text-muted); }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid #ff5a4e33;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4.4vw, 40px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    line-height: 1.15;
+  }
+  .article-meta {
+    color: var(--text-faint);
+    font-size: 13.5px;
+    margin: 0 0 40px;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 44px 0 14px;
+  }
+  h3 {
+    font-family: var(--font-display);
+    font-size: 17px;
+    font-weight: 600;
+    margin: 26px 0 8px;
+  }
+  p, li { color: var(--text-muted); font-size: 15.5px; }
+  ul, ol { padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--text-main); }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+  .steps { counter-reset: step; list-style: none; padding-left: 0; }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 16px;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: #14100e;
+    font-weight: 600;
+    font-size: 14.5px;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 999px;
+    margin: 8px 0 4px;
+  }
+  .cta-btn:hover { background: #ff6f63; }
+  .cta-card {
+    background: linear-gradient(145deg, var(--bg-card), var(--bg-raised));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 28px 26px;
+    text-align: center;
+    margin: 40px 0;
+  }
+  .cta-card p { margin: 0 0 16px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 14px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-soft);
+    color: var(--text-muted);
+  }
+  th { color: var(--text-main); font-family: var(--font-display); font-weight: 600; font-size: 13px; }
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin: 18px 0;
+  }
+  .related-card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 16px 18px;
+    text-decoration: none;
+  }
+  .related-card:hover { border-color: var(--accent); }
+  .related-card .tag { font-family: var(--font-mono); font-size: 11.5px; color: var(--accent); }
+  .related-card span.title { display: block; color: var(--text-main); font-size: 14.5px; font-weight: 600; margin-top: 4px; }
+  details {
+    border-bottom: 1px solid var(--border-soft);
+    padding: 14px 0;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 15px;
+    list-style: none;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::before {
+    content: "+";
+    color: var(--accent);
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  details[open] summary::before { content: "\2212"; }
+  details p { margin: 10px 0 0 20px; }
+  @media (max-width: 560px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
+  footer.site-footer {
+    border-top: 1px solid var(--border-soft);
+    padding: 28px 24px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 13px;
+  }
+  footer.site-footer a { color: var(--text-muted); text-decoration: none; }
+  footer.site-footer a:hover { color: var(--text-main); }
+
+  @media (max-width: 720px) {
+    header.nav {
+        padding: 14px 16px !important;
+    }
+    .nav-right-group {
+        gap: 8px !important;
+    }
+    .css-lang-container .nav-menu-panel {
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        left: auto !important;
+        right: 0 !important;
+        width: max-content !important;
+        padding: 4px !important;
+        border: 1px solid rgba(0, 255, 102, 0.3) !important;
+    }
+    .css-lang-container .nav-menu-item {
+        padding: 6px 12px !important;
+    }
+    
+    .footer-inner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 32px !important;
+    }
+    .footer-links {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        width: 100% !important;
+        gap: 16px 24px !important;
+    }
+
+    h1.hero-title {
+        font-size: clamp(28px, 8vw, 40px) !important;
+    }
+    .hero {
+        padding: 60px 16px 30px !important;
+    }
+  }
+
+
+  html {
+      overflow-x: hidden !important;
+      width: 100%;
+  }
+  body {
+      overflow-x: hidden !important;
+      width: 100%;
+  }
+  canvas {
+      max-width: 100vw;
+  }
+  @media (max-width: 480px) {
+      .controls {
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+      }
+      .controls .btn {
+          width: 100%;
+          box-sizing: border-box;
+      }
+      .nav-menu-trigger span {
+          /* Optionally hide the text "Tools" and "EN" on tiny screens to save space, just show icons */
+          /* But the user wants them identical, so let's just reduce padding */
+      }
+      .nav-menu-trigger {
+          padding: 6px 10px !important;
+          font-size: 13px !important;
+      }
+      .brand {
+          font-size: 16px !important;
+          gap: 8px !important;
+      }
+      .brand svg {
+          width: 32px !important;
+          height: 32px !important;
+      }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <a class="brand" href="../index.html" aria-label="Heicly home">
+    <div class="mark" aria-hidden="true" style="background: transparent; box-shadow: none;">
+      <svg width="16" height="16" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="34" y="32" width="42" height="42" rx="6" fill="#14100e"/>
+        <rect x="56" y="66" width="42" height="42" rx="6" fill="none" stroke="#14100e" stroke-width="7"/>
+      </svg>
+    </div>
+    Heicly
+  </a>
+  <a class="back-link" href="../index.html" aria-label="Back to Heicly converter">&larr; Back to converter</a>
+</header>
+
+<main id="main-content" aria-labelledby="post-title">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="./">Blog</a> / HEIC to WEBP</p>
+  <div class="eyebrow">Guide</div>
+  <h1 id="post-title">Convert HEIC to WEBP: Free Online Guide</h1>
+  <p class="article-meta">By Heicly Team · Updated August 2026 · 4 min read</p>
+
+  <p>If you're uploading photos to a website, online store, or blog, file size directly affects how fast your pages load. WEBP, a modern format built by Google specifically for the web, typically produces noticeably smaller files than JPG or PNG at similar visual quality — making it the better target format for HEIC photos headed for the web rather than for sharing or printing.</p>
+
+  <p>This guide covers how to convert HEIC to WEBP for free, directly in your browser, with no upload and no sign-up.</p>
+
+  <h2>How to convert HEIC to WEBP online for free</h2>
+  <p>Heicly decodes and re-encodes your images entirely inside your browser tab — nothing is sent to a server, so there's no upload wait and nothing stored anywhere afterward.</p>
+
+  <ol class="steps">
+    <li>Open <a href="../index.html">Heicly</a> in any modern browser — desktop or mobile.</li>
+    <li>Set the output format dropdown to <strong>WEBP</strong>.</li>
+    <li>Drag and drop your HEIC files onto the page, or click to browse — up to 15 at once.</li>
+    <li>Download each WEBP individually, or grab all of them together as a single zip file.</li>
+  </ol>
+
+  <a class="cta-btn" href="../index.html?to=webp#converter">Convert HEIC to WEBP now &rarr;</a>
+
+  <div class="card">
+    <p style="margin:0;"><strong>Why it's private:</strong> since conversion runs with JavaScript in your own browser, there's no upload endpoint your photos ever pass through — not even briefly. Nothing about the image reaches Heicly's servers.</p>
+  </div>
+
+  <h2>Why choose WEBP for HEIC conversion?</h2>
+  <ul>
+    <li><strong>Smaller file sizes</strong> — WEBP typically compresses more efficiently than JPG or PNG at comparable quality, meaning faster page loads.</li>
+    <li><strong>Modern browser support</strong> — all current major browsers display WEBP without any plugin or fallback needed.</li>
+    <li><strong>Good for e-commerce and content sites</strong> — smaller images mean faster load times, which matters for SEO and user experience alike.</li>
+    <li><strong>Supports both lossy and lossless modes</strong> — WEBP can be tuned depending on whether file size or fidelity matters more for a given image.</li>
+  </ul>
+
+  <p>One caveat: while WEBP is very well supported today, it's still slightly less universal than JPG for things like sending a photo to someone via email or messaging apps — for that use case, see our <a href="heic-to-jpg-guide.html">HEIC to JPG guide</a> instead.</p>
+
+  <h2>HEIC to WEBP vs. JPG vs. PNG</h2>
+  <table>
+    <tr><th>Format</th><th>Best for</th><th>Trade-off</th></tr>
+    <tr><td>WEBP</td><td>Websites, online stores, faster page loads</td><td>Slightly less universal than JPG for sharing</td></tr>
+    <tr><td>JPG</td><td>Photos, sharing, printing, email</td><td>Lossy compression — some quality loss</td></tr>
+    <tr><td>PNG</td><td>Screenshots, graphics, editing work</td><td>Larger file size, fully lossless</td></tr>
+  </table>
+  <p>Need pixel-perfect quality for design work instead? Check our <a href="heic-to-png-guide.html">HEIC to PNG guide</a>.</p>
+
+  <h2>Frequently asked questions</h2>
+
+  <details>
+    <summary>What is a WEBP file used for?</summary>
+    <p>WEBP is a modern image format built by Google, designed to give smaller file sizes than JPG or PNG at similar visual quality. It's widely used for website images to improve page load speed.</p>
+  </details>
+  <details>
+    <summary>Do all browsers support WEBP images?</summary>
+    <p>All current major browsers — Chrome, Firefox, Safari, and Edge — support WEBP. Very old browser versions may not, which is worth checking if your audience includes legacy software.</p>
+  </details>
+  <details>
+    <summary>Is converting HEIC to WEBP free with Heicly?</summary>
+    <p>Yes, conversion is completely free with no limits and no account required.</p>
+  </details>
+  <details>
+    <summary>Does Heicly upload my photos when converting to WEBP?</summary>
+    <p>No. Conversion happens entirely inside your browser. Your photos are never uploaded, transmitted, or stored anywhere.</p>
+  </details>
+
+  <div class="cta-card">
+    <p>Ready to convert your HEIC photos to WEBP?</p>
+    <a class="cta-btn" href="../index.html?to=webp#converter">Open the converter &rarr;</a>
+  </div>
+
+  <div class="related-grid">
+    <a class="related-card" href="heic-to-jpg-guide.html">
+      <span class="tag">HEIC → JPG</span>
+      <span class="title">Convert HEIC to JPG guide</span>
+    </a>
+    <a class="related-card" href="heic-to-png-guide.html">
+      <span class="tag">HEIC → PNG</span>
+      <span class="title">Convert HEIC to PNG guide</span>
+    </a>
+  </div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  Heicly — free, client-side HEIC converter. <a href="../index.html">Converter</a> · <a href="../privacy-policy.html">Privacy Policy</a> · <a href="./">Blog</a>
+</footer>
+
+
+<style class="quantum-patch">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif !important; 
+    background: transparent !important;
+}
+html {
+    background: #111317;
+}
+h1, h2, h3, h4, h5, h6, .brand, .nav-menu-item-title {
+    font-family: 'Space Grotesk', sans-serif !important;
+    text-transform: none !important;
+}
+
+/* Glassmorphism over the network */
+  .nav-menu-panel, .lang-menu-panel {
+      backdrop-filter: blur(28px) !important;
+      -webkit-backdrop-filter: blur(28px) !important;
+      background: rgba(10, 13, 15, 0.92) !important;
+      border-radius: var(--radius-lg) !important;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+      transition: all 0.3s ease !important;
+      border: 1px solid rgba(0, 255, 102, 0.3) !important;
+  }
+  
+  .nav-menu-trigger, .lang-menu-trigger, 
+  .dropzone, .state-panel, .format-card, .info-card, .stat, .result-card, .btn-secondary, .card {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary, .btn-secondary, .nav-menu-trigger, .lang-menu-trigger, .lang-menu-item, .nav-menu-item {
+    text-transform: none !important;
+    border-radius: var(--radius-lg) !important;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .nav-menu-trigger:hover, .lang-menu-trigger:hover, .lang-menu-item:hover, .nav-menu-item:hover {
+    transform: translateY(-2px) !important;
+}
+</style>
+
+<canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+<script>
+// --- Quantum Network Node Background ---
+const canvas = document.getElementById('particle-canvas');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let nodes = [];
+    const maxNodes = window.innerWidth < 768 ? 60 : 150;
+    const connectionDistance = 140;
+    
+    let mouse = { x: canvas.width/2, y: canvas.height/2, radius: 200, isHovering: false };
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
+    
+    document.addEventListener('mouseover', (e) => {
+        if(e.target.closest('.dropzone') || e.target.closest('.card')) {
+            mouse.isHovering = true;
+        } else {
+            mouse.isHovering = false;
+        }
+    });
+
+    class Node {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 1.5;
+            this.vy = (Math.random() - 0.5) * 1.5;
+            this.radius = Math.random() * 2 + 1;
+            this.color = Math.random() > 0.8 ? '#00ff66' : '#ffffff';
+        }
+        update() {
+            if(mouse.isHovering) {
+                let dx = (canvas.width/2) - this.x;
+                let dy = (canvas.height/2) - this.y;
+                let dist = Math.sqrt(dx*dx + dy*dy);
+                if(dist > 0) {
+                    this.vx += (dx / dist) * 0.08;
+                    this.vy += (dy / dist) * 0.08;
+                }
+                let speed = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+                if(speed > 5) {
+                    this.vx = (this.vx / speed) * 5;
+                    this.vy = (this.vy / speed) * 5;
+                }
+            } else {
+                let speed = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+                if(speed > 1.5) {
+                    this.vx *= 0.98;
+                    this.vy *= 0.98;
+                }
+            }
+        
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if(this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if(this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            
+            let dx = mouse.x - this.x;
+            let dy = mouse.y - this.y;
+            let distance = Math.sqrt(dx*dx + dy*dy);
+            if(distance < mouse.radius && !mouse.isHovering) {
+                this.x -= dx * 0.02;
+                this.y -= dy * 0.02;
+            }
+
+            this.draw();
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = this.color;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+    }
+
+    for(let i=0; i<maxNodes; i++) {
+        nodes.push(new Node());
+    }
+
+    function animateNetwork() {
+        ctx.fillStyle = '#111317';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        for(let a=0; a<nodes.length; a++) {
+            for(let b=a+1; b<nodes.length; b++) {
+                let dx = nodes[a].x - nodes[b].x;
+                let dy = nodes[a].y - nodes[b].y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                
+                if(distance < connectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(nodes[a].x, nodes[a].y);
+                    ctx.lineTo(nodes[b].x, nodes[b].y);
+                    let opacity = 1 - (distance/connectionDistance);
+                    ctx.strokeStyle = nodes[a].color === '#00ff66' || nodes[b].color === '#00ff66' ? 
+                                      `rgba(0, 255, 102, ${opacity * 0.5})` : 
+                                      `rgba(255, 255, 255, ${opacity * 0.2})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+            
+            if(!mouse.isHovering) {
+                let mdx = nodes[a].x - mouse.x;
+                let mdy = nodes[a].y - mouse.y;
+                let mDist = Math.sqrt(mdx*mdx + mdy*mdy);
+                if(mDist < connectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(nodes[a].x, nodes[a].y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    let mOp = 1 - (mDist/connectionDistance);
+                    ctx.strokeStyle = `rgba(0, 255, 102, ${mOp * 0.6})`;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        for(let i=0; i<nodes.length; i++) {
+            nodes[i].update();
+        }
+
+        requestAnimationFrame(animateNetwork);
+    }
+    animateNetwork();
+}
+</script>
+
+</body>
+</html>

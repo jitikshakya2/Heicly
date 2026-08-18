@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script>
+(function() {
+  var GA_ID = 'G-W7DVFC0C19';
+  var loaded = false;
+
+  function loadGA() {
+    if (loaded) return;
+    loaded = true;
+
+    var script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+
+    events.forEach(function(evt) {
+      window.removeEventListener(evt, loadGA);
+    });
+    clearTimeout(fallback);
+  }
+
+  var events = ['scroll', 'mousemove', 'touchstart', 'keydown', 'click'];
+  events.forEach(function(evt) {
+    window.addEventListener(evt, loadGA, { once: true, passive: true });
+  });
+
+  var fallback = setTimeout(loadGA, 4000);
+})();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | Heicly</title>
+<meta name="description" content="Read Heicly's privacy policy to learn how browser-based HEIC conversion protects your files and how advertising cookies may be used.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0c0d10">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://heicly.in/privacy-policy.html">
+<link rel="alternate" hreflang="en" href="https://heicly.in/privacy-policy.html">
+<link rel="alternate" hreflang="es" href="https://heicly.in/Esp/privacy-policy.html">
+<link rel="alternate" hreflang="x-default" href="https://heicly.in/privacy-policy.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Heicly">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Privacy Policy | Heicly">
+<meta property="og:description" content="Learn how Heicly keeps image conversion inside your browser and how advertising cookies may be used.">
+<meta property="og:url" content="https://heicly.in/privacy-policy.html">
+<meta property="og:image" content="https://heicly.in/og-image.png">
+<meta property="og:image:alt" content="Heicly browser-based HEIC image converter">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Policy | Heicly">
+<meta name="twitter:description" content="Learn how Heicly keeps image conversion inside your browser and how advertising cookies may be used.">
+<meta name="twitter:image" content="https://heicly.in/og-image.png">
+<meta name="twitter:image:alt" content="Heicly browser-based HEIC image converter">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "description": "Heicly's privacy policy for browser-based image conversion, advertising, cookies, and analytics.",
+  "url": "https://heicly.in/privacy-policy.html",
+  "dateModified": "2026-08-03",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Heicly",
+    "url": "https://heicly.in/"
+  }
+}
+</script>
+<link rel="icon" type="image/png" sizes="1024x1024" href="./heicly-logo-concept-b.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #111317;
+    --bg-raised: rgba(25, 35, 30, 0.85);
+    --bg-card: rgba(20, 25, 22, 0.7);
+    --border: rgba(0, 255, 102, 0.2);
+    --border-soft: rgba(0, 255, 102, 0.05);
+    --accent: #00ff66;
+    --accent-soft: rgba(0, 255, 102, 0.15);
+    --text-main: #f0fdf4;
+    --text-muted: #86efac;
+    --text-faint: #4ade80;
+    --radius-md: 14px;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.7;
+  }
+  a { color: var(--accent); }
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 36px;
+    background: rgba(12, 13, 16, 0.86);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--border-soft);
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--text-main);
+  }
+  .brand .mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(140deg, var(--accent), #ff8a4e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px var(--accent-soft);
+  }
+  .back-link {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .back-link:hover { color: var(--text-main); }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 100px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+  }
+  .updated {
+    color: var(--text-faint);
+    font-size: 13.5px;
+    margin: 0 0 44px;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 40px 0 12px;
+  }
+  p, li {
+    color: var(--text-muted);
+    font-size: 15.5px;
+  }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 20px 22px;
+    margin: 20px 0;
+  }
+  footer.site-footer {
+    border-top: 1px solid var(--border-soft);
+    padding: 28px 24px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 13px;
+  }
+
+  @media (max-width: 720px) {
+    header.nav {
+        padding: 14px 16px !important;
+    }
+    .nav-right-group {
+        gap: 8px !important;
+    }
+    .css-lang-container .nav-menu-panel {
+        position: absolute !important;
+        top: calc(100% + 8px) !important;
+        left: auto !important;
+        right: 0 !important;
+        width: max-content !important;
+        padding: 4px !important;
+        border: 1px solid rgba(0, 255, 102, 0.3) !important;
+    }
+    .css-lang-container .nav-menu-item {
+        padding: 6px 12px !important;
+    }
+    
+    .footer-inner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 32px !important;
+    }
+    .footer-links {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        width: 100% !important;
+        gap: 16px 24px !important;
+    }
+
+    h1.hero-title {
+        font-size: clamp(28px, 8vw, 40px) !important;
+    }
+    .hero {
+        padding: 60px 16px 30px !important;
+    }
+  }
+
+
+  html {
+      overflow-x: hidden !important;
+      width: 100%;
+  }
+  body {
+      overflow-x: hidden !important;
+      width: 100%;
+  }
+  canvas {
+      max-width: 100vw;
+  }
+  @media (max-width: 480px) {
+      .controls {
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+      }
+      .controls .btn {
+          width: 100%;
+          box-sizing: border-box;
+      }
+      .nav-menu-trigger span {
+          /* Optionally hide the text "Tools" and "EN" on tiny screens to save space, just show icons */
+          /* But the user wants them identical, so let's just reduce padding */
+      }
+      .nav-menu-trigger {
+          padding: 6px 10px !important;
+          font-size: 13px !important;
+      }
+      .brand {
+          font-size: 16px !important;
+          gap: 8px !important;
+      }
+      .brand svg {
+          width: 32px !important;
+          height: 32px !important;
+      }
+  }
+
+</style>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <a class="brand" href="index.html" aria-label="Heicly home">
+    <div class="mark" aria-hidden="true" style="background: transparent; box-shadow: none;">
+      <svg width="16" height="16" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="34" y="32" width="42" height="42" rx="6" fill="#14100e"/>
+        <rect x="56" y="66" width="42" height="42" rx="6" fill="none" stroke="#14100e" stroke-width="7"/>
+      </svg>
+    </div>
+    Heicly
+  </a>
+  <a class="back-link" href="index.html" aria-label="Back to Heicly converter">&larr; Back to converter</a>
+</header>
+
+<main id="main-content" aria-labelledby="privacy-title">
+  <h1 id="privacy-title">Privacy Policy</h1>
+  <p class="updated">Last updated: August 2026</p>
+
+  <p>Heicly ("we", "this site") provides a free, in-browser HEIC image converter. This policy explains what happens to your files, and separately, how advertising on this site works.</p>
+
+  <h2>Your files and images</h2>
+  <div class="card">
+    <p style="margin:0;">Image conversion runs entirely inside your browser using JavaScript. Your HEIC files are never uploaded, transmitted to a server, or stored anywhere. We have no access to the images you convert, and no record of them is kept.</p>
+  </div>
+
+  <h2>Advertising and cookies</h2>
+  <p>This site is supported by advertising served through Google AdSense. To provide and measure ads, Google and its advertising partners may use cookies, device identifiers, and similar technologies to:</p>
+  <ul>
+    <li>Serve ads based on your prior visits to this or other websites</li>
+    <li>Measure ad performance and prevent fraud</li>
+    <li>Limit how often you see the same ad</li>
+  </ul>
+  <p>Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and/or other sites on the internet. You can opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>.</p>
+  <p>Third-party vendors, including Google, use cookies to serve ads based on someone's prior visits to this website or other websites. These cookies are set by the ad provider, not by Heicly, and are unrelated to the images you convert.</p>
+
+  <h2>Analytics</h2>
+  <p>We may use basic, privacy-respecting analytics to understand approximate traffic and page performance (e.g. how many people visit, which pages are popular). This data is aggregated and is not linked to the files you convert.</p>
+
+  <h2>Information we do not collect</h2>
+  <ul>
+    <li>We do not require an account, email address, or sign-up of any kind.</li>
+    <li>We do not store or transmit the images you convert.</li>
+    <li>We do not sell personal data.</li>
+  </ul>
+
+  <h2>Children's privacy</h2>
+  <p>This site is not directed at children under 13, and we do not knowingly collect personal information from children. Google AdSense may restrict ad personalization on sites or pages directed at children, in line with Google's own policies.</p>
+
+  <h2>Third-party links</h2>
+  <p>This page links to external sites (such as Google's ad settings). We are not responsible for the privacy practices of those third-party sites — please review their own policies.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy from time to time, for example to reflect changes in the advertising services we use. Continued use of the site after changes means you accept the updated policy.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to the contact details listed on this site's about section.</p>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  Heicly — free, client-side HEIC converter.
+</footer>
+
+
+<style class="quantum-patch">
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+body { 
+    font-family: 'Inter', sans-serif !important; 
+    background: transparent !important;
+}
+html {
+    background: #111317;
+}
+h1, h2, h3, h4, h5, h6, .brand, .nav-menu-item-title {
+    font-family: 'Space Grotesk', sans-serif !important;
+    text-transform: none !important;
+}
+
+/* Glassmorphism over the network */
+  .nav-menu-panel, .lang-menu-panel {
+      backdrop-filter: blur(28px) !important;
+      -webkit-backdrop-filter: blur(28px) !important;
+      background: rgba(10, 13, 15, 0.92) !important;
+      border-radius: var(--radius-lg) !important;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6) !important;
+      transition: all 0.3s ease !important;
+      border: 1px solid rgba(0, 255, 102, 0.3) !important;
+  }
+  
+  .nav-menu-trigger, .lang-menu-trigger, 
+  .dropzone, .state-panel, .format-card, .info-card, .stat, .result-card, .btn-secondary, .card {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary, .btn-secondary, .nav-menu-trigger, .lang-menu-trigger, .lang-menu-item, .nav-menu-item {
+    text-transform: none !important;
+    border-radius: var(--radius-lg) !important;
+}
+
+.btn-primary:hover, .btn-secondary:hover, .nav-menu-trigger:hover, .lang-menu-trigger:hover, .lang-menu-item:hover, .nav-menu-item:hover {
+    transform: translateY(-2px) !important;
+}
+</style>
+
+<canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
+<script>
+// --- Quantum Network Node Background ---
+const canvas = document.getElementById('particle-canvas');
+if (canvas) {
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let nodes = [];
+    const maxNodes = window.innerWidth < 768 ? 60 : 150;
+    const connectionDistance = 140;
+    
+    let mouse = { x: canvas.width/2, y: canvas.height/2, radius: 200, isHovering: false };
+
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
+    
+    document.addEventListener('mouseover', (e) => {
+        if(e.target.closest('.dropzone') || e.target.closest('.card')) {
+            mouse.isHovering = true;
+        } else {
+            mouse.isHovering = false;
+        }
+    });
+
+    class Node {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 1.5;
+            this.vy = (Math.random() - 0.5) * 1.5;
+            this.radius = Math.random() * 2 + 1;
+            this.color = Math.random() > 0.8 ? '#00ff66' : '#ffffff';
+        }
+        update() {
+            if(mouse.isHovering) {
+                let dx = (canvas.width/2) - this.x;
+                let dy = (canvas.height/2) - this.y;
+                let dist = Math.sqrt(dx*dx + dy*dy);
+                if(dist > 0) {
+                    this.vx += (dx / dist) * 0.08;
+                    this.vy += (dy / dist) * 0.08;
+                }
+                let speed = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+                if(speed > 5) {
+                    this.vx = (this.vx / speed) * 5;
+                    this.vy = (this.vy / speed) * 5;
+                }
+            } else {
+                let speed = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+                if(speed > 1.5) {
+                    this.vx *= 0.98;
+                    this.vy *= 0.98;
+                }
+            }
+        
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if(this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if(this.y < 0 || this.y > canvas.height) this.vy *= -1;
+            
+            let dx = mouse.x - this.x;
+            let dy = mouse.y - this.y;
+            let distance = Math.sqrt(dx*dx + dy*dy);
+            if(distance < mouse.radius && !mouse.isHovering) {
+                this.x -= dx * 0.02;
+                this.y -= dy * 0.02;
+            }
+
+            this.draw();
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = this.color;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+    }
+
+    for(let i=0; i<maxNodes; i++) {
+        nodes.push(new Node());
+    }
+
+    function animateNetwork() {
+        ctx.fillStyle = '#111317';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        for(let a=0; a<nodes.length; a++) {
+            for(let b=a+1; b<nodes.length; b++) {
+                let dx = nodes[a].x - nodes[b].x;
+                let dy = nodes[a].y - nodes[b].y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                
+                if(distance < connectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(nodes[a].x, nodes[a].y);
+                    ctx.lineTo(nodes[b].x, nodes[b].y);
+                    let opacity = 1 - (distance/connectionDistance);
+                    ctx.strokeStyle = nodes[a].color === '#00ff66' || nodes[b].color === '#00ff66' ? 
+                                      `rgba(0, 255, 102, ${opacity * 0.5})` : 
+                                      `rgba(255, 255, 255, ${opacity * 0.2})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+            
+            if(!mouse.isHovering) {
+                let mdx = nodes[a].x - mouse.x;
+                let mdy = nodes[a].y - mouse.y;
+                let mDist = Math.sqrt(mdx*mdx + mdy*mdy);
+                if(mDist < connectionDistance) {
+                    ctx.beginPath();
+                    ctx.moveTo(nodes[a].x, nodes[a].y);
+                    ctx.lineTo(mouse.x, mouse.y);
+                    let mOp = 1 - (mDist/connectionDistance);
+                    ctx.strokeStyle = `rgba(0, 255, 102, ${mOp * 0.6})`;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        for(let i=0; i<nodes.length; i++) {
+            nodes[i].update();
+        }
+
+        requestAnimationFrame(animateNetwork);
+    }
+    animateNetwork();
+}
+</script>
+
+</body>
+</html>

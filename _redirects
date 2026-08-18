@@ -1,7 +1,0 @@
-# Redirect old privacy policy URL to clean path (matching canonical URL exactly)
-/Heicly/privacy-policy.html     https://heicly.in/privacy-policy.html    301
-
-# Old blog file had a space in its name (broke its own canonical URL) - renamed
-# to avif-file-wont-open.html. This preserves any link/index equity Bing or
-# Google already picked up from the old, broken URL.
-/blog/avif%20blog.html  /blog/avif-file-wont-open.html  301

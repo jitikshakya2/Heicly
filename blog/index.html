@@ -6,33 +6,33 @@
 (function() {
   var GA_ID = 'G-W7DVFC0C19';
   var loaded = false;
-
+ 
   function loadGA() {
     if (loaded) return;
     loaded = true;
-
+ 
     var script = document.createElement('script');
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
     script.async = true;
     document.head.appendChild(script);
-
+ 
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     window.gtag = gtag;
     gtag('js', new Date());
     gtag('config', GA_ID);
-
+ 
     events.forEach(function(evt) {
       window.removeEventListener(evt, loadGA);
     });
     clearTimeout(fallback);
   }
-
+ 
   var events = ['scroll', 'mousemove', 'touchstart', 'keydown', 'click'];
   events.forEach(function(evt) {
     window.addEventListener(evt, loadGA, { once: true, passive: true });
   });
-
+ 
   var fallback = setTimeout(loadGA, 4000);
 })();
 </script>
@@ -46,7 +46,7 @@
 <meta name="color-scheme" content="dark">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="canonical" href="https://heicly.in/blog/">
-
+ 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Heicly">
 <meta property="og:locale" content="en_US">
@@ -55,13 +55,13 @@
 <meta property="og:url" content="https://heicly.in/blog/">
 <meta property="og:image" content="https://heicly.in/og-image.png">
 <meta property="og:image:alt" content="Heicly browser-based HEIC image converter">
-
+ 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="HEIC Conversion Guides — JPG, PNG & WEBP | Heicly Blog">
 <meta name="twitter:description" content="Free guides on converting HEIC photos to JPG, PNG, and WEBP — no upload, no sign-up.">
 <meta name="twitter:image" content="https://heicly.in/og-image.png">
 <meta name="twitter:image:alt" content="Heicly browser-based HEIC image converter">
-
+ 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -75,12 +75,12 @@
     { "@type": "Article", "headline": "Convert HEIC to PNG — Free Online Guide", "url": "https://heicly.in/blog/heic-to-png-guide.html" },
     { "@type": "Article", "headline": "Convert HEIC to WEBP — Free Online Guide", "url": "https://heicly.in/blog/heic-to-webp-guide.html" },
     { "@type": "Article", "headline": "Convert AVIF to JPG — Free Online Guide", "url": "https://heicly.in/blog/avif-to-jpg-guide.html" },
-    { "@type": "Article", "headline": "Convert AVIF to PNG — Free Online Guide", "url": "https://heicly.in/blog/avif-to-png-guide.html" }
+    { "@type": "Article", "headline": "Convert AVIF to PNG — Free Online Guide", "url": "https://heicly.in/blog/avif-to-png-guide.html" },
     { "@type": "Article", "headline": "AVIF File Won't Open- Here's The Process", "url": "https://heicly.in/blog/avif-file-wont-open.html" }
   ]
 }
 </script>
-
+ 
 <link rel="icon" type="image/png" sizes="1024x1024" href="../heicly-logo-concept-b.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -229,7 +229,7 @@
   }
   footer.site-footer a { color: var(--text-muted); text-decoration: none; }
   footer.site-footer a:hover { color: var(--text-main); }
-
+ 
   @media (max-width: 720px) {
     header.nav {
         padding: 14px 16px !important;
@@ -261,7 +261,7 @@
         width: 100% !important;
         gap: 16px 24px !important;
     }
-
+ 
     h1.hero-title {
         font-size: clamp(28px, 8vw, 40px) !important;
     }
@@ -269,8 +269,8 @@
         padding: 60px 16px 30px !important;
     }
   }
-
-
+ 
+ 
   html {
       overflow-x: hidden !important;
       width: 100%;
@@ -309,11 +309,11 @@
           height: 32px !important;
       }
   }
-
+ 
 </style>
 </head>
 <body>
-
+ 
 <header class="nav" role="banner">
   <a class="brand" href="../index.html" aria-label="Heicly home">
     <div class="mark" aria-hidden="true" style="background: transparent; box-shadow: none;">
@@ -326,12 +326,12 @@
   </a>
   <a class="back-link" href="../index.html" aria-label="Back to Heicly converter">&larr; Back to converter</a>
 </header>
-
+ 
 <main id="main-content" aria-labelledby="blog-title">
   <div class="eyebrow">Heicly Blog</div>
   <h1 id="blog-title">Image conversion guides</h1>
   <p class="lead">Straightforward, no-nonsense guides for turning Apple's HEIC photos into formats every device, app, and person can actually open — all using a converter that never uploads your files.</p>
-
+ 
   <div class="post-grid">
     <a class="post-card" href="/blog/heic-to-jpg-guide.html">
       <span class="tag">HEIC → JPG</span>
@@ -365,15 +365,15 @@
     </a>
   </div>
 </main>
-
+ 
 <footer class="site-footer" role="contentinfo">
   Heicly — free, client-side HEIC converter. <a href="../index.html">Converter</a> · <a href="../privacy-policy.html">Privacy Policy</a>
 </footer>
-
-
+ 
+ 
 <style class="quantum-patch">
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-
+ 
 body { 
     font-family: 'Inter', sans-serif !important; 
     background: transparent !important;
@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6, .brand, .nav-menu-item-title {
     font-family: 'Space Grotesk', sans-serif !important;
     text-transform: none !important;
 }
-
+ 
 /* Glassmorphism over the network */
   .nav-menu-panel, .lang-menu-panel {
       backdrop-filter: blur(28px) !important;
@@ -405,17 +405,17 @@ h1, h2, h3, h4, h5, h6, .brand, .nav-menu-item-title {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
     transition: all 0.3s ease !important;
 }
-
+ 
 .btn-primary, .btn-secondary, .nav-menu-trigger, .lang-menu-trigger, .lang-menu-item, .nav-menu-item {
     text-transform: none !important;
     border-radius: var(--radius-lg) !important;
 }
-
+ 
 .btn-primary:hover, .btn-secondary:hover, .nav-menu-trigger:hover, .lang-menu-trigger:hover, .lang-menu-item:hover, .nav-menu-item:hover {
     transform: translateY(-2px) !important;
 }
 </style>
-
+ 
 <canvas id="particle-canvas" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; pointer-events: none;"></canvas>
 <script>
 // --- Quantum Network Node Background ---
@@ -424,18 +424,18 @@ if (canvas) {
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
+ 
     let nodes = [];
     const maxNodes = window.innerWidth < 768 ? 60 : 150;
     const connectionDistance = 140;
     
     let mouse = { x: canvas.width/2, y: canvas.height/2, radius: 200, isHovering: false };
-
+ 
     window.addEventListener('resize', () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
     });
-
+ 
     window.addEventListener('mousemove', (e) => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
@@ -448,7 +448,7 @@ if (canvas) {
             mouse.isHovering = false;
         }
     });
-
+ 
     class Node {
         constructor() {
             this.x = Math.random() * canvas.width;
@@ -482,7 +482,7 @@ if (canvas) {
         
             this.x += this.vx;
             this.y += this.vy;
-
+ 
             if(this.x < 0 || this.x > canvas.width) this.vx *= -1;
             if(this.y < 0 || this.y > canvas.height) this.vy *= -1;
             
@@ -493,7 +493,7 @@ if (canvas) {
                 this.x -= dx * 0.02;
                 this.y -= dy * 0.02;
             }
-
+ 
             this.draw();
         }
         draw() {
@@ -506,11 +506,11 @@ if (canvas) {
             ctx.shadowBlur = 0;
         }
     }
-
+ 
     for(let i=0; i<maxNodes; i++) {
         nodes.push(new Node());
     }
-
+ 
     function animateNetwork() {
         ctx.fillStyle = '#111317';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -548,16 +548,16 @@ if (canvas) {
                 }
             }
         }
-
+ 
         for(let i=0; i<nodes.length; i++) {
             nodes[i].update();
         }
-
+ 
         requestAnimationFrame(animateNetwork);
     }
     animateNetwork();
 }
 </script>
-
+ 
 </body>
 </html>

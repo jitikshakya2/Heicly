@@ -134,6 +134,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://heicly.in/blog/avif-file-wont-open.html"/>
   </url>
   <url>
+    <loc>https://heicly.in/blog/html-to-png-alternatives.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heicly.in/blog/html-to-png-alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heicly.in/Esp/blog/html-to-png-alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://heicly.in/blog/html-to-png-alternatives.html"/>
+  </url>
+  <url>
+    <loc>https://heicly.in/Esp/blog/html-to-png-alternatives.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://heicly.in/blog/html-to-png-alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://heicly.in/Esp/blog/html-to-png-alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://heicly.in/blog/html-to-png-alternatives.html"/>
+  </url>
+  <url>
     <loc>https://heicly.in/privacy-policy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://heicly.in/privacy-policy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://heicly.in/Esp/privacy-policy.html"/>

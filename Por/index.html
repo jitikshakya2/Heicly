@@ -1722,9 +1722,9 @@
 
 <main id="main-content">
   <section class="hero" id="converter" aria-labelledby="converter-title">
-    <div class="eyebrow"><span class="pulse-dot"></span> Se ejecuta 100% en tu navegador</div>
-    <h1 class="hero-title" id="converter-title">Convierte HEIC a <span class="grad">JPG PNG WEBP</span></h1>
-    <p class="hero-sub" id="heroSub">El formato de foto de Apple, traducido instantáneamente a algo que cada dispositivo, aplicación y persona puede abrir realmente. Sin subidas. Sin cuentas. Sin esperar en un servidor.</p>
+    <div class="eyebrow"><span class="pulse-dot"></span> Executado 100% no seu navegador</div>
+    <h1 class="hero-title" id="converter-title">Converter HEIC para <span class="grad">JPG, PNG e WEBP</span></h1>
+    <p class="hero-sub" id="heroSub">O formato de foto da Apple, convertido em algo que qualquer dispositivo, aplicativo e pessoa consegue abrir — instantaneamente, sem nunca sair do seu navegador.</p>
 
     <div class="swap-bar">
       <select id="sourceFormatSelect" name="input-format" aria-label="Input image format">
@@ -1758,15 +1758,15 @@
             <line x1="12" y1="3" x2="12" y2="15"></line>
           </svg>
         </div>
-        <h3 id="dropzoneTitle">Suelta hasta 15 archivos HEIC aquí</h3>
-        <p>o <span class="browse-underline">explora desde tu dispositivo</span> — nada sale de esta pestaña</p>
+        <h3 id="dropzoneTitle">Arraste até 15 arquivos HEIC aqui</h3>
+        <p>o <span class="browse-underline">explora desde tu dispositivo</span> — nada sai desta aba</p>
         <input type="file" id="fileInput" name="source-file" accept=".heic,.HEIC,.heif,.HEIF,image/heic,image/heif" multiple aria-label="Choose up to 15 HEIC images to convert">
       </div>
 
       <!-- Batch progress state -->
       <div class="state-panel batch-panel" id="batchPanel" role="status" aria-live="polite" aria-atomic="true">
         <div class="batch-head">
-          <div class="batch-title" id="batchTitle">Convirtiendo…</div>
+          <div class="batch-title" id="batchTitle">Convertendo…</div>
           <div class="batch-count" id="batchCount">0%</div>
         </div>
         <div class="progress-track"><div class="progress-fill" id="batchProgressFill" style="animation:none; width:0%;"></div></div>
@@ -1780,12 +1780,12 @@
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
-        <h3 id="resultsHeading">Conversión completada</h3>
+        <h3 id="resultsHeading">Conversão concluída</h3>
         <div class="results-grid" id="resultsGrid"></div>
         <div class="batch-warning" id="batchWarning" style="display:none;"></div>
         <div class="btn-row">
           <button class="btn btn-primary" id="downloadAllBtn" type="button" style="display:none;">&#8595; Baixar tudo (.zip)</button>
-          <button class="btn btn-secondary" id="resetBtn" type="button">Convertir más</button>
+          <button class="btn btn-secondary" id="resetBtn" type="button">Converter mais arquivos</button>
         </div>
       </div>
 
@@ -1798,20 +1798,20 @@
             <line x1="12" y1="16" x2="12.01" y2="16"></line>
           </svg>
         </div>
-        <h3>Error en la conversión</h3>
-        <p id="errorMessage">El archivo no pudo ser convertido. Puede estar corrupto o en un formato no soportado.</p>
-        <button class="btn btn-secondary" id="errorResetBtn" type="button">Intentar con otro archivo</button>
+        <h3>Ocorreu um erro na conversão</h3>
+        <p id="errorMessage">O arquivo não pôde ser convertido. Ele pode estar corrompido ou em um formato não suportado.</p>
+        <button class="btn btn-secondary" id="errorResetBtn" type="button">Tentar com outro arquivo</button>
       </div>
     </div>
   </section>
 
   <!-- Formats involved -->
   <section class="formats-section reveal">
-    <div class="section-tag">Formatos involucrados</div>
+    <div class="section-tag">Formatos envolvidos</div>
     <div class="formats-grid">
       <div class="format-card">
         <div class="fmt-head"><span class="swatch heic">I</span> <span id="fmtCardLabelLeft">HEIC</span> <span class="fmt-full" id="fmtCardFullLeft">Formato de imagen de alta eficiencia</span></div>
-        <p id="fmtCardDescLeft">El formato de foto predeterminado de Apple desde iOS 11. Codifica imágenes con el códec HEVC, reduciendo el tamaño del archivo aproximadamente a la mitad versus JPG con la misma calidad — pero apenas soportado fuera del hardware de Apple.</p>
+        <p id="fmtCardDescLeft">O formato padrão de fotos da Apple desde o iOS 11. Codifica imagens com codec HEVC, reduzindo o tamanho pela metade em relação ao JPG — porém com suporte limitado fora dos dispositivos Apple.</p>
       </div>
       <div class="format-card">
         <div class="fmt-head"><span class="swatch out">O</span> <span id="fmtCardLabel">PNG</span> <span class="fmt-full" id="fmtCardFull">Gráficos de red portátiles</span></div>
@@ -1822,28 +1822,28 @@
 
   <!-- Why convert -->
   <section class="info-section reveal" id="why">
-    <h2 id="whyHeading">¿Por qué convertir archivos HEIC?</h2>
+    <h2 id="whyHeading">Por que converter arquivos HEIC?</h2>
     <p class="info-intro" id="whyIntro">HEIC es eficiente, pero fue construido primero para el ecosistema de Apple — y para el resto del mundo en segundo lugar.</p>
 
     <div class="info-grid">
       <div class="info-card">
         <span class="num">01</span>
-        <h3 id="infoCard1Title">Compatibilidad universal</h3>
+        <h3 id="infoCard1Title">Compatibilidade universal</h3>
         <p id="infoCard1Desc">La mayoría de las aplicaciones de Windows, sitios web y dispositivos Android antiguos no pueden abrir HEIC. Convertir a JPG o PNG garantiza que se abra en todas partes, cada vez.</p>
       </div>
       <div class="info-card">
         <span class="num">02</span>
-        <h3 id="infoCard2Title">Compartir sin problemas</h3>
+        <h3 id="infoCard2Title">Compartilhamento fácil</h3>
         <p id="infoCard2Desc">Los formularios web, plataformas sociales y clientes de correo electrónico frecuentemente rechazan o manejan mal las subidas de HEIC. JPG y PNG son aceptados sin pensarlo dos veces.</p>
       </div>
       <div class="info-card">
         <span class="num">03</span>
-        <h3 id="infoCard3Title">Soporte de editores</h3>
+        <h3 id="infoCard3Title">Compatível com editores</h3>
         <p id="infoCard3Desc">Las versiones antiguas de Photoshop, GIMP y otras herramientas no leen HEIC de forma nativa. Convertir primero evita dolores de cabeza de compatibilidad durante la edición.</p>
       </div>
       <div class="info-card">
         <span class="num">04</span>
-        <h3 id="infoCard4Title">Archivado e impresión</h3>
+        <h3 id="infoCard4Title">Impressão e arquivo</h3>
         <p id="infoCard4Desc">Las tiendas de impresión y los flujos de trabajo de almacenamiento a largo plazo esperan abrumadoramente JPG o PNG. Convertir protege tus fotos de volverse ilegibles más adelante.</p>
       </div>
     </div>
@@ -1859,35 +1859,35 @@
   <!-- About -->
   <section class="content-section reveal" id="about">
     <div class="section-tag">Sobre</div>
-    <h2>Diseñado para hacer una cosa bien</h2>
-    <p>Esta herramienta existe porque convertir una sola foto no debería requerir una cuenta, una suscripción o confiar en el servidor de un desconocido con tu galería de fotos. <strong>Heicly</strong> es una página estática — todo el decodificador se ejecuta dentro del motor JavaScript de tu propio navegador, usando la misma tecnología que impulsa las aplicaciones web sin conexión.</p>
-    <p>No hay ningún equipo detrás de una cola de subidas, ninguna factura de almacenamiento y ninguna razón para pedirte tu email. Abres la página, sueltas un archivo, obtienes un resultado. Ese es todo el producto — los anuncios son cómo se mantiene gratis para funcionar, y se mantienen separados de cualquier cosa que conviertas. Consulta la <a href="privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Política de Privacidad</a> para saber cómo funcionan esos anuncios.</p>
+    <h2>Desenvolvido para fazer uma coisa com perfeição</h2>
+    <p>Esta ferramenta existe porque converter uma foto não deveria exigir cadastro, assinatura nem enviar sua galeria de fotos para servidores desconhecidos. O <strong>Heicly</strong> é uma ferramenta estática — todo o decodificador roda dentro do motor JavaScript do seu próprio navegador, com a mesma tecnologia de aplicações web offline.</p>
+    <p>Não há servidores de upload, cobranças de armazenamento nem motivos para pedir seu e-mail. Você abre a página, seleciona o arquivo e recebe o resultado. O serviço é mantido gratuitamente por anúncios que ficam totalmente separados do que você converte. Consulte nossa <a href="privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Política de Privacidade</a>.</p>
     
     <div class="tools-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin:2rem 0;">
       <a href="avif-to-jpg.html" class="tool-card" style="background:linear-gradient(135deg, rgba(255,99,71,0.08), rgba(255,140,0,0.06)); border:1px solid rgba(255,99,71,0.15); border-radius:16px; padding:1.5rem; text-decoration:none; color:inherit; transition:transform 0.2s ease, box-shadow 0.2s ease;">
         <div style="font-size:2rem; margin-bottom:0.75rem;">🦊</div>
-        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">Conversor de AVIF a JPG</h3>
-        <p style="margin:0; opacity:0.8; line-height:1.6;">Convierte imágenes AVIF a formato JPG directamente en tu navegador. Sin subidas, sin registro, completamente gratis.</p>
-        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(255,99,71,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Probar AVIF a JPG →</div>
+        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">Conversor de AVIF para JPG</h3>
+        <p style="margin:0; opacity:0.8; line-height:1.6;">Converta imagens AVIF para o formato JPG diretamente no seu navegador. Sem uploads, sem cadastro, 100% gratuito.</p>
+        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(255,99,71,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Experimentar AVIF para JPG →</div>
       </a>
       <a href="avif-to-png/index.html" class="tool-card" style="background:linear-gradient(135deg, rgba(52,211,153,0.08), rgba(31,184,134,0.06)); border:1px solid rgba(52,211,153,0.15); border-radius:16px; padding:1.5rem; text-decoration:none; color:inherit; transition:transform 0.2s ease, box-shadow 0.2s ease;">
         <div style="font-size:2rem; margin-bottom:0.75rem;">🖼️</div>
-        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">Conversor de AVIF a PNG</h3>
-        <p style="margin:0; opacity:0.8; line-height:1.6;">Convierte imágenes AVIF a PNG con calidad sin pérdidas y soporte de transparencia. Sin subidas, sin registro, completamente gratis.</p>
-        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(52,211,153,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Probar AVIF a PNG →</div>
+        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">Conversor de AVIF para PNG</h3>
+        <p style="margin:0; opacity:0.8; line-height:1.6;">Converta imagens AVIF para PNG com qualidade sem perdas e suporte a transparência. Sem uploads, sem cadastro, 100% gratuito.</p>
+        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(52,211,153,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Experimentar AVIF para PNG →</div>
       </a>
       <a href="html-to-png/index.html" class="tool-card" style="background:linear-gradient(135deg, rgba(228,77,38,0.08), rgba(241,101,41,0.06)); border:1px solid rgba(228,77,38,0.15); border-radius:16px; padding:1.5rem; text-decoration:none; color:inherit; transition:transform 0.2s ease, box-shadow 0.2s ease;">
         <div style="font-size:2rem; margin-bottom:0.75rem;">🌐</div>
-        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">Conversor de HTML a PNG</h3>
-        <p style="margin:0; opacity:0.8; line-height:1.6;">Convierte HTML a PNG gratis, directamente en tu navegador. Pega código o suelta un archivo .html — un conversor de documento HTML a PNG sin subidas.</p>
-        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(228,77,38,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Probar HTML a PNG →</div>
+        <h3 style="margin:0 0 0.5rem 0; font-size:1.25rem; font-weight:600;">Conversor de HTML para PNG</h3>
+        <p style="margin:0; opacity:0.8; line-height:1.6;">Converta HTML para PNG grátis, diretamente no seu navegador. Cole código ou arraste um arquivo .html — conversão rápida e segura sem uploads.</p>
+        <div style="margin-top:1rem; display:inline-block; padding:0.5rem 1rem; background:rgba(228,77,38,0.15); border-radius:8px; font-size:0.875rem; font-weight:500;">Experimentar HTML para PNG →</div>
       </a>
     </div>
     
     <div class="about-stats">
-      <div class="stat"><span class="n">0</span><span class="l">Servidores involucrados</span></div>
-      <div class="stat"><span class="n">0</span><span class="l">Cuentas requeridas</span></div>
-      <div class="stat"><span class="n">100%</span><span class="l">Se ejecuta en tu dispositivo</span></div>
+      <div class="stat"><span class="n">0</span><span class="l">Servidores envolvidos</span></div>
+      <div class="stat"><span class="n">0</span><span class="l">Cadastros necessários</span></div>
+      <div class="stat"><span class="n">100%</span><span class="l">Executado no seu dispositivo</span></div>
     </div>
   </section>
 
@@ -1895,23 +1895,23 @@
   <section class="content-section reveal" id="privacy">
     <div class="section-tag">Política de Privacidade</div>
     <h2>Não conseguimos ver suas fotos — estruturalmente</h2>
-    <p>No es una promesa que te pedimos confiar; es una consecuencia de cómo está construida la página. No hay ningún endpoint de subida por el que tu imagen pueda viajar.</p>
+    <p>Não é apenas uma promessa: é uma consequência direta de como nossa página foi construída. Não existe nenhum servidor de upload pelo qual sua imagem possa transitar.</p>
     <ul class="policy-list">
       <li>
         <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div><h4>Nenhum arquivo sai do seu dispositivo</h4><p>La conversión ocurre con JavaScript en el navegador. Tu archivo HEIC se lee en memoria localmente y nunca se envía a ninguna parte.</p></div>
+        <div><h4>Nenhum arquivo sai do seu dispositivo</h4><p>A conversão acontece via JavaScript no navegador. Seu arquivo HEIC é processado localmente na memória e nunca é enviado para a rede.</p></div>
       </li>
       <li>
         <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div><h4>Nada vinculado aos seus arquivos</h4><p>Tus imágenes y lo que las conviertes nunca se registran, almacenan o asocian contigo. Los anuncios en esta página son servidos por Google y pueden usar cookies para ese propósito — consulta nuestra <a href="privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Política de Privacidad</a> para más detalles.</p></div>
+        <div><h4>Nada vinculado aos seus arquivos</h4><p>Suas imagens nunca são gravadas, armazenadas ou associadas a você. Os anúncios desta página são exibidos pelo Google e podem usar cookies — consulte nossa <a href="privacy-policy.html" style="color:var(--accent); text-decoration:underline;">Política de Privacidade</a> para mais detalhes.</p></div>
       </li>
       <li>
         <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div><h4>Sin cuenta, sin email, sin base de datos</h4><p>No hay nada para lo que registrarse y nada que almacene tu identidad junto a tus imágenes, porque no existe tal base de datos.</p></div>
+        <div><h4>Sem cadastro, sem e-mail, sem banco de dados</h4><p>Não há cadastros nem armazenamento da sua identidade, pois não temos banco de dados de usuários.</p></div>
       </li>
       <li>
         <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span>
-        <div><h4>Código aberto e inspecionável</h4><p>Todo se ejecuta en una sola página que puedes ver con view-source en cualquier momento — no hay ninguna llamada de red oculta en la que tengas que confiar.</p></div>
+        <div><h4>Código transparente e inspecionável</h4><p>Tudo é executado diretamente na aba que você pode inspecionar a qualquer momento — não existem requisições de rede ocultas.</p></div>
       </li>
     </ul>
   </section>
@@ -1919,7 +1919,7 @@
   <!-- FAQ -->
   <section class="content-section reveal" id="faq">
     <div class="section-tag">Perguntas Frequentes</div>
-    <h2>Preguntas comunes</h2>
+    <h2>Perguntas Frequentes</h2>
 
     <details class="faq-item" open>
       <summary>É realmente gratuito?
@@ -1962,7 +1962,7 @@
       <a href="blog/index.html">Blog</a>
       <a href="privacy-policy.html">Política de Privacidade</a>
     </nav>
-    <div class="footer-note">Conversor de HEIC gratuito y del lado del cliente. Sin registro, sin marcas de agua, sin límites impuestos por el servidor.</div>
+    <div class="footer-note">Conversor de HEIC gratuito e executado no navegador. Sem cadastro, sem marcas d'água e sem limites de servidor.</div>
   </div>
 </footer>
 
@@ -2028,8 +2028,8 @@
   const FORMATS = {
     heic: {
       label: 'HEIC',
-      full: 'Formato de imagen de alta eficiencia',
-      desc: "El formato de foto predeterminado de Apple desde iOS 11. Codifica imágenes con el códec HEVC, reduciendo el tamaño del archivo aproximadamente a la mitad versus JPG con la misma calidad — pero apenas soportado fuera del hardware de Apple.",
+      full: 'Formato de Imagem de Alta Eficiência',
+      desc: "O formato padrão de fotos da Apple desde o iOS 11. Codifica imagens com codec HEVC, reduzindo o tamanho pela metade em relação ao JPG — porém com suporte limitado fora dos dispositivos Apple.",
       accept: '.heic,.HEIC,.heif,.HEIF,image/heic,image/heif',
       exts: ['.heic', '.heif'],
       mimes: ['image/heic', 'image/heif']
@@ -2037,15 +2037,15 @@
     jpg: {
       label: 'JPG',
       full: 'Joint Photographic Experts Group',
-      desc: "El formato de foto más aceptado en la web. Archivos más pequeños que PNG a través de compresión con pérdida — ideal para compartir y enviar correos.",
+      desc: "O formato de foto mais aceito do mundo. Arquivos mais leves que PNG através de compressão com perdas — ideal para compartilhar e enviar por e-mail.",
       accept: '.jpg,.jpeg,.JPG,.JPEG,image/jpeg',
       exts: ['.jpg', '.jpeg'],
       mimes: ['image/jpeg']
     },
     png: {
       label: 'PNG',
-      full: 'Gráficos de red portátiles',
-      desc: "Sin pérdida y universalmente soportado. Cada navegador, editor y SO puede abrir un PNG sin pensarlo dos veces — el formato de exportación más seguro posible.",
+      full: 'Gráficos Portáteis de Rede (PNG)',
+      desc: "Sem perdas e universalmente suportado. Qualquer navegador, editor e sistema operacional abre PNG instantaneamente — o formato mais seguro para design.",
       accept: '.png,.PNG,image/png',
       exts: ['.png'],
       mimes: ['image/png']
@@ -2053,7 +2053,7 @@
     webp: {
       label: 'WEBP',
       full: 'Web Picture Format',
-      desc: "Un formato moderno que equilibra un tamaño de archivo pequeño con una calidad sólida. Soportado por todos los navegadores actuales y cada vez más por herramientas de edición.",
+      desc: "Formato moderno que combina tamanho reduzido com alta fidelidade visual. Suportado por todos os navegadores modernos e editores gráficos.",
       accept: '.webp,.WEBP,image/webp',
       exts: ['.webp'],
       mimes: ['image/webp']
@@ -2082,15 +2082,15 @@
   // but the reasoning changes with what's actually being converted — the
   // pitch for HEIC->JPG (compatibility) isn't the pitch for PNG->WEBP (size).
   const HERO_CONTENT = {
-    heic_jpg: { sub: "El formato de foto de Apple, convertido en algo que cualquier dispositivo, aplicación y persona puede abrir — instantáneamente, sin salir nunca de tu navegador." },
-    heic_png: { sub: "El formato de foto de Apple, traducido a un archivo sin pérdida y universalmente legible que puedes usar directamente en cualquier herramienta. Sin subidas, sin cuentas, sin esperar en un servidor." },
-    heic_webp: { sub: "El formato de foto de Apple, convertido en un archivo web más pequeño que sigue viéndose nítido. Se ejecuta completamente en tu dispositivo — nada se sube nunca." },
-    jpg_png: { sub: "Convierte un JPG comprimido en un PNG sin pérdida con fondo transparente si lo necesitas — todo localmente en tu navegador, sin subir nada." },
-    jpg_webp: { sub: "Reduce aún más un JPG sin perder calidad visible, listo para páginas de carga más rápida. Convertido aquí mismo, en tu dispositivo, en segundos." },
-    png_jpg: { sub: "Cambia un PNG pesado y sin pérdida por un JPG mucho más pequeño que sigue siendo bastante nítido para compartir o imprimir — sin subida, sin cuenta, sin espera." },
-    png_webp: { sub: "Mantén la transparencia de tu PNG pero reduce drásticamente el tamaño del archivo. Todo ocurre localmente — tu imagen nunca sale de esta pestaña." },
-    webp_jpg: { sub: "Convierte un WEBP moderno en un JPG que se abre en cualquier cosa, desde editores antiguos hasta imprentas. Convertido al instante, directamente en tu navegador." },
-    webp_png: { sub: "Convierte un WEBP moderno en un PNG sin pérdida que cualquier editor o archivo puede abrir. Se ejecuta localmente — tu archivo nunca se envía a ningún lado." }
+    heic_jpg: { sub: "O formato de foto da Apple, convertido em algo que qualquer dispositivo, aplicativo e pessoa consegue abrir — instantaneamente, sem sair do seu navegador." },
+    heic_png: { sub: "O formato de foto da Apple, transformado em um arquivo sem perdas e universalmente compatível que você pode usar em qualquer ferramenta. Sem uploads, sem cadastro, sem espera." },
+    heic_webp: { sub: "O formato de foto da Apple, convertido em um arquivo web super leve e nítido. Executado 100% no seu dispositivo — nada é enviado para a nuvem." },
+    jpg_png: { sub: "Converta um JPG comprimido em um PNG sem perdas com fundo transparente se precisar — tudo localmente no seu navegador, sem uploads." },
+    jpg_webp: { sub: "Reduza ainda mais o tamanho de um JPG sem perder qualidade visual, acelerando suas páginas web. Convertido no seu dispositivo em segundos." },
+    png_jpg: { sub: "Substitua um PNG pesado por um JPG muito mais leve e perfeito para compartilhar ou imprimir — sem upload, sem cadastro, sem espera." },
+    png_webp: { sub: "Mantenha a transparência do seu PNG enquanto reduz drasticamente o tamanho do arquivo. Tudo acontece localmente no seu navegador." },
+    webp_jpg: { sub: "Converta um WEBP moderno em um JPG compatível com qualquer software antigo ou gráfica. Convertido instantaneamente no seu navegador." },
+    webp_png: { sub: "Converta um WEBP moderno em um PNG sem perdas compatível com qualquer editor gráfico. Executado localmente — seu arquivo nunca é transmitido." }
   };
 
   // Keeps the H1 an exact-match "Convert X to Y" for whatever pair is
@@ -2102,7 +2102,7 @@
     const content = HERO_CONTENT[source + '_' + target];
     if (!content || !converterTitle || !heroSub) return;
 
-    converterTitle.innerHTML = 'Convertir ' + source.toUpperCase() + ' a <span class="grad">' + target.toUpperCase() + '</span>';
+    converterTitle.innerHTML = 'Converter ' + source.toUpperCase() + ' para <span class="grad">' + target.toUpperCase() + '</span>';
     heroSub.textContent = content.sub;
   }
 
@@ -2128,40 +2128,40 @@
   // as filler for half of these, so each pair gets its own two lines.
   const WHY_CONTENT = {
     heic_jpg: {
-      heading: '¿Por qué convertir HEIC a JPG?',
-      intro: "HEIC es eficiente, pero es un formato primero de Apple que muchas aplicaciones, plataformas y dispositivos antiguos todavía no abren. JPG es el único formato que casi nada en la tierra tiene problemas para leer."
+      heading: 'Por que converter HEIC para JPG?',
+      intro: "O HEIC é eficiente, mas é um formato exclusivo da Apple que muitos aplicativos, plataformas e computadores ainda não abrem. O JPG é o formato universal aceito em qualquer lugar."
     },
     heic_png: {
-      heading: '¿Por qué convertir HEIC a PNG?',
-      intro: "HEIC es eficiente, pero es un formato primero de Apple que muchas aplicaciones, plataformas y dispositivos antiguos todavía no abren. PNG sacrifica parte de esa eficiencia por calidad sin pérdida, transparencia y soporte en todas partes."
+      heading: 'Por que converter HEIC para PNG?',
+      intro: "O HEIC é eficiente, mas pouco compatível fora da Apple. O PNG oferece qualidade sem perdas, suporte a transparência e compatibilidade com qualquer ferramenta de design."
     },
     heic_webp: {
-      heading: '¿Por qué convertir HEIC a WEBP?',
-      intro: "HEIC es eficiente, pero es un formato primero de Apple que muchas aplicaciones, plataformas y dispositivos antiguos todavía no abren. WEBP mantiene un equilibrio similar de tamaño pequeño y calidad sólida, sin los dolores de cabeza de compatibilidad."
+      heading: 'Por que converter HEIC para WEBP?',
+      intro: "O HEIC tem compatibilidade restrita na web. O WEBP combina arquivos super leves com ótima qualidade para acelerar o carregamento de sites."
     },
     jpg_png: {
-      heading: '¿Por qué convertir JPG a PNG?',
-      intro: "La compresión con pérdida de JPG mantiene los archivos pequeños, pero puede suavizar los detalles finos y no ofrece forma de mantener parte de una imagen transparente. PNG soluciona ambas cosas — calidad sin pérdida con fondo transparente cuando lo necesitas."
+      heading: 'Por que converter JPG para PNG?',
+      intro: "A compressão com perdas do JPG pode suavizar detalhes finos e não suporta transparência. O PNG resolve ambos — qualidade pixel-perfect e suporte a canal alfa."
     },
     jpg_webp: {
-      heading: '¿Por qué convertir JPG a WEBP?',
-      intro: "JPG ha sido el estándar web durante décadas, pero la compresión más nueva de WEBP puede igualar la misma calidad con un tamaño de archivo notablemente menor — lo cual suma rápido en páginas con muchas imágenes."
+      heading: 'Por que converter JPG para WEBP?',
+      intro: "O JPG foi o padrão por décadas, mas o WEBP entrega qualidade idêntica com tamanho de arquivo até 30% menor, otimizando o SEO e o desempenho web."
     },
     png_jpg: {
-      heading: '¿Por qué convertir PNG a JPG?',
-      intro: "La calidad sin pérdida de PNG es excelente, pero viene con un tamaño de archivo que a menudo es excesivo para una foto ordinaria. La compresión de JPG reduce drásticamente el archivo mientras se mantiene lo suficientemente nítido para compartir, imprimir o la web."
+      heading: 'Por que converter PNG para JPG?',
+      intro: "A qualidade sem perdas do PNG é excelente, mas gera arquivos muito pesados. O JPG reduz significativamente o tamanho, facilitando o envio por e-mail e redes sociais."
     },
     png_webp: {
-      heading: '¿Por qué convertir PNG a WEBP?',
-      intro: "PNG mantiene cada píxel exacto, pero esa precisión cuesta espacio de almacenamiento y tiempo de carga. WEBP te acerca a la misma calidad — transparencia incluida — en una fracción del tamaño del archivo."
+      heading: 'Por que converter PNG para WEBP?',
+      intro: "O PNG preserva cada pixel, mas ocupa muito espaço. O WEBP entrega a mesma nitidez e transparência em uma fração do tamanho do arquivo."
     },
     webp_jpg: {
-      heading: '¿Por qué convertir WEBP a JPG?',
-      intro: "WEBP es compacto y moderno, pero editores antiguos, imprentas y algunas herramientas heredadas todavía no pueden abrirlo. JPG sacrifica un poco de eficiencia por un formato que garantiza funcionar dondequiera que lo envíes."
+      heading: 'Por que converter WEBP para JPG?',
+      intro: "O WEBP é moderno, mas softwares antigos e gráficas podem recusá-lo. O JPG garante compatibilidade universal com qualquer programa ou dispositivo."
     },
     webp_png: {
-      heading: '¿Por qué convertir WEBP a PNG?',
-      intro: "WEBP es compacto y moderno, pero editores antiguos, imprentas y algunas herramientas heredadas todavía no pueden abrirlo. PNG renuncia a parte de esa eficiencia por calidad sin pérdida y soporte que nunca está en duda."
+      heading: 'Por que converter WEBP para PNG?',
+      intro: "O PNG é o formato padrão da indústria criativa para edição e design, garantindo fidelidade absoluta sem artefatos de compressão."
     }
   };
 
@@ -2171,58 +2171,58 @@
   // gets its own four points rather than a generic template repeated nine times.
   const CARD_CONTENT = {
     heic_jpg: [
-      { title: 'Compatibilidad universal', desc: "JPG se abre literalmente en todo — cada teléfono, portátil, aplicación y sitio web lo soporta. Ya no tendrás que preguntarte si una foto realmente se abrirá donde la envíes." },
-      { title: 'Compartir sin esfuerzo', desc: 'Los formularios de subida, aplicaciones de mensajería y plataformas sociales están diseñados para JPG. Convertir primero significa una cosa menos que puede salir mal al enviarlo.' },
-      { title: 'Funciona en cualquier editor', desc: 'Desde Photoshop hasta un editor básico de teléfono, nada tiene problemas para abrir un JPG. Evita la búsqueda de plugins y las advertencias de formato que HEIC todavía provoca en software antiguo.' },
-      { title: 'Listo para imprimir y almacenar', desc: 'Las imprentas y los flujos de archivo están construidos alrededor de JPG como base. Convertir ahora significa que tus fotos seguirán siendo utilizables en el futuro.' }
+      { title: 'Compatibilidade universal', desc: "O JPG abre em tudo — qualquer celular, computador, aplicativo ou site o suporta perfeitamente." },
+      { title: 'Compartilhamento fácil', desc: 'Redes sociais, WhatsApp e e-mails são otimizados para JPG, garantindo envio sem erros.' },
+      { title: 'Compatível com editores', desc: 'Do Photoshop aos apps simples de celular, qualquer programa edita JPG sem exigir plugins.' },
+      { title: 'Pronto para impressão', desc: 'Gráficas e laboratórios fotográficos utilizam JPG como padrão universal de impressão.' }
     ],
     heic_png: [
-      { title: 'Compatibilidad universal', desc: "PNG es leído por cada sistema operativo, navegador y aplicación que existe — sin excepciones, sin plugins, sin tener que adivinar si se abrirá." },
-      { title: 'Calidad de píxel perfecto', desc: "La compresión sin pérdida de PNG significa que no se descarta nada en la conversión. Lo que ves es exactamente lo que se capturó, hasta el último píxel." },
-      { title: 'Transparencia, si la necesitas', desc: 'A diferencia de HEIC, PNG puede preservar un fondo transparente — útil para logotipos, recortes o cualquier cosa dirigida a una herramienta de diseño más adelante.' },
-      { title: 'Construido para el largo plazo', desc: 'Debido a que no se comprime nada, PNG es la apuesta más segura para las fotos que deseas archivar o editar nuevamente en el futuro.' }
+      { title: 'Compatibilidade universal', desc: "O PNG é suportado nativamente por todos os sistemas operacionais, navegadores e editores de imagem." },
+      { title: 'Qualidade pixel-perfect', desc: "A compressão sem perdas (lossless) do PNG preserva cada detalhe da foto com máxima nitidez." },
+      { title: 'Suporte a transparência', desc: 'Permite manter fundos transparentes e recortes para uso profissional em design.' },
+      { title: 'Ideal para o longo prazo', desc: 'O melhor formato para salvar e reutilizar arquivos visuais sem perda de qualidade.' }
     ],
     heic_webp: [
-      { title: 'Compatibilidad universal', desc: 'Cada navegador moderno — Chrome, Safari, Firefox, Edge — renderiza WEBP nativamente, por lo que tus imágenes simplemente funcionan donde sea que se vean en línea.' },
-      { title: 'Archivos más pequeños, misma calidad', desc: 'WEBP normalmente reduce las imágenes más que JPG a una calidad comparable, lo que significa cargas de página más rápidas y compartición más veloz en conexiones lentas.' },
-      { title: 'Cada vez más compatible con editores', desc: 'La mayoría de las herramientas de diseño actuales ahora leen y escriben WEBP directamente, cerrando la brecha que solía convertirlo en un formato solo para web.' },
-      { title: 'Construido para flujos modernos', desc: 'Si tus fotos están destinadas a un sitio web, aplicación o CMS, WEBP suele ser el formato que esas plataformas ya esperan.' }
+      { title: 'Compatibilidade na web', desc: 'Todos os navegadores modernos (Chrome, Safari, Firefox, Edge) exibem imagens WEBP com rapidez.' },
+      { title: 'Arquivos super leves', desc: 'Gera imagens mais leves que o JPG mantendo a mesma nitidez para carregamento veloz.' },
+      { title: 'Compatível com editores modernos', desc: 'Ferramentas de design atuais como Figma e Photoshop já oferecem suporte nativo a WEBP.' },
+      { title: 'Otimizado para SEO', desc: 'Páginas mais rápidas alcançam melhores pontuações no Google e melhor experiência do usuário.' }
     ],
     jpg_png: [
-      { title: 'Calidad de píxel perfecto', desc: 'A diferencia de JPG, PNG es sin pérdida. Eso significa cero artefactos de compresión y precisión exacta píxel a píxel desde la imagen original.' },
-      { title: 'Mantiene la transparencia', desc: 'PNG soporta un canal alfa para fondos transparentes. Aunque HEIC también lo hace, JPG no — haciendo de PNG la opción de exportación más segura cuando necesitas mantener recortes.' },
-      { title: 'Ampliamente soportado', desc: 'Aunque es más grande que un JPG, PNG es igual de universal. Se abre sin problemas en cualquier navegador, SO, editor o formulario sin requerir plugins o actualizaciones.' },
-      { title: 'Hecho para editar', desc: 'Si planeas usar una imagen en diseño, producción de video o edición por capas, PNG es el formato estándar. Evita la pérdida de calidad al guardar repetidamente un JPG.' }
+      { title: 'Qualidade sem perdas', desc: 'Sem artefatos de compressão, mantendo a precisão de cada pixel da imagem original.' },
+      { title: 'Suporte a canal alfa', desc: 'Permite adicionar e preservar fundos transparentes para composição visual.' },
+      { title: 'Suporte universal', desc: 'Abre com perfeição em qualquer plataforma, aplicativo e sistema operacional.' },
+      { title: 'Ideal para edição', desc: 'Evita a degradação geracional de salvar arquivos repetidamente.' }
     ],
     jpg_webp: [
-      { title: 'Una fracción del tamaño', desc: "La compresión moderna de WEBP puede igualar la calidad visible de formatos más antiguos con un tamaño de archivo significativamente menor. Eso ahorra espacio y ancho de banda." },
-      { title: 'Acelera los tiempos de carga', desc: 'Si publicas fotos en un sitio web o aplicación, archivos más pequeños significan cargas más rápidas y mejores métricas. WEBP es el estándar actual para esto.' },
-      { title: 'Mantiene la transparencia', desc: "Al igual que PNG, WEBP soporta un canal alfa. Si tu imagen original tiene un fondo transparente, no lo perderás al convertir a WEBP." },
-      { title: 'Cada vez más compatible con editores', desc: 'La mayoría de las herramientas de diseño actuales ahora leen y escriben WEBP directamente, cerrando la brecha que solía convertirlo en un formato solo para web.' }
+      { title: 'Uma fração do tamanho', desc: "Comprime de forma muito mais eficiente, economizando espaço e franquia de dados." },
+      { title: 'Acelera carregamento', desc: 'Reduz o tempo de carregamento de páginas web, melhorando métricas de SEO.' },
+      { title: 'Suporta transparência', desc: "Permite transparência com compressão avançada sem pesar no carregamento." },
+      { title: 'Padrão da web moderna', desc: 'Recomendado para sites modernos, e-commerces e blogs de alta performance.' }
     ],
     png_jpg: [
-      { title: 'Ahorro masivo de tamaño', desc: 'Los archivos PNG pueden ser enormes. Convertir a un JPG de alta calidad reduce significativamente el tamaño del archivo, haciéndolo práctico para adjuntar a correos o chats.' },
-      { title: 'Compartir sin esfuerzo', desc: 'La mayoría de las plataformas manejan JPG mejor que PNG para la generación de miniaturas y los límites de almacenamiento. Convertir primero te mantiene por debajo de los límites de carga.' },
-      { title: 'Evita la transparencia no deseada', desc: "A veces no quieres un fondo transparente. Convertir a JPG aplana la imagen sobre un fondo blanco sólido, evitando problemas de visualización en modo oscuro." },
-      { title: 'Mejor para impresión', desc: 'Los proveedores de impresión suelen requerir JPG estándar. Convertir desde PNG evita cambios de color inesperados o errores de renderizado con las capas de transparencia.' }
+      { title: 'Economia de espaço', desc: 'Reduz significativamente o tamanho de arquivos PNG pesados para fácil compartilhamento.' },
+      { title: 'Envio descomplicado', desc: 'Perfeito para anexos de e-mail e formulários com limites estritos de tamanho.' },
+      { title: 'Fundo sólido', desc: "Converte transparências em fundo branco uniforme para evitar problemas no modo escuro." },
+      { title: 'Compatível com gráficas', desc: 'Formato exigido por laboratórios fotográficos e equipamentos de impressão.' }
     ],
     png_webp: [
-      { title: 'Ahorro masivo de tamaño de archivo', desc: 'PNG es sin pérdida, lo que significa tamaños de archivo enormes para fotos complejas. WEBP utiliza compresión moderna para reducir el tamaño a una fracción manteniéndose nítido.' },
-      { title: 'Acelera los tiempos de carga', desc: 'Si tienes un sitio web, los pesados archivos PNG arruinan tus tiempos de carga. Reemplazarlos con WEBP es una de las formas más rápidas de mejorar la velocidad.' },
-      { title: 'Mantiene el recorte', desc: 'A diferencia de JPG, WEBP soporta transparencia. Obtienes el ahorro de tamaño de una imagen muy comprimida sin perder el fondo transparente de tu PNG.' },
-      { title: 'Cada vez más compatible con editores', desc: 'La mayoría de las herramientas de diseño actuales ahora leen y escriben WEBP directamente, cerrando la brecha que solía convertirlo en un formato solo para web.' }
+      { title: 'Redução massiva', desc: 'Reduz o peso do PNG a uma fração sem comprometer a nitidez visual.' },
+      { title: 'Velocidade máxima', desc: 'Melhora o desempenho de sites e aplicativos instantaneamente.' },
+      { title: 'Mantém o recorte', desc: 'Preserva áreas transparentes intactas com alta compressão.' },
+      { title: 'Suporte completo', desc: 'Exibição perfeita em todos os navegadores e dispositivos modernos.' }
     ],
     webp_jpg: [
-      { title: "Funciona en herramientas que no reconocen WEBP", desc: 'Algunos programas antiguos, servicios de impresión y sistemas heredados aún no saben qué hacer con un archivo WEBP. JPG evita ese problema por completo.' },
-      { title: 'Compatibilidad universal', desc: "JPG se abre literalmente en todo — cada teléfono, portátil, aplicación y sitio web lo soporta. Ya no tendrás que preguntarte si una foto realmente se abrirá donde la envíes." },
-      { title: 'Mejor para flujos de trabajo de impresión', desc: 'Las imprentas comerciales prefieren archivos JPG (o TIFF). WEBP está muy optimizado para pantallas, no para salida física.' },
-      { title: 'Compartir sin esfuerzo', desc: 'Los formularios de subida, aplicaciones de mensajería y plataformas sociales están diseñados para JPG. Convertir primero significa una cosa menos que puede salir mal al enviarlo.' }
+      { title: "Compatibilidade universal", desc: 'Funciona em qualquer programa legado ou aplicativo que ainda não abra WEBP.' },
+      { title: 'Abre em qualquer lugar', desc: "Garante visualização em qualquer dispositivo antigo ou moderno." },
+      { title: 'Ideal para impressão', desc: 'Gráficas e laboratórios preferem arquivos JPG padronizados.' },
+      { title: 'Compartilhamento rápido', desc: 'Facilidade para enviar em qualquer rede social ou mensageiro.' }
     ],
     webp_png: [
-      { title: "Funciona en herramientas que no reconocen WEBP", desc: "Muchos editores antiguos y sistemas heredados todavía no pueden abrir un archivo WEBP directamente. PNG no tiene ese problema — ha sido el estándar durante décadas." },
-      { title: 'Compatibilidad universal', desc: "PNG es leído por cada sistema operativo, navegador y aplicación que existe — sin excepciones, sin plugins, sin tener que adivinar si se abrirá." },
-      { title: 'Cero pérdida por compresión', desc: 'Si necesitas editar y guardar una imagen repetidamente, PNG previene la degradación de calidad (pérdida de generación) que ocurre cada vez que guardas un JPG o WEBP.' },
-      { title: 'Hecho para editar', desc: 'Si planeas usar una imagen en diseño, producción de video o edición por capas, PNG es el formato estándar. Evita la pérdida de calidad al guardar repetidamente un JPG.' }
+      { title: "Padrão da indústria", desc: "O PNG é amplamente aceito em todos os programas de edição gráfica." },
+      { title: 'Compatibilidade total', desc: "Suportado por todos os sistemas operacionais e ferramentas sem exceção." },
+      { title: 'Zero perda', desc: 'Preserva a qualidade intacta para edições futuras e arquivamento.' },
+      { title: 'Feito para design', desc: 'Ideal para trabalho em camadas no Photoshop, Illustrator e Canva.' }
     ]
   };
 
@@ -2439,7 +2439,7 @@
     if (status === 'active') {
       item.classList.add('is-active');
       iconEl.innerHTML = '<span class="spinner-sm" aria-hidden="true"></span>';
-      statusEl.textContent = label || 'Convirtiendo…';
+      statusEl.textContent = label || 'Convertendo…';
     } else if (status === 'done') {
       item.classList.add('is-done');
       iconEl.innerHTML = '<svg class="check-sm" viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
@@ -2552,7 +2552,7 @@
 
   function renderResults() {
     const n = currentResults.length;
-    resultsHeading.textContent = n === 1 ? 'Conversión completada' : `${n} archivo${n > 1 ? 's' : ''} convertido${n > 1 ? 's' : ''}`;
+    resultsHeading.textContent = n === 1 ? 'Conversão concluída' : `${n} archivo${n > 1 ? 's' : ''} convertido${n > 1 ? 's' : ''}`;
     downloadAllBtn.style.display = n > 1 ? 'inline-flex' : 'none';
 
     resultsGrid.innerHTML = '';
